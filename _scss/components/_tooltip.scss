@@ -1,0 +1,43 @@
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 99;
+  top: -2.5em;
+  left: 50%;
+  display: block;
+  width: auto;
+  padding: 5px 12px;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2em;
+  white-space: nowrap;
+  color: $white;
+  border-radius: $radius * 2;
+  background-color: $charcoal;
+  @include prefix(box-shadow, 0 0 20px rgba(0,0,0,0.05));
+  opacity: 0;
+  @include prefix(transform, perspective(300px) translateX(-50%) rotateX(-33deg));
+  @include transition;
+  @include prefix(transition-properties, margin-top, margin-left, opacity, transform);
+  pointer-events: none;
+}
+
+.button,
+[class^="button-"],
+[class*=" button-"] {
+
+  &[data-tooltip]::after {
+    top: -3em;
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+
+  &:hover::after {
+    margin-top: -5px;
+    opacity: 1;
+    @include prefix(transform, perspective(300px) translateX(-50%));
+  }
+}

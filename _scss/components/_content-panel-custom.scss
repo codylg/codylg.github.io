@@ -1,0 +1,59 @@
+.content-panel {
+
+  &.divvy-panel {
+    background-color: rgb(30,150,255);
+
+    .content-panel-header {
+      background-color: rgb(50,170,255);
+    }
+
+    figure {
+      background-image: url('/img/divvy-bg@2x.png');
+      background-size: 98px;
+    }
+  }
+
+  &.threads-network-panel {
+    background-color: rgb(242,124,97);
+    background-image: url('/img/grunge-bg@2x.png');
+    background-size: 600px;
+    background-size: 400px;
+
+    figure {
+
+      img {
+        max-width: 367px;
+        margin: 95px auto;
+      }
+    }
+  }
+
+  &.ios86-panel {
+
+    figure {
+      background-image: url('/img/ios86-bg@2x.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &.sarif-panel {
+    background-image: url('/img/sarif-bg@2x.jpg');
+    background-size: cover;
+    background-position: 75% 50%;
+  }
+
+  &.axex-constructions-panel {
+    background-image: url('/img/axex-bg@2x.jpg');
+    background-size: cover;
+    background-position: center;
+
+    figure {
+
+      img {
+        max-width: 430px;
+        margin: 125px auto;
+      }
+    }
+  }
+}

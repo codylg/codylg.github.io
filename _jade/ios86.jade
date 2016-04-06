@@ -1,0 +1,18 @@
+extends layout
+
+block append variables
+  - var title = "iOS'86 iPhone theme"
+  - var description = "iOS'86 was a long-term project that developed into one of the most expansive iPhone themes available. Based on the concept design by Anton Repponen, iOS'86 is the official and fully functional Winterboard theme for iPhone and iPod Touch. Including thousands of hand-pixeled monochrome graphics along with a port of the original Chicago font; iOS'86 takes your device back to another era."
+  - var slug = "ios86"
+  - var card = "ios86/ios86-01@2x.jpg"
+  - var frontPage = false
+
+block content
+
+  article.content-panels
+  
+    include content/_ios86
+    
+    .content-full
+    
+      include content/_ios86-full

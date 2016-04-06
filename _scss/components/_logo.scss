@@ -1,0 +1,34 @@
+svg.logo {
+  width: 60px;
+  height: 60px;
+  x: 0px;
+  y: 0px;
+  viewBox: 0 0 60 60;
+
+  path.script {
+    fill: none;
+    stroke: $charcoal;
+    stroke-dasharray: 270;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    @include prefix(animation, logo-stroke 2.33s ease-out 1);
+    @include prefix(animation-delay, 0.66s);
+    @include prefix(animation-fill-mode, backwards);
+    @include transition($property: stroke-dashoffset, $duration: 2s, $timing: ease-out);
+  }
+
+  &:hover path.script {
+    stroke-dashoffset: 270;
+    @include prefix(transition-timing-function, ease-in);
+  }
+}
+
+@include keyframes(logo-stroke) {
+  0% {
+    stroke-dashoffset: 270;
+  } 100% {
+    stroke-dashoffset: 0;
+  }
+}

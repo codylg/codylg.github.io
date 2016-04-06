@@ -1,0 +1,28 @@
+extends content
+
+block variables
+  - var classname = "ios86"
+
+block header
+  h1
+    a(href="/ios86") iOS'86
+  
+block description
+  p
+    | iOS'86 was a long-term project that developed into one of the most expansive 
+    strong iPhone themes
+    |  available. Based on the concept design by 
+    a(href="http://work.repponen.com/" target="_blank") Anton Repponen
+    | , iOS'86 is the official and fully functional Winterboard theme for iPhone and iPod Touch.
+  p
+    | Including thousands of hand-pixeled monochrome graphics along with a port of the original Chicago font; iOS'86 takes your device back to another era.
+    | Available on iOS 4, 5, and 6.
+  p.grey-text Mid 2012 - late 2013
+
+  if frontPage
+    hr
+    a.button-black(href="/ios86") See more &rarr;
+  else
+    hr
+    p
+      a.button-black(href="cydia://package/com.modmyi.ios86", data-tooltip="Tap this on your jailbroken iPhone") $2 from Cydia &rarr;

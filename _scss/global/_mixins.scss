@@ -1,0 +1,56 @@
+@mixin prefix($property, $values...) {
+  -webkit-#{$property}: #{$values};
+  -moz-#{$property}: #{$values};
+  -ms-#{$property}: #{$values};
+  -o-#{$property}: #{$values};
+  #{$property}: #{$values};
+}
+
+@mixin font-antialias {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin flex($property: flex) {
+  display: -webkit-box;
+  display: -webkit-$property;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -ms-$property;
+  display: $property;
+}
+
+@mixin transition($property: all, $duration: 0.33s, $timing: cubic-bezier(0.19, 1, 0.22, 1)) {
+  @include prefix(transition, $property $duration $timing);
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+      @content;
+  }
+  @-moz-keyframes #{$name} {
+      @content;
+  }
+  @-ms-keyframes #{$name} {
+      @content;
+  }
+  @keyframes #{$name} {
+      @content;
+  }
+}
+
+@mixin linear-gradient($angle, $colors...) {
+  background-image: -webkit-linear-gradient(#{$angle}deg, $colors);
+  background-image: -moz-linear-gradient(#{$angle}deg, $colors);
+  background-image: -o-linear-gradient(#{$angle}deg, $colors);
+  background-image: linear-gradient(#{$angle}deg, $colors);
+}
+
+$dottedLineSpacing: 6;
+
+@mixin dotted-line($color: $grey, $alignment: bottom) {
+  background-image: linear-gradient(to right, $color 0%, $color (100% / $dottedLineSpacing), transparent (100% / $dottedLineSpacing));
+  background-position: 0 $alignment;
+  background-size: ($dottedLineSpacing + px) 1px;
+  background-repeat: repeat-x;
+}

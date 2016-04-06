@@ -1,0 +1,62 @@
+.content-full {
+  max-width: 700px;
+  margin-top: $pagePadding;
+
+  hr {
+    margin: $pagePadding * 2 0;
+  }
+
+  figure {
+    margin-top: $pagePadding;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    img {
+      border-radius: 2px;
+      background-color: $greyLight;
+
+      & + img {
+        margin-top: $pagePadding / 2;
+      }
+    }
+
+    &.half-tiles {
+
+      img {
+        display: inline-block;
+        width: calc(50% - #{$pagePadding / 4});
+
+        &:nth-of-type(odd) {
+          margin-right: $pagePadding / 2;
+        }
+      }
+    }
+  }
+
+  table {
+
+    tr {
+      border-bottom: 1px solid $greyLight;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        padding: $pagePadding / 2;
+        vertical-align: top;
+
+        &:first-child {
+          padding-left: 0;
+          font-weight: 700;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

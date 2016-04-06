@@ -1,0 +1,51 @@
+.white-text {
+  color: $white;
+
+  a {
+    border-bottom-color: rgba($white, 0.33);
+
+    &:hover {
+      border-bottom-color: $white;
+    }
+  }
+}
+
+.grey-text {
+  color: $grey;
+}
+
+.grey-dark-text {
+  color: $greyDark;
+}
+
+.column-list {
+  padding: 0;
+  @include prefix(columns, 3);
+  list-style-type: none;
+
+  li {
+    margin: 0;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: $greyLight;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    border: none;
+  }
+
+  & + img {
+    margin-top: $pagePadding / 2;
+  }
+}

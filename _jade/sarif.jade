@@ -1,0 +1,18 @@
+extends layout
+
+block append variables
+  - var title = "Sarif iPhone theme"
+  - var description = "Sarif was built to accomodate user customisation with a library of UI styles, widgets, icons, and more - all available from within Winterboard. Sarif also supports a huge range of popular third party apps and tweaks, ensuring a complete revamp of your device across the board."
+  - var slug = "sarif"
+  - var card = "sarif/sarif-01@2x.jpg"
+  - var frontPage = false
+
+block content
+
+  article.content-panels
+  
+    include content/_sarif
+    
+    .content-full
+    
+      include content/_sarif-full
