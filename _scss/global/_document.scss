@@ -111,7 +111,11 @@ hr {
   @include dotted-line;
 
   &.white-line {
-    @include dotted-line($color: white);
+    @include dotted-line($color: $white);
+  }
+
+  &.black-line {
+    @include dotted-line($color: $charcoal);
   }
 }
 

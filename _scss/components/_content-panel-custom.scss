@@ -11,16 +11,6 @@
   }
 }
 
-.post-svg-spinner-panel {
-  background-color: rgb(45,26,55);
-  @include linear-gradient(66, rgb(45,26,55), rgb(26,26,26));
-}
-
-.post-dotted-border-panel {
-  background-color: rgb(48,233,161);
-  @include linear-gradient(165, rgb(48,233,161), rgb(20,255,252));
-}
-
 .threads-network-panel {
   background-color: rgb(242,124,97);
   background-image: url('/img/grunge-bg@2x.png');
