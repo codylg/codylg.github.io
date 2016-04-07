@@ -1,12 +1,22 @@
 block variables
   - var classname = ""
+  - var smallpanel = false
 
-.content-panel(class="#{classname}-panel")
+if smallpanel
+  .content-panel.content-panel-small(class="#{classname}-panel")
+  
+    .content-panel-header
+      block header
 
-  .content-panel-header
-    block header
+      block description
+    
+else
+  .content-panel(class="#{classname}-panel")
 
-    block description
+    .content-panel-header
+      block header
 
-  block figure
-    figure
+      block description
+
+    block figure
+      figure

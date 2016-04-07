@@ -87,40 +87,40 @@
         padding: 0;
       }
     }
+  }
 
-    &.threads-network-panel {
+  .threads-network-panel {
 
-      figure {
+    figure {
 
-        img {
-          margin-top: 0;
-          margin-bottom: $pagePadding;
-        }
+      img {
+        margin-top: 0;
+        margin-bottom: $pagePadding;
       }
     }
+  }
 
-    &.ios86-panel {
+  .ios86-panel {
 
-      figure {
-        min-height: 50vw;
-      }
+    figure {
+      min-height: 50vw;
     }
+  }
 
-    &.sarif-panel {
+  .sarif-panel {
 
-      .content-panel-header {
-        background-color: rgba($charcoal, 0.33);
-      }
+    .content-panel-header {
+      background-color: rgba($charcoal, 0.33);
     }
+  }
 
-    &.axex-constructions-panel {
+  .axex-constructions-panel {
 
-      figure {
+    figure {
 
-        img {
-          margin-top: 0;
-          margin-bottom: $pagePadding;
-        }
+      img {
+        margin-top: 0;
+        margin-bottom: $pagePadding;
       }
     }
   }
@@ -168,6 +168,16 @@
 
     h2 {
       margin-top: 0;
+    }
+  }
+
+
+  .content-panel-small {
+    width: 100%;
+    min-height: 0;
+
+    & + .content-panel-small {
+      margin-left: 0;
     }
   }
 

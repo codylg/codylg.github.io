@@ -71,3 +71,17 @@
     }
   }
 }
+
+.content-panel-small {
+  @include flex(inline-flex);
+  width: calc(50% - #{$pagePadding / 2};
+  min-height: 360px;
+
+  & + .content-panel-small {
+    margin-left: $pagePadding;
+  }
+
+  .content-panel-header {
+    width: 100%;
+  }
+}
