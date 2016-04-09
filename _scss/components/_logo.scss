@@ -1,18 +1,10 @@
 svg.logo {
   width: 60px;
   height: 60px;
-  x: 0px;
-  y: 0px;
-  viewBox: 0 0 60 60;
 
   path.script {
-    fill: none;
     stroke: $charcoal;
     stroke-dasharray: 270;
-    stroke-width: 8px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
     @include prefix(animation, logo-stroke 2.33s ease-out 1);
     @include prefix(animation-delay, 0.66s);
     @include prefix(animation-fill-mode, backwards);
