@@ -1,8 +1,11 @@
 header.page-header {
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
   @include prefix(box-sizing, border-box);
+  overflow-x: hidden;
+  overflow-y: auto;
   width: $headerWidth;
   padding: $pagePadding;
   padding-right: 0;
