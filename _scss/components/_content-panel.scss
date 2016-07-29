@@ -4,8 +4,6 @@
   max-width: $pagePadding * 4 + $contentSidebarWidth + 700px;
   padding: $pagePadding;
   margin-left: $headerWidth;
-  @include prefix(animation, fade-and-slide 1s ease 1);
-  @include prefix(animation-fill-mode, both);
 }
 
 .content-panel {

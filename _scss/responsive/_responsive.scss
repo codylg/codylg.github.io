@@ -47,12 +47,8 @@
     width: 100vw;
     padding-right: $pagePadding;
 
-    & > div {
-      @include prefix(animation-delay, 0s);
-
-      p {
-        margin-top: 1.5em;
-      }
+    p {
+      margin-top: 1.5em;
     }
   }
 
@@ -61,7 +57,6 @@
     max-width: none;
     padding-top: 0;
     margin-left: 0;
-    @include prefix(animation-delay, 0.33s);
   }
 
   .content-full {

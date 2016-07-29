@@ -11,13 +11,7 @@ header.page-header {
   padding-right: 0;
   color: $charcoal;
 
-  & > div {
-    @include prefix(animation, fade-and-slide 1s ease 1);
-    @include prefix(animation-fill-mode, both);
-    @include prefix(animation-delay, 0.33s);
-
-    p {
-      margin-top: 2.5em;
-    }
+  p {
+    margin-top: 2.5em;
   }
 }
