@@ -1,21 +1,21 @@
 .content-panels {
   @include prefix(box-sizing, border-box);
-  width: calc(100vw - #{$headerWidth});
-  max-width: $pagePadding * 4 + $contentSidebarWidth + 700px;
-  padding: $pagePadding;
-  margin-left: $headerWidth;
+  width: calc(100vw - #{$header-width});
+  max-width: $page-padding * 4 + $content-sidebar-width + $content-width;
+  padding: $page-padding;
+  margin-left: $header-width;
 }
 
 .content-panel {
   @include prefix(box-sizing, border-box);
   @include flex;
   overflow: hidden;
-  min-height: calc(100vh - #{$pagePadding} * 3);
-  margin-bottom: $pagePadding;
-  font-size: 0;
+  min-height: calc(100vh - #{$page-padding} * 3);
+  margin-bottom: $page-padding;
   border-radius: $radius;
   background-color: $white;
-  @include prefix(box-shadow, 0 1px 3px rgba(0,0,0,0.2));
+  font-size: 0;
+  @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
 
   &:last-of-type {
     margin-bottom: 0;
@@ -24,15 +24,15 @@
   .content-panel-header,
   figure {
     @include prefix(box-sizing, border-box);
-    padding: $pagePadding;
+    padding: $page-padding;
   }
 
   .content-panel-header {
-    width: $contentSidebarWidth;
+    width: $content-sidebar-width;
     @include prefix(flex-shrink, 0);
 
     hr {
-      margin: $pagePadding 0;
+      margin: $page-padding 0;
     }
   }
 
@@ -43,11 +43,11 @@
 
       img {
         border-radius: $radius;
-        background-color: $greyLight;
-        @include prefix(box-shadow, 0 1px 3px rgba(0,0,0,0.2));
+        background-color: $grey-light;
+        @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
 
-        & + img {
-          margin-top: $pagePadding / 2;
+        + img {
+          margin-top: $page-padding / 2;
         }
       }
     }
@@ -56,14 +56,14 @@
   h1 > a {
 
     &[href^="#"] {
-      border-bottom: none;
+      border-bottom: 0;
 
       &::before {
         content: '';
         display: block;
-        height: $pagePadding * 3.25;
-        margin-top: $pagePadding * -3.25;
         visibility: hidden;
+        height: $page-padding * 3.25;
+        margin-top: $page-padding * -3.25;
         pointer-events: none;
       }
     }
@@ -72,11 +72,11 @@
 
 .content-panel-small {
   @include flex(inline-flex);
-  width: calc(50% - #{$pagePadding / 2};
+  width: calc(50% - #{$page-padding / 2});
   min-height: 360px;
 
-  & + .content-panel-small {
-    margin-left: $pagePadding;
+  + .content-panel-small {
+    margin-left: $page-padding;
   }
 
   .content-panel-header {

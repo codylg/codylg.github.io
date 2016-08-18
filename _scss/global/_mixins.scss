@@ -1,3 +1,6 @@
+// Vendor prefix required for some mixins
+// scss-lint:disable VendorPrefix
+
 @mixin prefix($property, $values...) {
   -webkit-#{$property}: #{$values};
   -moz-#{$property}: #{$values};
@@ -26,16 +29,19 @@
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
-      @content;
+    @content;
   }
+
   @-moz-keyframes #{$name} {
-      @content;
+    @content;
   }
+
   @-ms-keyframes #{$name} {
-      @content;
+    @content;
   }
+
   @keyframes #{$name} {
-      @content;
+    @content;
   }
 }
 
@@ -46,11 +52,13 @@
   background-image: linear-gradient(#{$angle}deg, $colors);
 }
 
-$dottedLineSpacing: 6;
+$dotted-line-spacing: 6;
 
 @mixin dotted-line($color: $grey, $alignment: bottom) {
-  background-image: linear-gradient(to right, $color 0%, $color (100% / $dottedLineSpacing), transparent (100% / $dottedLineSpacing));
+  background-image: linear-gradient(to right, $color 0%, $color (100% / $dotted-line-spacing), transparent (100% / $dotted-line-spacing));
   background-position: 0 $alignment;
-  background-size: ($dottedLineSpacing + px) 1px;
+  background-size: ($dotted-line-spacing + px) 1px;
   background-repeat: repeat-x;
 }
+
+// scss-lint:enable VendorPrefix

@@ -6,8 +6,8 @@ header.page-header {
   @include prefix(box-sizing, border-box);
   overflow-x: hidden;
   overflow-y: auto;
-  width: $headerWidth;
-  padding: $pagePadding;
+  width: $header-width;
+  padding: $page-padding;
   padding-right: 0;
   color: $charcoal;
 

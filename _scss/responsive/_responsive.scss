@@ -1,7 +1,7 @@
 @media (min-width: 1750px) {
 
   header.page-header {
-    left: calc(50% - #{($pagePadding * 4 + $contentSidebarWidth + 700px) / 2 + $headerWidth})
+    left: calc(50% - #{($page-padding * 4 + $content-sidebar-width + $content-width) / 2 + $header-width});
   }
 
   .content-panels {
@@ -15,25 +15,25 @@
 @media (max-width: 1260px) and (min-width: 1024px) {
 
   header.page-header {
-    width: $headerWidth - $pagePadding;
+    width: $header-width - $page-padding;
   }
 
   .content-panels {
-    width: calc(100vw - #{$headerWidth - $pagePadding});
-    padding-right: $pagePadding / 2;
-    margin-left: $headerWidth - $pagePadding;
+    width: calc(100vw - #{$header-width - $page-padding});
+    padding-right: $page-padding / 2;
+    margin-left: $header-width - $page-padding;
   }
 
   .content-panel {
 
     .content-panel-header {
-      width: $contentSidebarWidth - $pagePadding * 2;
-      padding-right: $pagePadding / 2;
+      width: $content-sidebar-width - $page-padding * 2;
+      padding-right: $page-padding / 2;
     }
 
     figure {
-      padding-right: $pagePadding / 2;
-      padding-left: $pagePadding / 2;
+      padding-right: $page-padding / 2;
+      padding-left: $page-padding / 2;
     }
   }
 }
@@ -45,7 +45,7 @@
   header.page-header {
     position: relative;
     width: 100vw;
-    padding-right: $pagePadding;
+    padding-right: $page-padding;
 
     p {
       margin-top: 1.5em;
@@ -90,7 +90,7 @@
 
       img {
         margin-top: 0;
-        margin-bottom: $pagePadding;
+        margin-bottom: $page-padding;
       }
     }
   }
@@ -115,7 +115,7 @@
 
       img {
         margin-top: 0;
-        margin-bottom: $pagePadding;
+        margin-bottom: $page-padding;
       }
     }
   }
@@ -130,7 +130,7 @@
   }
 
   header.page-header {
-    padding: $pagePadding / 2;
+    padding: $page-padding / 2;
   }
 
   .content-panels {
@@ -144,8 +144,8 @@
 
     .content-panel-header,
     figure {
-      padding-right: $pagePadding / 2;
-      padding-left: $pagePadding / 2;
+      padding-right: $page-padding / 2;
+      padding-left: $page-padding / 2;
     }
 
     figure.image-gallery {
@@ -155,7 +155,7 @@
         border-radius: 0;
         @include prefix(box-shadow, none);
 
-        & + img {
+        + img {
           margin-top: 0;
         }
       }
@@ -171,7 +171,7 @@
     width: 100%;
     min-height: 0;
 
-    & + .content-panel-small {
+    + .content-panel-small {
       margin-left: 0;
     }
   }
@@ -184,12 +184,12 @@
     p,
     ol,
     ul {
-      margin-left: $pagePadding / 2;
-      margin-right: $pagePadding / 2;
+      margin-right: $page-padding / 2;
+      margin-left: $page-padding / 2;
     }
 
     h2 {
-      margin-top: $pagePadding * 1.5;
+      margin-top: $page-padding * 1.5;
     }
 
     p {
@@ -209,7 +209,7 @@
       img {
         border-radius: 0;
 
-        & + img {
+        + img {
           margin-top: 0;
         }
       }
@@ -235,11 +235,11 @@
           display: block;
 
           &:first-child {
-            padding-left: $pagePadding / 2;
+            padding-left: $page-padding / 2;
           }
 
           &:last-child {
-            padding-right: $pagePadding / 2;
+            padding-right: $page-padding / 2;
           }
         }
       }
@@ -252,7 +252,7 @@
       border-radius: 0;
     }
 
-    & + img {
+    + img {
       margin-top: 0;
     }
   }

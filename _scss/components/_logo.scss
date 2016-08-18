@@ -20,7 +20,9 @@ svg.logo {
 @include keyframes(logo-stroke) {
   0% {
     stroke-dashoffset: 270;
-  } 100% {
+  }
+
+  100% {
     stroke-dashoffset: 0;
   }
 }

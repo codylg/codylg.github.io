@@ -3,32 +3,32 @@
 [class*=" button-"] {
   display: inline-block;
   @include prefix(box-sizing, border-box);
-  padding: 1em;
   vertical-align: middle;
+  padding: 1em;
+  border: 0;
+  border-radius: $radius * 2;
+  background-color: $grey-light;
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1em;
   text-align: center;
-  color: $greyDark;
+  color: $grey-dark;
   @include font-antialias;
-  border: none;
-  border-radius: $radius * 2;
   outline: none;
-  background-color: $greyLight;
   cursor: pointer;
   @include prefix(appearance, none);
   @include transition;
   @include prefix(transition-property, color, background-color);
 
-  & + .button,
-  & + [class^="button-"],
-  & + [class*=" button-"] {
+  + .button,
+  + [class^="button-"],
+  + [class*=" button-"] {
     margin-left: 0.5em;
   }
 
   &:focus,
   &:hover {
-    background-color: $offWhite;
+    background-color: $off-white;
   }
 
   &.button-full {
@@ -36,22 +36,22 @@
   }
 
   &.button-black {
-    color: $white;
     background-color: $charcoal;
+    color: $white;
 
     &:focus,
     &:hover {
-      color: $greyLight;
+      color: $grey-light;
     }
   }
 
   &.button-white {
-    color: $charcoal;
     background-color: $white;
+    color: $charcoal;
 
     &:focus,
     &:hover {
-      background-color: $greyLight;
+      background-color: $grey-light;
     }
   }
 }
