@@ -1,0 +1,115 @@
+@import '../global/mixins';
+
+$font: monospace;
+$page-padding: 40px;
+$radius: 3px;
+
+$yellowed-page: rgb(250, 250, 247);
+$white-page: rgb(252, 252, 251);
+$type: rgb(66, 60, 60);
+$faded-type: rgb(106, 100, 100);
+
+body {
+  background-color: $yellowed-page;
+  color: $type;
+}
+
+h1 {
+  font-family: "freight-big-pro", monospace;
+  font-size: 4rem;
+}
+
+p {
+  font-family: "freight-text-pro", monospace;
+  font-size: 1.6rem;
+  line-height: 1.6em;
+}
+
+small {
+  font-family: "freight-micro-pro", monospace;
+  font-size: 1.1rem;
+}
+
+hr {
+  margin: 3em 0;
+}
+
+#stories {
+  display: block;
+  padding: $page-padding;
+}
+
+.page {
+  @include prefix(box-sizing, border-box);
+  display: block;
+  max-width: 720px;
+  padding: ($page-padding * 2) ($page-padding * 3);
+  margin: 0 auto;
+  border-radius: $radius;
+  background-color: $white-page;
+  @include prefix(box-shadow, 0 0 20px rgba(0, 0, 0, 0.02), 0 2px 2px rgba(0, 0, 0, 0.033));
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  + .page {
+    margin-top: $page-padding;
+  }
+
+  header {
+
+    p {
+      @include flex;
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: $faded-type;
+
+      *:last-child {
+        @include prefix(flex-grow, 1);
+        text-align: right;
+      }
+    }
+  }
+
+  p:not(:first-of-type)::first-letter {
+    margin-left: 1.5em;
+  }
+
+  footer {
+    text-align: center;
+    color: $faded-type;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  #stories {
+    padding: 0;
+  }
+
+  .page {
+    padding: $page-padding;
+    border-radius: 0;
+    @include prefix(box-shadow, none);
+
+    + .page {
+      margin-top: 0;
+      border-top: 1px solid $faded-type;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+
+  .page {
+    padding-right: $page-padding / 2;
+    padding-left: $page-padding / 2;
+  }
+}
