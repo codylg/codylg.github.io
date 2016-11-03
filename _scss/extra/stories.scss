@@ -23,12 +23,6 @@ h1 {
   font-size: 6.4rem;
 }
 
-h2 {
-  font-family: "freight-text-pro", monospace;
-  font-weight: 700;
-  font-size: 2.8rem;
-}
-
 p {
   font-family: "freight-text-pro", monospace;
   font-size: 1.6rem;
@@ -154,15 +148,6 @@ hr {
     p {
       @include prefix(animation-delay, 1.1s);
     }
-  }
-}
-
-.chapter {
-  margin-bottom: 2em;
-  counter-increment: chapter;
-
-  &::after {
-    content: ' ' counter(chapter);
   }
 }
 
