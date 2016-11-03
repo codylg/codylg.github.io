@@ -12,6 +12,7 @@ $faded-type: rgb(106, 100, 100);
 body {
   background-color: $yellowed-page;
   color: $type;
+  counter-reset: page;
 }
 
 h1 {
@@ -48,6 +49,7 @@ hr {
   border-radius: $radius;
   background-color: $white-page;
   @include prefix(box-shadow, 0 0 20px rgba(0, 0, 0, 0.02), 0 2px 2px rgba(0, 0, 0, 0.033));
+  counter-increment: page;
 
   > *:first-child {
     margin-top: 0;
@@ -74,6 +76,11 @@ hr {
         text-align: right;
       }
     }
+
+    small {
+      margin-right: 6.66em;
+      letter-spacing: 0.1em;
+    }
   }
 
   p:not(:first-of-type)::first-letter {
@@ -83,6 +90,10 @@ hr {
   footer {
     text-align: center;
     color: $faded-type;
+
+    .page-number::before {
+      content: counter(page);
+    }
   }
 }
 
