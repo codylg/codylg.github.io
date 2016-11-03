@@ -117,7 +117,7 @@ hr {
   @include flex;
   @include prefix(align-items, center);
   min-height: calc(100vh - 180px);
-  padding: 40px;
+  padding: $page-padding;
   text-align: center;
 
   .title-container {
@@ -198,6 +198,10 @@ hr {
 
 @media (max-width: 768px) {
 
+  h1 {
+    font-size: 4.6rem;
+  }
+
   #stories {
     padding: 0;
   }
@@ -207,16 +211,25 @@ hr {
     border-radius: 0;
     @include prefix(box-shadow, none);
 
-    + .page {
+    &:not(:first-child) {
       margin-top: 0;
       border-top: 1px solid $faded-type;
     }
+  }
+
+  .end-page {
+    display: none;
   }
 }
 
 @media (max-width: 420px) {
 
-  .page {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .page,
+  .title-page {
     padding-right: $page-padding / 2;
     padding-left: $page-padding / 2;
   }
