@@ -6,18 +6,27 @@ $radius: 3px;
 
 $yellowed-page: rgb(250, 250, 247);
 $white-page: rgb(252, 252, 251);
+$white: rgb(255, 255, 255);
 $type: rgb(66, 60, 60);
 $faded-type: rgb(106, 100, 100);
 
 body {
   background-color: $yellowed-page;
+  text-shadow: 1px 1px $white;
   color: $type;
-  counter-reset: page;
+  counter-reset: page chapter;
 }
 
 h1 {
-  font-family: "freight-big-pro", monospace;
-  font-size: 4rem;
+  font-family: "freight-display-pro", monospace;
+  font-weight: 100;
+  font-size: 6.4rem;
+}
+
+h2 {
+  font-family: "freight-text-pro", monospace;
+  font-weight: 700;
+  font-size: 2.8rem;
 }
 
 p {
@@ -94,6 +103,36 @@ hr {
     .page-number::before {
       content: counter(page);
     }
+  }
+}
+
+.title-page {
+  @include prefix(box-sizing, border-box);
+  min-height: calc(100vh - 180px);
+  padding: 40px;
+  text-align: center;
+
+  .title-container {
+    max-width: 720px;
+    margin: 0 auto;
+
+    hr::before {
+      content: '~';
+      position: relative;
+      top: -0.43em;
+      padding: 0 0.33em;
+      background-color: $yellowed-page;
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.chapter {
+  margin-bottom: 2em;
+  counter-increment: chapter;
+
+  &::after {
+    content: ' ' counter(chapter);
   }
 }
 
