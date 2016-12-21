@@ -148,15 +148,22 @@
       padding-left: $page-padding / 2;
     }
 
-    figure.image-gallery {
-      padding: 0;
+    figure {
 
-      img {
-        border-radius: 0;
-        @include prefix(box-shadow, none);
+      &.image-gallery,
+      &.image-gallery-small {
+        padding: 0;
 
-        + img {
-          margin-top: 0;
+        img {
+          display: block;
+          width: 100%;
+          margin: 0;
+          border-radius: 0;
+          @include prefix(box-shadow, none);
+
+          + img {
+            margin-top: 0;
+          }
         }
       }
     }
