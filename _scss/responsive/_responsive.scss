@@ -170,6 +170,7 @@
   .content-panel-small {
     width: 100%;
     min-height: 0;
+    border-bottom: 1px solid $grey-light;
 
     + .content-panel-small {
       margin-left: 0;
