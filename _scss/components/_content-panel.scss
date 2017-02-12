@@ -18,6 +18,20 @@
   font-size: 0;
   @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
 
+  &:first-child,
+  &:nth-child(2) {
+    @include prefix(animation, fade-in 1s ease-out 1);
+    @include prefix(animation-fill-mode, both);
+  }
+
+  &:first-child {
+    @include prefix(animation-delay, 0.33s);
+  }
+
+  &:nth-child(2) {
+    @include prefix(animation-delay, 0.66s);
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -112,5 +126,15 @@
 
   .content-panel-header {
     width: 100%;
+  }
+}
+
+@keyframes(fade-in) {
+  0% {
+    opacity: 0;
+    @include prefix(transform, translateY(10px) scale(0.98));
+  } 100% {
+    opacity: 1;
+    @include prefix(transform, none);
   }
 }

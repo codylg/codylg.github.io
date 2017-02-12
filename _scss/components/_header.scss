@@ -13,5 +13,6 @@ header.page-header {
 
   p {
     margin-top: 2.5em;
+    @include prefix(animation, fade-in 1s ease-out 1);
   }
 }
