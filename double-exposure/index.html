@@ -36,10 +36,11 @@
     <script type="text/javascript" src="/double-exposure/double-exposure.js" async></script>
   </head>
   <body>
-    <div id="double-exposure" onmousemove="showCoords(event)">
-      <figure><img id="bokeh1" src="bokeh1.jpg"><img id="bokeh2" src="bokeh2.jpg"><img id="bokeh3" src="bokeh3.jpg"><img id="bokeh4" src="bokeh4.jpg"><img id="exposure" src="exposure.jpg"><img id="base" src="base.jpg">
-      </figure>
-      <p id="demo">hello</p>
+    <div id="double-exposure">
+      <div id="double-exposure-wrapper" onmousemove="addTransform(event)">
+        <figure><img id="bokeh1" src="bokeh1.jpg"><img id="bokeh2" src="bokeh2.jpg"><img id="bokeh3" src="bokeh3.jpg"><img id="bokeh4" src="bokeh4.jpg"><img id="exposure" src="exposure.jpg"><img id="base" src="base.jpg"></figure>
+      </div>
+      <p id="coords"></p>
     </div>
   </body>
 </html>

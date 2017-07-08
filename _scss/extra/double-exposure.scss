@@ -12,29 +12,44 @@ body {
 }
 
 #double-exposure {
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  padding: 10vh;
+  perspective: 2000px;
+
+  #double-exposure-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 80vw;
+    height: 80vw;
+    max-width: 80vh;
+    max-height: 80vh;
+    margin: 0 auto;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    transition: transform ease 0.05s;
+  }
+
 
   figure {
-    position: relative;
-    width: 100vw;
-    height: 100vw;
-    max-width: 100vh;
-    max-height: 100vh;
-    margin: 0 auto;
-    // background-color: red;
-    mask-image: url('/double-exposure/mask.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: url('/double-exposure/mask.jpg');
     mask-position: center center;
     mask-repeat: no-repeat;
     mask-size: cover;
   }
 
   img {
-    // display: none;
     position: absolute;
     max-width: 100%;
     max-height: 100%;
     transform-origin: center center;
+    transition: transform ease 0.05s;
   }
 
   #base {
@@ -58,11 +73,39 @@ body {
     z-index: 3;
     mix-blend-mode: screen;
   }
+
+  // $gloss-shadow-size: 500px;
+
+  // #gloss,
+  // #shadow {
+  //   position: absolute;
+  // }
+
+  // #gloss {
+  //   top: $gloss-shadow-size / -2;
+  //   left: $gloss-shadow-size / -2;
+  //   width: $gloss-shadow-size;
+  //   height: $gloss-shadow-size;
+  //   background-image: radial-gradient(circle closest-side at center, rgba(255,255,255,1), rgba(255,255,255,0));
+  //   opacity: 0.66;
+  //   mix-blend-mode: soft-light;
+  // }
+
+  // #shadow {
+  //   // top: calc(100% - #{$gloss-shadow-size / -2});
+  //   // left: calc(100% - #{$gloss-shadow-size / -2});
+  //   top: calc(100% - #{$gloss-shadow-size / -2});
+  //   left: calc(100% - #{$gloss-shadow-size / -2});
+  //   width: $gloss-shadow-size;
+  //   height: $gloss-shadow-size;
+  //   z-index: -1;
+  //   background-image: radial-gradient(circle closest-side at center, rgba(0,0,0,1), rgba(0,0,0,0));
+  // }
 }
 
-#demo {
+#coords {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 12px;
+  // font-size: 12px;
 }
