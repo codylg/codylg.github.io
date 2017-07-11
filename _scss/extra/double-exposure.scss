@@ -18,19 +18,32 @@ body {
   padding: 10vh;
   perspective: 2000px;
 
-  #double-exposure-wrapper {
-    position: relative;
-    overflow: hidden;
+  #double-exposure-outer {
     width: 80vw;
     height: 80vw;
     max-width: 80vh;
     max-height: 80vh;
     margin: 0 auto;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    transition: transform ease 0.05s;
+
+    &:hover #double-exposure-wrapper,
+    &:hover img {
+      transition-duration: 0.05s;
+    }
   }
 
+  #double-exposure-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+  }
+
+  #double-exposure-wrapper,
+  img {
+    transition: transform ease 0.33s;
+  }
 
   figure {
     position: absolute;
@@ -49,7 +62,6 @@ body {
     max-width: 100%;
     max-height: 100%;
     transform-origin: center center;
-    transition: transform ease 0.05s;
   }
 
   #base {
@@ -75,12 +87,12 @@ body {
   }
 
   // $gloss-shadow-size: 500px;
-
+  //
   // #gloss,
   // #shadow {
   //   position: absolute;
   // }
-
+  //
   // #gloss {
   //   top: $gloss-shadow-size / -2;
   //   left: $gloss-shadow-size / -2;

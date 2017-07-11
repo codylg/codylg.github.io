@@ -30,11 +30,11 @@ function addTransform(event) {
   // document.getElementById("shadow").style.transform = "translate(" + wrapperX * 1 + "px, " + wrapperY * 1 + "px)";
 }
 
-// function clearTransform() {
-//   document.getElementById("double-exposure-wrapper").style.transform = "none";
-//   document.getElementById("exposure").style.transform = "none";
-//   document.getElementById("bokeh1").style.transform = "none";
-//   document.getElementById("bokeh2").style.transform = "none";
-//   document.getElementById("bokeh3").style.transform = "none";
-//   document.getElementById("bokeh4").style.transform = "none";
-// }
+function clearTransform() {
+  document.getElementById("double-exposure-wrapper").style.transform = "none";
+  document.getElementById("exposure").style.transform = "none";
+  document.getElementById("bokeh1").style.transform = "none";
+  document.getElementById("bokeh2").style.transform = "none";
+  document.getElementById("bokeh3").style.transform = "none";
+  document.getElementById("bokeh4").style.transform = "none";
+}

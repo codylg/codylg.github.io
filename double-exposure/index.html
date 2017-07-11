@@ -37,8 +37,10 @@
   </head>
   <body>
     <div id="double-exposure">
-      <div id="double-exposure-wrapper" onmousemove="addTransform(event)">
-        <figure><img id="bokeh1" src="bokeh1.jpg"><img id="bokeh2" src="bokeh2.jpg"><img id="bokeh3" src="bokeh3.jpg"><img id="bokeh4" src="bokeh4.jpg"><img id="exposure" src="exposure.jpg"><img id="base" src="base.jpg"></figure>
+      <div id="double-exposure-outer" onmousemove="addTransform(event)" onmouseout="clearTransform()">
+        <div id="double-exposure-wrapper">
+          <figure><img id="bokeh1" src="bokeh1.jpg"><img id="bokeh2" src="bokeh2.jpg"><img id="bokeh3" src="bokeh3.jpg"><img id="bokeh4" src="bokeh4.jpg"><img id="exposure" src="exposure.jpg"><img id="base" src="base.jpg"></figure>
+        </div>
       </div>
       <p id="coords"></p>
     </div>

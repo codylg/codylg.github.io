@@ -15,16 +15,16 @@ block header
 block content
 
   #double-exposure
-    //- #double-exposure-wrapper(onmousemove="addTransform(event)", onmouseout="clearTransform()")
-    #double-exposure-wrapper(onmousemove="addTransform(event)")
-      figure
-        img#bokeh1(src="bokeh1.jpg")
-        img#bokeh2(src="bokeh2.jpg")
-        img#bokeh3(src="bokeh3.jpg")
-        img#bokeh4(src="bokeh4.jpg")
-        img#exposure(src="exposure.jpg")
-        img#base(src="base.jpg")
-      //- #gloss
-      //- #shadow
+    #double-exposure-outer(onmousemove="addTransform(event)", onmouseout="clearTransform()")
+      #double-exposure-wrapper
+        figure
+          img#bokeh1(src="bokeh1.jpg")
+          img#bokeh2(src="bokeh2.jpg")
+          img#bokeh3(src="bokeh3.jpg")
+          img#bokeh4(src="bokeh4.jpg")
+          img#exposure(src="exposure.jpg")
+          img#base(src="base.jpg")
+        //- #gloss
+        //- #shadow
       
     p#coords
