@@ -2,6 +2,13 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 var wrapper = document.getElementById("double-exposure-wrapper");
 
+function calcWindowSize() {
+  w = window.innerWidth;
+  h = window.innerHeight;
+}
+
+window.onresize = calcWindowSize;
+
 function addTransform(event) {
   var x = event.clientX;
   var y = event.clientY;
