@@ -7,7 +7,7 @@ $white: rgb(255, 255, 255);
 $charcoal: rgb(66, 60, 60);
 
 body {
-  background-color: $white;
+  background-color: rgb(255,255,255);
   color: $charcoal;
 }
 
@@ -25,20 +25,9 @@ body {
     perspective: 2000px;
 
     &:hover #double-exposure-wrapper,
+    &:hover #gloss,
     &:hover img {
       transition-duration: 0.05s;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 110%;
-      background-image: radial-gradient(circle closest-side at center, rgba(0,0,0,0.66), rgba(0,0,0,0));
-      border-radius: 50%;
     }
   }
 
@@ -95,31 +84,15 @@ body {
     mix-blend-mode: screen;
   }
 
-  // $gloss-shadow-size: 500px;
-  //
-  // #gloss,
-  // #shadow {
-  //   position: absolute;
-  // }
-  //
-  // #gloss {
-  //   top: $gloss-shadow-size / -2;
-  //   left: $gloss-shadow-size / -2;
-  //   width: $gloss-shadow-size;
-  //   height: $gloss-shadow-size;
-  //   background-image: radial-gradient(circle closest-side at center, rgba(255,255,255,1), rgba(255,255,255,0));
-  //   opacity: 0.66;
-  //   mix-blend-mode: soft-light;
-  // }
-
-  // #shadow {
-  //   // top: calc(100% - #{$gloss-shadow-size / -2});
-  //   // left: calc(100% - #{$gloss-shadow-size / -2});
-  //   top: calc(100% - #{$gloss-shadow-size / -2});
-  //   left: calc(100% - #{$gloss-shadow-size / -2});
-  //   width: $gloss-shadow-size;
-  //   height: $gloss-shadow-size;
-  //   z-index: -1;
-  //   background-image: radial-gradient(circle closest-side at center, rgba(0,0,0,1), rgba(0,0,0,0));
-  // }
+  #gloss {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66%;
+    background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.25));
+    opacity: 0;
+    transition: opacity ease 0.33s;
+  }
 }

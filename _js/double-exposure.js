@@ -26,8 +26,7 @@ function addTransform(event) {
   document.getElementById("bokeh-2").style.transform = "translate(" + wrapperPx / -2 + "px, " + wrapperPy / -3 + "px)";
   document.getElementById("bokeh-3").style.transform = "translate(" + wrapperPx / -3 + "px, " + wrapperPy / -4 + "px)";
   document.getElementById("bokeh-4").style.transform = "translate(" + wrapperPx / -4 + "px, " + wrapperPy / -5 + "px)";
-  // document.getElementById("gloss").style.transform = "translate(" + wrapperX + "px, " + wrapperY + "px)";
-  // document.getElementById("shadow").style.transform = "translate(" + wrapperX * 1 + "px, " + wrapperY * 1 + "px)";
+  document.getElementById("gloss").style.opacity = wrapperPy / -100;
 }
 
 function clearTransform() {
@@ -37,4 +36,5 @@ function clearTransform() {
   document.getElementById("bokeh-2").style.transform = "none";
   document.getElementById("bokeh-3").style.transform = "none";
   document.getElementById("bokeh-4").style.transform = "none";
+  document.getElementById("gloss").style.opacity = 0;
 }
