@@ -14,6 +14,12 @@ block header
 
 block content
 
+  header
+    div
+      h1 Double exposure depth experiment
+      h2 by 
+        a(href="//clg.name") Cody Lindsay Gordon
+
   #double-exposure
     #double-exposure-outer(onmousemove="addTransform(event)", onmouseout="clearTransform()")
       #double-exposure-wrapper
@@ -25,3 +31,12 @@ block content
           img#bokeh-4(src="bokeh-4@2x.jpg")
           img#exposure(src="exposure@2x.jpg")
         #gloss
+
+  //- footer
+  //-   nav
+  //-     p.prev
+  //-       &larr; 
+  //-       a(href="./2") Previous exposure
+  //-     p.next
+  //-       a(href="./2") Next exposure
+  //-       &nbsp;&rarr;
