@@ -1,0 +1,18 @@
+extends dede
+
+block append variables
+  - var slug = "dede/2"
+  - var deClass = "second"
+
+block double-exposure-figure
+  img#bokeh-1(src="bokeh-1@2x.jpg")
+  img#bokeh-2(src="bokeh-2@2x.jpg")
+  img#bokeh-3(src="bokeh-3@2x.jpg")
+  img#bokeh-4(src="bokeh-4@2x.jpg")
+  img#exposure(src="exposure@2x.jpg")
+
+block double-exposure-previous
+  a(href="../") Previous exposure
+
+block double-exposure-previous-next
+  a(href="../") Next exposure

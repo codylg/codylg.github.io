@@ -16,7 +16,7 @@ footer {
   box-sizing: border-box;
   height: 10vh;
   width: 100%;
-  padding: 0 10vh;
+  padding: 0 5vh;
 
   > * {
     display: flex;
@@ -152,5 +152,13 @@ footer {
     background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.25));
     opacity: 0;
     transition: opacity ease 0.33s;
+  }
+
+  &.second {
+    background-color: rgb(255, 237, 182);
+
+    figure {
+      mask-image: url('/dede/2/mask@2x.png');
+    }
   }
 }

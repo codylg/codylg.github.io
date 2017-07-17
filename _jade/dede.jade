@@ -5,6 +5,7 @@ block append variables
   - var description = "This is a test"
   - var slug = "dede"
   - var frontPage = false
+  - var deClass = "first"
   
 block headExtra
   link(rel="stylesheet", href="/dede/dede.css", async)
@@ -20,23 +21,26 @@ block content
       h2 by 
         a(href="//clg.name") Cody Lindsay Gordon
 
-  #double-exposure
+  #double-exposure(class="#{deClass}")
     #double-exposure-outer(onmousemove="addTransform(event)", onmouseout="clearTransform()")
       #double-exposure-wrapper
         img#base(src="base@2x.jpg")
         figure
-          img#bokeh-1(src="bokeh-1@2x.jpg")
-          img#bokeh-2(src="bokeh-2@2x.jpg")
-          img#bokeh-3(src="bokeh-3@2x.jpg")
-          img#bokeh-4(src="bokeh-4@2x.jpg")
-          img#exposure(src="exposure@2x.jpg")
+          block double-exposure-figure
+            img#bokeh-1(src="bokeh-1@2x.jpg")
+            img#bokeh-2(src="bokeh-2@2x.jpg")
+            img#bokeh-3(src="bokeh-3@2x.jpg")
+            img#bokeh-4(src="bokeh-4@2x.jpg")
+            img#exposure(src="exposure@2x.jpg")
         #gloss
 
-  //- footer
-  //-   nav
-  //-     p.prev
-  //-       &larr; 
-  //-       a(href="./2") Previous exposure
-  //-     p.next
-  //-       a(href="./2") Next exposure
-  //-       &nbsp;&rarr;
+  footer
+    nav
+      p.prev
+        &larr; 
+        block double-exposure-previous
+          a(href="./2") Previous exposure
+      p.next
+        block double-exposure-previous-next
+          a(href="./2") Next exposure
+        &nbsp;&rarr;
