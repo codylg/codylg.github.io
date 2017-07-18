@@ -14,11 +14,14 @@ function handleOrientation(event) {
   x += 90;
   y += 90;
 
-  output.innerHTML  = "beta : " + x + "\n";
-  output.innerHTML += "gamma: " + y + "\n";
+  // Move to range of 0 - 100
+  x = x * (100 / 180);
+  y = y * (100 / 180);
+
+  output.innerHTML  = "x : " + x + "\n";
+  output.innerHTML += "y: " + y + "\n";
+
+  document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + x / 10 + "deg) rotateX(" + y / -10 + "deg)";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
-
-output.innerHTML  = "beta : \n";
-output.innerHTML += "gamma: \n";
