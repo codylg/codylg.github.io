@@ -18,10 +18,10 @@ function handleOrientation(event) {
   x = x / 0.9;
   y = y / 0.9;
 
-  output.innerHTML  = "x : " + x + "\n";
+  output.innerHTML  = "x: " + x + "\n";
   output.innerHTML += "y: " + y + "\n";
 
-  document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + y / 10 + "deg) rotateX(" + x / -10 + "deg)";
+  document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + y + "deg) rotateX(" + x * -1 + "deg)";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
