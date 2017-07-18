@@ -11,17 +11,17 @@ function handleOrientation(event) {
 
   // To make computation easier we shift the range of
   // x and y to [0,180]
-  x += 90;
-  y += 90;
+  // x += 90;
+  // y += 90;
 
-  // Move to range of 0 - 100
-  x = x * (100 / 180);
-  y = y * (100 / 180);
+  // Move to range of -100 to 100
+  x = x / 0.9;
+  y = y / 0.9;
 
   output.innerHTML  = "x : " + x + "\n";
   output.innerHTML += "y: " + y + "\n";
 
-  document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + x / 10 + "deg) rotateX(" + y / -10 + "deg)";
+  document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + y / 10 + "deg) rotateX(" + x / -10 + "deg)";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
