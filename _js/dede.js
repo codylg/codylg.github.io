@@ -38,3 +38,13 @@ function clearTransform() {
   document.getElementById("depth-4").style.transform = "none";
   document.getElementById("gloss").style.opacity = 0;
 }
+
+function handleOrientation(event) {
+  var x = event.beta;
+  var y = event.gamma;
+
+  document.getElementById("demo-x").innerHTML = x;
+  document.getElementById("demo-y").innerHTML = y;
+}
+
+window.addEventListener("deviceorientation", handleOrientation, true);
