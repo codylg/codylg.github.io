@@ -39,12 +39,16 @@ function clearTransform() {
   document.getElementById("gloss").style.opacity = 0;
 }
 
+
+
+var output = document.querySelector('.output');
+
 function handleOrientation(event) {
   var x = event.beta;
   var y = event.gamma;
 
-  document.getElementById("demo-x").innerHTML = x;
-  document.getElementById("demo-y").innerHTML = y;
+  output.innerHTML  = "x : " + x + "\n";
+  output.innerHTML += "y: " + y + "\n";
 }
 
-window.addEventListener("deviceorientation", handleOrientation, true);
+window.addEventListener('deviceorientation', handleOrientation);
