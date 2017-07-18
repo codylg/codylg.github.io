@@ -82,11 +82,11 @@ footer {
     margin: 0 auto;
     perspective: 2000px;
 
-    &:hover #double-exposure-wrapper,
-    &:hover #gloss,
-    &:hover img {
-      transition-duration: 0.05s;
-    }
+    // &:hover #double-exposure-wrapper,
+    // &:hover #gloss,
+    // &:hover img {
+    //   transition-duration: 0.05s;
+    // }
   }
 
   #double-exposure-wrapper {
@@ -98,10 +98,10 @@ footer {
     border-radius: 15px;
   }
 
-  #double-exposure-wrapper,
-  img {
-    transition: transform ease 0.33s;
-  }
+  // #double-exposure-wrapper,
+  // img {
+  //   transition: transform ease 0.33s;
+  // }
 
   #base {
     position: relative;
