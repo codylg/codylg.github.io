@@ -1,0 +1,46 @@
+extends layout
+
+block append variables
+  - var title = "Double exposure depth experiment"
+  - var description = "This is a test"
+  - var slug = "dede"
+  - var frontPage = false
+  - var deClass = "first"
+  
+block headExtra
+  link(rel="stylesheet", href="/dede/dede.css", async)
+  script(type="text/javascript", src="/dede/dede.js", async)
+
+block header
+
+block content
+
+  header
+    div
+      h1 Double exposure depth experiment
+      h2 Made by 
+        a(href="//clg.name") Cody Lindsay Gordon
+
+  #double-exposure(class="#{deClass}")
+    #double-exposure-outer(onmousemove="addTransform(event)", onmouseout="clearTransform()")
+      #double-exposure-wrapper
+        img#base(src="base@2x.jpg")
+        figure
+          block double-exposure-figure
+            img#depth-1(src="bokeh-1@2x.jpg")
+            img#depth-2(src="bokeh-2@2x.jpg")
+            img#depth-3(src="bokeh-3@2x.jpg")
+            img#depth-4(src="bokeh-4@2x.jpg")
+            img#exposure(src="exposure@2x.jpg")
+        #gloss
+
+  footer
+    nav
+      p.prev
+        &larr; 
+        block double-exposure-previous
+          a(href="./2") Previous exposure
+      p.next
+        block double-exposure-previous-next
+          a(href="./2") Next exposure
+        &nbsp;&rarr;
