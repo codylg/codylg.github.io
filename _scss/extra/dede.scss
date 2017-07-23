@@ -82,11 +82,11 @@ footer {
     margin: 0 auto;
     perspective: 2000px;
 
-    // &:hover #double-exposure-wrapper,
-    // &:hover #gloss,
-    // &:hover img {
-    //   transition-duration: 0.05s;
-    // }
+    &:hover #double-exposure-wrapper,
+    &:hover #gloss,
+    &:hover img {
+      transition-duration: 0.05s;
+    }
   }
 
   #double-exposure-wrapper {
@@ -98,10 +98,10 @@ footer {
     border-radius: 15px;
   }
 
-  // #double-exposure-wrapper,
-  // img {
-  //   transition: transform ease 0.33s;
-  // }
+  #double-exposure-wrapper,
+  img {
+    transition: transform ease 0.33s;
+  }
 
   #base {
     position: relative;
@@ -186,6 +186,30 @@ footer {
     #double-exposure-wrapper {
       max-width: 95vw;
       max-height: 95vw;
+    }
+  }
+}
+
+@media (hover: none) {
+
+  #double-exposure {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh;
+
+    #double-exposure-outer {
+
+      #double-exposure-wrapper,
+      img {
+        transition-duration: 0.05s;
+      }
+    }
+
+    #gloss {
+      display: none;
     }
   }
 }
