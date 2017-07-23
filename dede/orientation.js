@@ -21,13 +21,13 @@ function handleOrientation(event) {
   output.innerHTML  = "x : " + x + "\n";
   output.innerHTML += "y : " + y + "\n";
 
-  document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + y + "deg) rotateX(" + x * -1 + "deg)";
-  document.getElementById("exposure").style.transform = "translate(" + x / (-7/2) + "px, " + y / (-7/2) + "px)";
-  document.getElementById("depth-1").style.transform = "translate(" + x / (-5/2) + "px, " + y / (-6/2) + "px)";
-  document.getElementById("depth-2").style.transform = "translate(" + x / (-4/2) + "px, " + y / (-5/2) + "px)";
-  document.getElementById("depth-3").style.transform = "translate(" + x / (-3/2) + "px, " + y / (-4/2) + "px)";
-  document.getElementById("depth-4").style.transform = "translate(" + x / (-2/2) + "px, " + y / (-3/2) + "px)";
-  document.getElementById("gloss").style.opacity = x / -10;
+  // document.getElementById("double-exposure-wrapper").style.transform = "rotateY(" + y + "deg) rotateX(" + x * -1 + "deg)";
+  document.getElementById("exposure").style.transform = "translate(" + y / (-7/2) + "px, " + x / (-7/2) + "px)";
+  document.getElementById("depth-1").style.transform = "translate(" + y / (-5/2) + "px, " + x / (-6/2) + "px)";
+  document.getElementById("depth-2").style.transform = "translate(" + y / (-4/2) + "px, " + x / (-5/2) + "px)";
+  document.getElementById("depth-3").style.transform = "translate(" + y / (-3/2) + "px, " + x / (-4/2) + "px)";
+  document.getElementById("depth-4").style.transform = "translate(" + y / (-2/2) + "px, " + x / (-3/2) + "px)";
+  // document.getElementById("gloss").style.opacity = x / -10;
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
