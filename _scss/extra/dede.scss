@@ -13,6 +13,7 @@ body {
 header,
 footer {
   position: absolute;
+  z-index: 2;
   box-sizing: border-box;
   height: 10vh;
   width: 100%;
@@ -52,6 +53,7 @@ header {
 
   h1 {
     font-size: 14px;
+    line-height: 1.4em;
   }
 
   h2 {
@@ -164,10 +166,59 @@ footer {
 }
 
 
+.dede-why {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(229, 255, 193);
 
-@media (max-width: 768px) {
+  section {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    padding: 60px;
+    margin: 0 auto;
+
+    header {
+      position: relative;
+      padding: 0;
+    }
+  }
+}
+
+
+
+@media (min-width: 650px) {
+
+  header h1 br {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+
+  header,
+  footer {
+    padding: 0 2vh;
+  }
+
+  header {
+    padding-top: 30px;
+
+    > * {
+      align-items: flex-start;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
 
   footer {
+    padding-bottom: 30px;
+
+    > * {
+      align-items: flex-end;
+    }
 
     a span {
       display: none;
@@ -175,17 +226,17 @@ footer {
   }
 
   #double-exposure {
-    padding: 2.5vh;
+    padding: 2vh;
 
     #double-exposure-outer {
       position: relative;
-      max-width: 95vh;
-      max-height: 95vh;
+      max-width: 96vh;
+      max-height: 96vh;
     }
 
     #double-exposure-wrapper {
-      max-width: 95vw;
-      max-height: 95vw;
+      max-width: 96vw;
+      max-height: 96vw;
     }
   }
 }
@@ -193,12 +244,6 @@ footer {
 @media (hover: none) {
 
   #double-exposure {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    padding: 10vh;
 
     #double-exposure-outer {
 
