@@ -98,6 +98,7 @@ footer {
     max-height: 80vw;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
+    background-color: #fff;
   }
 
   #double-exposure-wrapper,
@@ -253,6 +254,37 @@ footer {
       }
     }
 
+    #gloss {
+      display: none;
+    }
+  }
+}
+
+@supports not ((mask-size: cover) or (mix-blend-mode: screen) or (-webkit-mask-size: cover) or (-webkit-mix-blend-mode: screen)) {
+
+  #double-exposure-wrapper {
+    background-image: url('/dede/backup@2x.jpg');
+    background-size: cover;
+
+    &::before {
+      content: 'Unfortunately, your browser doesn\'t yet support the CSS properties used for this experiment';
+      position: absolute;
+      display: block;
+      padding: 10px 15px;
+      margin: 15px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.66);
+    }
+
+    .second & {
+      background-image: url('/dede/2/backup@2x.jpg');
+    }
+
+    img {
+      visibility: hidden;
+    }
+
+    figure,
     #gloss {
       display: none;
     }
