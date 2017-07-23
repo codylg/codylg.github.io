@@ -13,6 +13,7 @@ body {
 header,
 footer {
   position: absolute;
+  z-index: 2;
   box-sizing: border-box;
   height: 10vh;
   width: 100%;
@@ -52,6 +53,7 @@ header {
 
   h1 {
     font-size: 14px;
+    line-height: 1.4em;
   }
 
   h2 {
@@ -165,9 +167,38 @@ footer {
 
 
 
-@media (max-width: 768px) {
+@media (min-width: 650px) {
+
+  header h1 br {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+
+  header,
+  footer {
+    padding: 0 2vh;
+  }
+
+  header {
+    padding-top: 30px;
+
+    > * {
+      align-items: flex-start;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
 
   footer {
+    padding-bottom: 30px;
+
+    > * {
+      align-items: flex-end;
+    }
 
     a span {
       display: none;
@@ -175,17 +206,17 @@ footer {
   }
 
   #double-exposure {
-    padding: 2.5vh;
+    padding: 2vh;
 
     #double-exposure-outer {
       position: relative;
-      max-width: 95vh;
-      max-height: 95vh;
+      max-width: 96vh;
+      max-height: 96vh;
     }
 
     #double-exposure-wrapper {
-      max-width: 95vw;
-      max-height: 95vw;
+      max-width: 96vw;
+      max-height: 96vw;
     }
   }
 }
