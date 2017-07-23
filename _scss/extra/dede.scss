@@ -168,3 +168,28 @@ footer {
 pre {
   position: absolute;
 }
+
+@media (max-width: 768px) {
+
+  footer {
+
+    a span {
+      display: none;
+    }
+  }
+
+  #double-exposure {
+    padding: 2.5vh;
+
+    #double-exposure-outer {
+      position: relative;
+      max-width: 95vh;
+      max-height: 95vh;
+    }
+
+    #double-exposure-wrapper {
+      max-width: 95vw;
+      max-height: 95vw;
+    }
+  }
+}
