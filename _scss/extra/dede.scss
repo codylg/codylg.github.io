@@ -183,6 +183,20 @@ footer {
       position: relative;
       padding: 0;
     }
+
+    code {
+      background-color: rgba(133, 133, 133, 0.33);
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    a {
+      border-bottom-color: rgba(133, 133, 133, 0.33);
+
+      &:hover {
+        border-bottom-color: rgba(133, 133, 133, 0.66);
+      }
+    }
   }
 }
 
