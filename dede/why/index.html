@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Double exposure depth experiment &#8729; Cody Lindsay Gordon</title>
-    <meta name="description" content="This is a test">
+    <meta name="description" content="An experiment combining some new CSS properties and JS events, and photography.">
     <meta name="robots" content="NOODP">
     <meta name="theme-color" content="#26282e">
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <meta name="google-site-verification" content="ZkjeR5dDgGZ5iIrCxvCjqgPrhHp6dco-Jck7IWutYZo">
     <meta property="og:title" content="Double exposure depth experiment">
     <meta property="og:site_name" content="Cody Lindsay Gordon">
-    <meta property="og:description" content="This is a test">
+    <meta property="og:description" content="An experiment combining some new CSS properties and JS events, and photography.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://clg.name/dede/why">
     <meta property="og:image" content="http://clg.name/card-clg.png">
@@ -33,7 +33,6 @@
       ga('send', 'pageview');
     </script>
     <link rel="stylesheet" href="/dede/dede.css" async>
-    <script type="text/javascript" src="/dede/dede.js" async></script>
   </head>
   <body>
     <div class="dede-why">
@@ -41,11 +40,28 @@
         <header>
           <div>
             <p>&larr; <a href="../">Go back</a></p>
-            <p><a href="/">Visit clg.name</a>&nbsp;&rarr;</p>
+            <p><a href="/">Go to clg.name</a>&nbsp;&rarr;</p>
           </div>
         </header>
-        <h1>Q: Why did you do this?</h1>
-        <p>A: I'll answer this later</p>
+        <h1>Q: What's this all about?</h1>
+        <p>
+          A: This is an experiment combining some new CSS properties and JS events, and photography.
+          Layers of the exposure are blended together in the browser using the <code>mix-blend-mode</code> property. These layers are then trimmed to the silhouette with the <code>mask-image</code> property.
+        </p>
+        <h1>Devices</h1>
+        <p>
+          If you're visiting on a device with a cursor, the exposure will react to mouseovers.
+          This is probably the ideal device type to view this experiment with.
+          The cursor coordinates are used to apply transforms (translations and rotations) across the layers of the exposure.
+        </p>
+        <p>
+          If you're visiting on a device with an accelerometer — e.g. a smartphone — you'll see the exposure react to the device tilting and panning.
+          The <code>deviceorientation</code> event sends down the <code>beta</code> and <code>gamma</code> orientation, which is then adjusted and applied as transforms (translations) across the layers of the exposure.
+        </p>
+        <h1>@supports</h1>
+        <p>Browsers that don't support CSS masking or blend modes will load a static backup image instead.</p>
+        <h1>Plugs</h1>
+        <p>Check out my Instagram <a href="https://instagram.com/clg_aus" target="_blank">@clg_aus</a> for more photography or <a href="/">http://clg.name</a> for more web stuff.</p>
       </section>
     </div>
   </body>

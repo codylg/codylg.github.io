@@ -10,10 +10,40 @@ block content
       header
         div
           p
-            &larr; 
+            | &larr; 
             a(href="../") Go back
           p
-            a(href="/") Visit clg.name
-            &nbsp;&rarr;
-      h1 Q: Why did you do this?
-      p A: I'll answer this later
+            a(href="/") Go to clg.name
+            | &nbsp;&rarr;
+      h1 Q: What's this all about?
+      p
+        | A: This is an experiment combining some new CSS properties and JS events, and photography.
+        | Layers of the exposure are blended together in the browser using the 
+        code mix-blend-mode
+        |  property. These layers are then trimmed to the silhouette with the 
+        code mask-image
+        |  property.
+      h1 Devices
+      p
+        | If you're visiting on a device with a cursor, the exposure will react to mouseovers.
+        | This is probably the ideal device type to view this experiment with.
+        | The cursor coordinates are used to apply transforms (translations and rotations) across the layers of the exposure.
+      p
+        | If you're visiting on a device with an accelerometer — e.g. a smartphone — you'll see the exposure react to the device tilting and panning.
+        | The 
+        code deviceorientation
+        |  event sends down the 
+        code beta
+        |  and 
+        code gamma
+        |  orientation, which is then adjusted and applied as transforms (translations) across the layers of the exposure.
+      h1 @supports
+      p
+        | Browsers that don't support CSS masking or blend modes will load a static backup image instead.
+      h1 Plugs
+      p
+        | Check out my Instagram 
+        a(href="https://instagram.com/clg_aus", target="_blank") @clg_aus
+        |  for more photography or 
+        a(href="/") http://clg.name
+        |  for more web stuff.

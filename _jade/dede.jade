@@ -2,14 +2,13 @@ extends layout
 
 block append variables
   - var title = "Double exposure depth experiment"
-  - var description = "This is a test"
+  - var description = "An experiment combining some new CSS properties and JS events, and photography."
   - var slug = "dede"
   - var frontPage = false
   - var deClass = "first"
   
 block headExtra
   link(rel="stylesheet", href="/dede/dede.css", async)
-  script(type="text/javascript", src="/dede/dede.js", async)
 
 block header
 
@@ -19,7 +18,7 @@ block content
     div
       h1 Double exposure depth experiment 
           br
-          &mdash; 
+          | &mdash; 
           a.underline-link(href="/dede/why")
             em but why?
       h2 Made by 
@@ -41,7 +40,7 @@ block content
   footer
     nav
       p.prev
-        &larr; 
+        | &larr; 
         block double-exposure-previous
           a(href="./2") Previous
             span &nbsp;exposure
@@ -49,6 +48,6 @@ block content
         block double-exposure-previous-next
           a(href="./2") Next
             span &nbsp;exposure
-        &nbsp;&rarr;
+        | &nbsp;&rarr;
   
-  script(type="text/javascript", src="/dede/orientation.js")
+  script(type="text/javascript", src="/dede/dede.js")
