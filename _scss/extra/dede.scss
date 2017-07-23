@@ -166,6 +166,26 @@ footer {
 }
 
 
+.dede-why {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(229, 255, 193);
+
+  section {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    padding: 60px;
+    margin: 0 auto;
+
+    header {
+      position: relative;
+      padding: 0;
+    }
+  }
+}
+
+
 
 @media (min-width: 650px) {
 
