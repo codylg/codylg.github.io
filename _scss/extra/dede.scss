@@ -97,13 +97,14 @@ footer {
     max-width: 80vw;
     max-height: 80vw;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    background-color: #fff;
+    background-color: $white;
   }
 
   #double-exposure-wrapper,
   img {
     transition: transform ease 0.33s;
+    will-change: transform;
+    border-radius: 15px;
   }
 
   #base {
@@ -153,6 +154,8 @@ footer {
     width: 100%;
     height: 66%;
     background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.25));
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     opacity: 0;
     transition: opacity ease 0.33s;
   }
