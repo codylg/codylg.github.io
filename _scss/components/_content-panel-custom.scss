@@ -1,3 +1,27 @@
+.dede-panel {
+  background-color: $grey-light;
+  background-image: url('/img/dede-bg@2x.jpg');
+  background-position: 100% 0;
+  background-size: cover;
+
+  .content-panel-header {
+    padding-bottom: 150px;
+  }
+
+  h1,
+  p {
+    text-shadow: 1px 1px rgba($white, 0.33);
+  }
+
+  a {
+    border-bottom-color: $grey;
+
+    &:hover {
+      border-bottom-color: $grey-dark;
+    }
+  }
+}
+
 .divvy-panel {
   background-color: rgb(30, 150, 255);
 
@@ -35,12 +59,14 @@
 }
 
 .sarif-panel {
+  background-color: $grey-dark;
   background-image: url('/img/sarif-bg@2x.jpg');
   background-position: 75% 50%;
   background-size: cover;
 }
 
 .axex-constructions-panel {
+  background-color: $grey;
   background-image: url('/img/axex-bg@2x.jpg');
   background-position: center;
   background-size: cover;
