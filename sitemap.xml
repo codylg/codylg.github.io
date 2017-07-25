@@ -5,6 +5,10 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>http://clg.name/dede/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>http://clg.name/ios86/</loc>
     <changefreq>monthly</changefreq>
   </url>
