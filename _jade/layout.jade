@@ -49,9 +49,11 @@ html(lang="en")
       ga('send', 'pageview');
     block headExtra
 
-  body.night-mode
+  body
 
     block header
       include _header
 
     block content
+
+    script(type="text/javascript", src="/static/app.min.js", async)

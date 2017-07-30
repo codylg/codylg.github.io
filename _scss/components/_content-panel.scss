@@ -18,10 +18,6 @@
   font-size: 0;
   @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
 
-  &.can-darken .night-mode & {
-    background-color: $charcoal;
-  }
-
   &:first-child,
   &:nth-child(2) {
     @include prefix(animation, fade-in 1s ease-out 1);
