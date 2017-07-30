@@ -9,6 +9,10 @@ svg.logo {
     @include prefix(animation-delay, 0.66s);
     @include prefix(animation-fill-mode, backwards);
     @include transition($property: stroke-dashoffset, $duration: 2s, $timing: ease-out);
+
+    .night-mode & {
+      stroke: $grey;
+    }
   }
 
   &:hover path.script {

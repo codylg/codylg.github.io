@@ -20,6 +20,10 @@ body {
   color: $charcoal;
   @include font-antialias;
   -webkit-tap-highlight-color: transparent;
+
+  &.night-mode {
+    background-color: $charcoal-dark;
+  }
 }
 
 h1,

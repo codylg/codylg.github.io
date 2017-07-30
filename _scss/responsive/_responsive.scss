@@ -189,6 +189,10 @@
     min-height: 0;
     border-bottom: 1px solid $grey-light;
 
+    .night-mode & {
+      border-bottom-color: $grey-dark;
+    }
+
     + .content-panel-small {
       margin-left: 0;
     }

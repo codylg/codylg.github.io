@@ -1,81 +1,131 @@
-.dede-panel {
-  background-color: $grey-light;
-  background-image: url('/img/dede-bg@2x.jpg');
-  background-position: 100% 0;
-  background-size: cover;
+.content-panel {
 
-  .content-panel-header {
-    padding-bottom: 100px;
-  }
+  &.content-panel-small,
+  &.photo-collection-01-panel,
+  &.ios86-panel,
+  &.broadbeach-slsc-panel,
+  &.tutorial-room-panel {
 
-  h1,
-  p {
-    text-shadow: 1px 1px rgba($white, 0.33);
-  }
+    .night-mode & {
+      background-color: $charcoal;
+      color: $grey;
 
-  a {
-    border-bottom-color: $grey;
+      a {
+        border-bottom-color: $grey-dark;
 
-    &:hover {
-      border-bottom-color: $grey-dark;
+        &:hover {
+          border-bottom-color: $grey;
+        }
+      }
+
+      .grey-text {
+        color: $grey-dark;
+      }
+
+      .button,
+      .button-black {
+        background-color: $grey-dark;
+        color: $grey-light;
+
+        &:hover {
+          background-color: $grey;
+          color: $white;
+        }
+      }
     }
   }
-}
 
-.divvy-panel {
-  background-color: rgb(30, 150, 255);
+  &.dede-panel {
+    background-color: $grey-light;
+    background-image: url('/img/dede-bg@2x.jpg');
+    background-position: 100% 0;
+    background-size: cover;
 
-  .content-panel-header {
-    background-color: rgb(50, 170, 255);
-  }
+    .content-panel-header {
+      padding-bottom: 100px;
+    }
 
-  figure {
-    background-image: url('/img/divvy-bg@2x.png');
-    background-size: 98px;
-  }
-}
+    h1,
+    p {
+      text-shadow: 1px 1px rgba($white, 0.33);
+    }
 
-.threads-network-panel {
-  background-color: rgb(242, 124, 97);
-  background-image: url('/img/grunge-bg@2x.png');
-  background-size: 400px;
+    a {
+      border-bottom-color: $grey;
 
-  figure {
-
-    img {
-      max-width: 367px;
-      margin: 95px auto;
+      &:hover {
+        border-bottom-color: $grey-dark;
+      }
     }
   }
-}
 
-.ios86-panel {
+  &.divvy-panel {
+    background-color: rgb(30, 150, 255);
 
-  figure {
-    background-image: url('/img/ios86-bg@2x.jpg');
-    background-position: center;
+    .content-panel-header {
+      background-color: rgb(50, 170, 255);
+    }
+
+    .night-mode & {
+      background-color: rgb(34, 121, 198);
+
+      .content-panel-header {
+        background-color: rgb(50, 148, 217);
+      }
+    }
+
+    figure {
+      background-image: url('/img/divvy-bg@2x.png');
+      background-size: 98px;
+    }
+  }
+
+  &.threads-network-panel {
+    background-color: rgb(242, 124, 97);
+    background-image: url('/img/grunge-bg@2x.png');
+    background-size: 400px;
+
+    .night-mode & {
+      background-color: rgb(200, 97, 73);
+    }
+
+    figure {
+
+      img {
+        max-width: 367px;
+        margin: 95px auto;
+      }
+    }
+  }
+
+  &.ios86-panel {
+
+    figure {
+      background-image: url('/img/ios86-bg@2x.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &.sarif-panel {
+    background-color: $grey-dark;
+    background-image: url('/img/sarif-bg@2x.jpg');
+    background-position: 75% 50%;
     background-size: cover;
   }
-}
 
-.sarif-panel {
-  background-color: $grey-dark;
-  background-image: url('/img/sarif-bg@2x.jpg');
-  background-position: 75% 50%;
-  background-size: cover;
-}
+  &.axex-constructions-panel {
+    background-color: $grey;
+    background-image: url('/img/axex-bg@2x.jpg');
+    background-position: center;
+    background-size: cover;
 
-.axex-constructions-panel {
-  background-color: $grey;
-  background-image: url('/img/axex-bg@2x.jpg');
-  background-position: center;
-  background-size: cover;
+    figure {
 
-  figure {
-
-    img {
-      max-width: 430px;
-      margin: 125px auto;
+      img {
+        max-width: 430px;
+        margin: 125px auto;
+      }
     }
   }
 }

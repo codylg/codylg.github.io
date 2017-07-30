@@ -11,6 +11,18 @@ header.page-header {
   padding-right: 0;
   color: $charcoal;
 
+  .night-mode & {
+    color: $grey;
+
+    a {
+      border-bottom-color: $grey-dark;
+
+      &:hover {
+        border-bottom-color: $grey;
+      }
+    }
+  }
+
   p {
     margin-top: 2.5em;
     @include prefix(animation, fade-in 1s ease-out 1);
