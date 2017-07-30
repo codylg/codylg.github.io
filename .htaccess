@@ -4,4 +4,11 @@ Header set Cache-Control "max-age=2628000, public"
 Header set Cache-Control "max-age=86400, public"
 </filesMatch>
 
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+ExpiresByType text/css "access plus 1 day"
+ExpiresByType application/javascript "access plus 1 day"
+</IfModule>
+
 ErrorDocument 404 /404.html
