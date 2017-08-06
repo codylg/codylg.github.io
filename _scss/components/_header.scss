@@ -3,6 +3,8 @@ header.page-header {
   top: 0;
   bottom: 0;
   left: 0;
+  @include flex;
+  @include prefix(flex-direction, column);
   @include prefix(box-sizing, border-box);
   overflow-x: hidden;
   overflow-y: auto;
@@ -23,8 +25,97 @@ header.page-header {
     }
   }
 
+  > div {
+    @include flex;
+    @include prefix(flex-direction, column);
+    @include prefix(flex-grow, 1);
+  }
+
   p {
     margin-top: 2.5em;
     @include prefix(animation, fade-in 1s ease-out 1);
+  }
+}
+
+.night-mode-toggle {
+  @include flex;
+  @include prefix(align-items, flex-end);
+  @include prefix(flex-grow, 1);
+  padding-top: $page-padding;
+
+  label {
+    position: relative;
+    cursor: pointer;
+    @include prefix(user-select, none);
+
+    &::before,
+    &::after {
+      content: '';
+      @include prefix(box-sizing, border-box);
+      display: inline-block;
+    }
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $grey;
+      @include transition;
+    }
+
+    &::after {
+      width: 20px;
+      height: 12px;
+      border: 2px solid $grey;
+      border-radius: 6px;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+
+      + label::before {
+        left: 11px;
+      }
+    }
+  }
+
+  span {
+    margin-left: 5px;
+    font-size: 11px;
+
+    &.on {
+      display: none;
+    }
+  }
+
+  .night-mode & {
+
+    label {
+
+      &::before {
+        background-color: rgb(246, 227, 100);
+      }
+
+      &::after {
+        border-color: rgb(246, 227, 100);
+      }
+    }
+
+    span {
+
+      &.on {
+        display: inline-block;
+      }
+
+      &.off {
+        display: none;
+      }
+    }
   }
 }

@@ -17,6 +17,7 @@
   background-color: $white;
   font-size: 0;
   @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
+  @include transition($property: background-color);
 
   &:first-child,
   &:nth-child(2) {
