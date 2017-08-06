@@ -26,8 +26,6 @@ header.page-header {
   }
 
   > div {
-    @include flex;
-    @include prefix(flex-direction, column);
     @include prefix(flex-grow, 1);
   }
 
@@ -42,6 +40,18 @@ header.page-header {
   @include prefix(align-items, flex-end);
   @include prefix(flex-grow, 1);
   padding-top: $page-padding;
+
+  @media (max-width: $medium-breakpoint) {
+    position: absolute;
+    right: $page-padding;
+    bottom: $page-padding;
+    padding: 0;
+  }
+
+  @media (max-width: $small-breakpoint) {
+    right: $page-padding / 2;
+    bottom: $page-padding;
+  }
 
   label {
     position: relative;

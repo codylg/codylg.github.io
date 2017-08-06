@@ -30,11 +30,13 @@ header.page-header
         //- |  &rarr;
         br
         a(href="mailto:clg@clg.name") clg@clg.name
-      .night-mode-toggle
-        input(id="night-mode-switch", type="checkbox")
-        label(for="night-mode-switch", onclick="toggleNightMode()")
-        span.on &#127773;
-        span.off &#127770;
     else
       p &larr; 
         a(href="/") Go home
+
+  if frontPage
+    .night-mode-toggle
+      input(id="night-mode-switch", type="checkbox")
+      label(for="night-mode-switch", onclick="toggleNightMode()")
+      span.on &#127773;
+      span.off &#127770;
