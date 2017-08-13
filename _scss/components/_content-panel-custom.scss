@@ -59,6 +59,18 @@
     }
   }
 
+  &.scrunchdotcom-panel {
+    background-color: rgb(243, 243, 244);
+    background-image: url('/img/scrunchdotcom-pattern-bg@2x.jpg');
+    background-position: 0 0;
+    background-size: 533px 574px;
+    background-repeat: no-repeat;
+
+    .landing-gif {
+      @include prefix(column-span, all);
+    }
+  }
+
   &.divvy-panel {
     background-color: rgb(30, 150, 255);
 
