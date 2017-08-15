@@ -40,6 +40,9 @@ header.page-header {
   @include prefix(align-items, flex-end);
   @include prefix(flex-grow, 1);
   padding-top: $page-padding;
+  @include prefix(animation, fade-in 1s ease-out 1);
+  @include prefix(animation-delay, 1s);
+  @include prefix(animation-fill-mode, both);
 
   @media (max-width: $medium-breakpoint) {
     position: absolute;
