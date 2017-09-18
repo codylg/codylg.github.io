@@ -1,17 +1,6 @@
-$font: monospace;
-$page-padding: 40px;
-$header-width: 270px;
-$content-width: 700px;
-$content-sidebar-width: 360px;
-$radius: 2px;
-
-$medium-breakpoint: 1024px;
-$small-breakpoint: 550px;
-
-
-
 @import 'lib/normalize';
 
+@import 'global/vars';
 @import 'global/mixins';
 @import 'global/colors';
 @import 'global/document';

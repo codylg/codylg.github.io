@@ -1,0 +1,28 @@
+extends layout
+
+block append variables
+  - var title = "Photography"
+  - var description = "Some pictures I have taken"
+  - var slug = "photo"
+  //- TODO
+  - var card = "photo/clg-photo@2x.jpg" 
+  - var frontPage = false
+
+block headExtra
+  link(rel="stylesheet", href="photo.css", async)
+
+block content
+
+  figure.photo-gallery
+    img(srcset="img/fox-glacier-01.jpg 1x, img/fox-glacier-01@2x.jpg 2x" alt="")
+    img(srcset="img/franz-josef-glacier-01.jpg 1x, img/franz-josef-glacier-01@2x.jpg 2x" alt="")
+    img(srcset="img/franz-josef-glacier-02.jpg 1x, img/franz-josef-glacier-02@2x.jpg 2x" alt="")
+    img(srcset="img/franz-josef-glacier-03.jpg 1x, img/franz-josef-glacier-03@2x.jpg 2x" alt="")
+    img(srcset="img/franz-josef-glacier-04.jpg 1x, img/franz-josef-glacier-04@2x.jpg 2x" alt="")
+    img(srcset="img/franz-josef-glacier-05.jpg 1x, img/franz-josef-glacier-05@2x.jpg 2x" alt="")
+    img(srcset="img/franz-josef-glacier-06.jpg 1x, img/franz-josef-glacier-06@2x.jpg 2x" alt="")
+    img(srcset="img/ijen-miner-01.jpg 1x, img/ijen-miner-01@2x.jpg 2x" alt="")
+    img(srcset="img/ijen-miner-02.jpg 1x, img/ijen-miner-02@2x.jpg 2x" alt="")
+    img(srcset="img/ijen-miner-03.jpg 1x, img/ijen-miner-03@2x.jpg 2x" alt="")
+    img(srcset="img/new-zealand-road-01.jpg 1x, img/new-zealand-road-01@2x.jpg 2x" alt="")
+    img(srcset="img/new-zealand-road-02.jpg 1x, img/new-zealand-road-02@2x.jpg 2x" alt="")
