@@ -81,20 +81,18 @@ a {
   color: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ol,
-ul {
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+p > a,
+ol > a,
+ul > a,
+.underline-link {
+  border-bottom: 2px solid $grey-light;
 
-  > a {
-    border-bottom: 2px solid $grey-light;
-
-    &:hover {
-      border-bottom-color: $grey;
-    }
+  &:hover {
+    border-bottom-color: $grey;
   }
 }
 
