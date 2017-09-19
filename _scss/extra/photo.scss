@@ -36,6 +36,7 @@ figure.photo-gallery {
   @include flex;
   @include prefix(flex-direction, row);
   height: 100vh;
+  overflow-x: auto;
 
   img {
     @include prefix(flex-shrink, 0);
@@ -50,7 +51,7 @@ figure.photo-gallery {
   figure.photo-gallery {
     @include prefix(flex-direction, column);
     height: auto;
-    width: 100vw;
+    width: 100%;
 
     img {
       width: 100%;
