@@ -36,6 +36,10 @@ header.page-header {
 
   .no-underline {
     border-bottom: 0;
+
+    @media (max-width: $small-breakpoint) {
+      padding-right: 20px;
+    }
   }
 }
 
