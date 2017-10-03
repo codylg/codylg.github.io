@@ -2,11 +2,10 @@
 // scss-lint:disable VendorPrefix
 
 @mixin prefix($property, $values...) {
-  -webkit-#{$property}: #{$values};
-  -moz-#{$property}: #{$values};
-  -ms-#{$property}: #{$values};
-  -o-#{$property}: #{$values};
-  #{$property}: #{$values};
+  -webkit-#{$property}: $values;
+  -moz-#{$property}: $values;
+  -ms-#{$property}: $values;
+  $property: $values;
 }
 
 @mixin font-antialias {
