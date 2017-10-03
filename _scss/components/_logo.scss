@@ -17,7 +17,7 @@ svg.logo {
 
   &:hover path.script {
     stroke-dashoffset: 270;
-    @include prefix(transition-timing-function, ease-in);
+    transition-timing-function: ease-in;
   }
 }
 

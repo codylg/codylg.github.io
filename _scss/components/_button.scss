@@ -18,7 +18,7 @@
   cursor: pointer;
   @include prefix(appearance, none);
   @include transition;
-  @include prefix(transition-property, color, background-color);
+  transition-property: color, background-color;
 
   + .button,
   + [class^="button-"],
