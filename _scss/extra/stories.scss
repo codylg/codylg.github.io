@@ -51,7 +51,7 @@ hr {
   margin: 0 auto;
   border-radius: $radius;
   background-color: $white-page;
-  @include prefix(box-shadow, 0 0 20px rgba(0, 0, 0, 0.02), 0 2px 2px rgba(0, 0, 0, 0.033));
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.02), 0 2px 2px rgba(0, 0, 0, 0.033);
   counter-increment: page;
 
   &.page-animate {
@@ -194,7 +194,7 @@ hr {
   .page {
     padding: $page-padding;
     border-radius: 0;
-    @include prefix(box-shadow, none);
+    box-shadow: none;
 
     &:not(:first-child) {
       margin-top: 0;

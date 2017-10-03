@@ -16,7 +16,7 @@
   line-height: 2em;
   white-space: nowrap;
   color: $white;
-  @include prefix(box-shadow, 0 0 20px rgba($black, 0.05));
+  box-shadow: 0 0 20px rgba($black, 0.05);
   @include prefix(transform, perspective(300px) translateX(-50%) rotateX(-33deg));
   @include transition;
   @include prefix(transition-properties, margin-top, margin-left, opacity, transform);
