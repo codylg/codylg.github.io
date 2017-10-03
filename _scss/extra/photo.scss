@@ -4,6 +4,7 @@
 
 body {
   background-color: $charcoal;
+  font-size: 0;
 }
 
 svg.logo {
@@ -29,14 +30,15 @@ a.photo-insta-link {
   position: fixed;
   top: $page-padding;
   right: $page-padding;
+  font-size: 13px;
+  line-height: 1.6em;
   @include prefix(mix-blend-mode, exclusion);
 }
 
 figure.photo-gallery {
-  @include flex;
+  @include flex($property: inline-flex);
   @include prefix(flex-direction, row);
   height: 100vh;
-  overflow-x: auto;
 
   img {
     @include prefix(flex-shrink, 0);
