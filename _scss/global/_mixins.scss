@@ -15,11 +15,8 @@
 }
 
 @mixin flex($property: flex) {
-  display: -webkit-box;
-  display: -webkit-$property;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -ms-$property;
+  display: -webkit-#{$property};
+  display: -ms-#{$property};
   display: $property;
 }
 
