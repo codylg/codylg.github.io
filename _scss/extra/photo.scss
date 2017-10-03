@@ -19,7 +19,7 @@ svg.logo {
 }
 
 header.page-header {
-  @include prefix(mix-blend-mode, exclusion);
+  mix-blend-mode: exclusion;
 
   > div {
     display: none;
@@ -32,7 +32,7 @@ a.photo-insta-link {
   right: $page-padding;
   font-size: 13px;
   line-height: 1.6em;
-  @include prefix(mix-blend-mode, exclusion);
+  mix-blend-mode: exclusion;
 }
 
 figure.photo-gallery {
