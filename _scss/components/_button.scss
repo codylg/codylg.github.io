@@ -2,7 +2,7 @@
 [class^="button-"],
 [class*=" button-"] {
   display: inline-block;
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   vertical-align: middle;
   padding: 1em;
   border: 0;

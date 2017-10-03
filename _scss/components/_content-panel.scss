@@ -1,5 +1,5 @@
 .content-panels {
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   width: calc(100vw - #{$header-width});
   max-width: $page-padding * 4 + $content-sidebar-width + $content-width;
   padding: $page-padding;
@@ -8,7 +8,7 @@
 }
 
 .content-panel {
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   @include flex;
   overflow: hidden;
   min-height: calc(100vh - #{$page-padding} * 3);
@@ -39,7 +39,7 @@
 
   .content-panel-header,
   figure {
-    @include prefix(box-sizing, border-box);
+    box-sizing: border-box;
     padding: $page-padding;
   }
 

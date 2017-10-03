@@ -44,7 +44,7 @@ hr {
 }
 
 .page {
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   display: block;
   max-width: 720px;
   padding: ($page-padding * 2) ($page-padding * 3);
@@ -107,7 +107,7 @@ hr {
 }
 
 .title-page {
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   @include flex;
   @include prefix(align-items, center);
   min-height: calc(100vh - 180px);
