@@ -1,0 +1,26 @@
+extends content
+
+block variables
+  - var classname = "sharedesk"
+  - var smallpanel = false
+
+block header
+  h1.white-text
+    a(href="http://sharedesk.net.au", target="_blank") Sharedesk
+  
+block description
+  p.white-text
+    strong Branding
+    | , 
+    strong web development
+    | , 
+    strong interior design 
+    | and 
+    strong signage 
+    | for a co-working space outside of Brisbane.
+  hr.white-line
+  a.button-white(href="http://sharedesk.net.au", target="_blank") http://sharedesk.net.au &rarr; 
+
+block figure
+  figure
+    img(srcset="/img/sharedesk.jpg 1x, /img/sharedesk@2x.jpg 2x" alt="Sharedesk website")
