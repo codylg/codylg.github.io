@@ -50,52 +50,43 @@
     hr {
       margin: $page-padding 0;
     }
+
+    .btn-wrapper {
+      margin-top: -0.5em;
+      margin-right: -0.5em;
+
+      > * {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        margin-left: 0;
+      }
+    }
   }
 
   figure {
     width: 100%;
     pointer-events: none;
+  }
 
-    &.image-gallery {
+  .image-gallery {
 
-      img {
-        border-radius: $radius;
-        background-color: $grey-light;
-        box-shadow: 0 1px 3px rgba($black, 0.2);
+    img {
+      border-radius: $radius;
+      background-color: $grey-light;
+      box-shadow: 0 1px 3px rgba($black, 0.2);
 
-        + img {
-          margin-top: $page-padding / 2;
-        }
+      + img {
+        margin-top: $page-padding / 2;
       }
     }
+  }
 
-    &.image-gallery-small {
-      vertical-align: top;
+  .image-gallery-small {
+    @include prefix(columns, 2 auto);
+    @include prefix(column-gap, $page-padding / 2);
 
-      img {
-        display: inline-block;
-        vertical-align: top;
-        width: calc(50% - (#{$page-padding} / 2));
-        margin: $page-padding / 2;
-
-        &:nth-child(odd) {
-          margin-left: 0;
-        }
-
-        &:nth-child(even) {
-          margin-right: 0;
-        }
-
-        &:first-child,
-        &:nth-child(2) {
-          margin-top: 0;
-        }
-
-        &:last-child,
-        &:nth-last-child(2) {
-          margin-bottom: 0;
-        }
-      }
+    .gallery-span {
+      @include prefix(column-span, all);
     }
   }
 

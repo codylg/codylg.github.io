@@ -66,7 +66,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
   .content-panel {
     @include prefix(flex-direction, column);
@@ -155,24 +155,25 @@
       padding-left: $page-padding / 2;
     }
 
-    figure {
+    .image-gallery,
+    .image-gallery-small {
+      padding: 0;
 
-      &.image-gallery,
-      &.image-gallery-small {
-        padding: 0;
+      img {
+        display: block;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
 
-        img {
-          display: block;
-          width: 100%;
-          margin: 0;
-          border-radius: 0;
-          box-shadow: none;
-
-          + img {
-            margin-top: 0;
-          }
+        + img {
+          margin-top: 0;
         }
       }
+    }
+
+    .image-gallery-small {
+      columns: 1;
     }
 
     h2 {
@@ -182,6 +183,13 @@
 
   .dede-panel {
     background-position: 75% 0;
+  }
+
+  .scrunch-panel {
+
+    img:not(.gallery-span) {
+      display: none;
+    }
   }
 
   .content-panel-small {

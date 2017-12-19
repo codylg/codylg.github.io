@@ -59,6 +59,13 @@
     }
   }
 
+  &.scrunch-panel {
+    background-image: url('/img/scrunch-pattern-bg@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 531px 504px;
+  }
+
   &.divvy-panel {
     background-color: rgb(30, 150, 255);
 
