@@ -24,7 +24,7 @@
     margin-left: $header-width - $page-padding;
   }
 
-  .content-panel {
+  .content-panel:not(.content-panel-small) {
 
     .content-panel-header {
       width: $content-sidebar-width - $page-padding * 2;
