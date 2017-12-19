@@ -64,10 +64,6 @@
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 531px 504px;
-
-    .landing-gif {
-      @include prefix(column-span, all);
-    }
   }
 
   &.scrunchapp-panel {

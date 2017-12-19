@@ -84,6 +84,10 @@
   .image-gallery-small {
     @include prefix(columns, 2 auto);
     @include prefix(column-gap, $page-padding / 2);
+
+    .gallery-span {
+      @include prefix(column-span, all);
+    }
   }
 
   h1 > a {
