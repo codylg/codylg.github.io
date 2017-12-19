@@ -185,9 +185,9 @@
     background-position: 75% 0;
   }
 
-  .scrunchdotcom-panel {
+  .scrunch-panel {
 
-    .landing-gif ~img {
+    img:not(.gallery-span) {
       display: none;
     }
   }
