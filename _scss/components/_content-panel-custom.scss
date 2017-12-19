@@ -59,12 +59,12 @@
     }
   }
 
-  &.scrunchdotcom-panel {
+  &.scrunch-panel {
     background-color: rgb(243, 243, 244);
     background-image: url('/img/scrunchdotcom-pattern-bg@2x.jpg');
-    background-position: 0 0;
-    background-size: 533px 574px;
     background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 533px 574px;
 
     .landing-gif {
       @include prefix(column-span, all);
