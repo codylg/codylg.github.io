@@ -1,5 +1,5 @@
 .content-panels {
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   width: calc(100vw - #{$header-width});
   max-width: $page-padding * 4 + $content-sidebar-width + $content-width;
   padding: $page-padding;
@@ -8,7 +8,7 @@
 }
 
 .content-panel {
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   @include flex;
   overflow: hidden;
   min-height: calc(100vh - #{$page-padding} * 3);
@@ -16,7 +16,7 @@
   border-radius: $radius;
   background-color: $white;
   font-size: 0;
-  @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
+  box-shadow: 0 1px 3px rgba($black, 0.2);
   @include transition($property: background-color);
 
   &:first-child,
@@ -39,7 +39,7 @@
 
   .content-panel-header,
   figure {
-    @include prefix(box-sizing, border-box);
+    box-sizing: border-box;
     padding: $page-padding;
   }
 
@@ -62,7 +62,7 @@
     img {
       border-radius: $radius;
       background-color: $grey-light;
-      @include prefix(box-shadow, 0 1px 3px rgba($black, 0.2));
+      box-shadow: 0 1px 3px rgba($black, 0.2);
 
       + img {
         margin-top: $page-padding / 2;

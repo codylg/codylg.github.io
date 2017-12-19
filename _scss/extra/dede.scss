@@ -122,7 +122,7 @@ footer {
     @include prefix(mask-position, center center);
     @include prefix(mask-repeat, no-repeat);
     @include prefix(mask-size, cover);
-    @include prefix(mix-blend-mode, screen);
+    mix-blend-mode: screen;
   }
 
   img {
@@ -134,7 +134,7 @@ footer {
 
   #exposure {
     z-index: 1;
-    @include prefix(mix-blend-mode, screen);
+    mix-blend-mode: screen;
   }
 
   #depth-1,
@@ -142,7 +142,7 @@ footer {
   #depth-3,
   #depth-4 {
     z-index: 2;
-    @include prefix(mix-blend-mode, screen);
+    mix-blend-mode: screen;
   }
 
   #gloss {

@@ -96,6 +96,14 @@
     }
   }
 
+  &.sharedesk-panel {
+    background-color: rgb(62, 42, 160);
+
+    figure {
+      padding: 0;
+    }
+  }
+
   &.threads-network-panel {
     background-color: rgb(242, 124, 97);
     background-image: url('/img/grunge-bg@2x.png');

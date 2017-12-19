@@ -2,11 +2,10 @@
 // scss-lint:disable VendorPrefix
 
 @mixin prefix($property, $values...) {
-  -webkit-#{$property}: #{$values};
-  -moz-#{$property}: #{$values};
-  -ms-#{$property}: #{$values};
-  -o-#{$property}: #{$values};
-  #{$property}: #{$values};
+  -webkit-#{$property}: $values;
+  -moz-#{$property}: $values;
+  -ms-#{$property}: $values;
+  $property: $values;
 }
 
 @mixin font-antialias {
@@ -15,31 +14,19 @@
 }
 
 @mixin flex($property: flex) {
-  display: -webkit-box;
-  display: -webkit-$property;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -ms-$property;
+  display: -webkit-#{$property};
+  display: -ms-#{$property};
   display: $property;
 }
 
 @mixin transition($property: all, $duration: 0.33s, $timing: cubic-bezier(0.19, 1, 0.22, 1)) {
-  @include prefix(transition, $property $duration $timing);
+  transition: $property $duration $timing;
 }
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
     @content;
   }
-
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-
-  @-ms-keyframes #{$name} {
-    @content;
-  }
-
   @keyframes #{$name} {
     @content;
   }

@@ -5,7 +5,7 @@ header.page-header {
   left: 0;
   @include flex;
   @include prefix(flex-direction, column);
-  @include prefix(box-sizing, border-box);
+  box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
   width: $header-width;
@@ -32,6 +32,14 @@ header.page-header {
   p {
     margin-top: 2.5em;
     @include prefix(animation, fade-in 1s ease-out 1);
+  }
+
+  .no-underline {
+    border-bottom: 0;
+
+    @media (max-width: $small-breakpoint) {
+      padding-right: 20px;
+    }
   }
 }
 
@@ -68,7 +76,7 @@ header.page-header {
     &::after {
       content: '';
       position: absolute;
-      @include prefix(box-sizing, border-box);
+      box-sizing: border-box;
       display: block;
     }
 
