@@ -57,6 +57,38 @@
     }
   }
 
+  &.attract-panel {
+    background-color: rgb(255, 102, 111);
+
+    .content-panel-header {
+      background-color: $white;
+    }
+
+    figure {
+      background-image: url('/img/attract-pattern@2x.png');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+
+      img {
+        box-shadow: 0 10px 33px rgb(220, 70, 110);
+      }
+
+      @media (max-width: $small-breakpoint) {
+
+        img {
+          border-top: 1px solid $grey-light;
+          border-bottom: 1px solid $grey-light;
+          box-shadow: none;
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   &.scrunch-panel {
     background-image: url('/img/scrunch-pattern-bg@2x.jpg');
     background-repeat: no-repeat;
