@@ -118,10 +118,31 @@
   }
 
   &.sharedesk-panel {
-    background-color: rgb(62, 42, 160);
 
     figure {
       padding: 0;
+      background-color: rgb(62, 42, 160);
+    }
+
+    @media (max-width: $large-breakpoint) {
+
+      &:not(.content-panel-small) figure {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: $vertical-breakpoint) {
+      background-color: rgb(62, 42, 160);
+
+      h1,
+      p:not(.grey-text) {
+        color: $white;
+
+        a:not(:hover) {
+          border-bottom-color: rgba($white, 0.33);
+        }
+      }
     }
   }
 
