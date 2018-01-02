@@ -8,13 +8,14 @@ function calcWindowSize() {
 }
 
 window.onresize = calcWindowSize;
+window.onload = calcWindowSize;
 
 function addTransform(event) {
   var x = event.clientX;
   var y = event.clientY;
 
   var wrapperWidth = wrapper.offsetWidth;
-  var wrapperHeight = wrapper.offsetWidth;
+  var wrapperHeight = wrapper.offsetHeight;
   var wrapperX = x - (w - wrapperWidth) / 2;
   var wrapperPx = ((wrapperX / wrapperWidth * 100) - 50) * 2;
   var wrapperY = y - (h - wrapperHeight) / 2;
