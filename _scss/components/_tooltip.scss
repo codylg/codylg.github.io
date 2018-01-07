@@ -10,13 +10,13 @@
   border-radius: $radius * 2;
   background-color: $charcoal;
   opacity: 0;
+  box-shadow: 0 0 20px rgba($black, 0.05);
   font-family: $font;
   font-weight: 700;
   font-size: 1rem;
   line-height: 2em;
   white-space: nowrap;
   color: $white;
-  box-shadow: 0 0 20px rgba($black, 0.05);
   @include prefix(transform, perspective(300px) translateX(-50%) rotateX(-33deg));
   @include transition;
   transition-property: margin-top, margin-left, opacity, transform;

@@ -2,8 +2,8 @@
 [class^="button-"],
 [class*=" button-"] {
   display: inline-block;
-  box-sizing: border-box;
   vertical-align: middle;
+  box-sizing: border-box;
   padding: 1em;
   border: 0;
   border-radius: $radius * 2;

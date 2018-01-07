@@ -13,11 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Dupe display required for fallback
+// scss-lint:disable DuplicateProperty
+
 @mixin flex($property: flex) {
   display: -webkit-#{$property};
   display: -ms-#{$property};
   display: $property;
 }
+
+// scss-lint:enable DuplicateProperty
 
 @mixin transition($property: all, $duration: 0.33s, $timing: cubic-bezier(0.19, 1, 0.22, 1)) {
   transition: $property $duration $timing;

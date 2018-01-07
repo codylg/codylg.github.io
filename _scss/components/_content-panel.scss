@@ -8,15 +8,15 @@
 }
 
 .content-panel {
-  box-sizing: border-box;
   @include flex;
   overflow: hidden;
+  box-sizing: border-box;
   min-height: calc(100vh - #{$page-padding} * 3);
   margin-bottom: $page-padding;
   border-radius: $radius;
   background-color: $white;
-  font-size: 0;
   box-shadow: 0 1px 3px rgba($black, 0.2);
+  font-size: 0;
   @include transition($property: background-color);
 
   &:first-child,
@@ -125,7 +125,9 @@
   0% {
     opacity: 0;
     @include prefix(transform, translateY(10px) scale(0.98));
-  } 100% {
+  }
+
+  100% {
     opacity: 1;
     @include prefix(transform, none);
   }

@@ -44,8 +44,8 @@ hr {
 }
 
 .page {
-  box-sizing: border-box;
   display: block;
+  box-sizing: border-box;
   max-width: 720px;
   padding: ($page-padding * 2) ($page-padding * 3);
   margin: 0 auto;

@@ -52,8 +52,8 @@ figure.photo-gallery {
 
   figure.photo-gallery {
     @include prefix(flex-direction, column);
-    height: auto;
     width: 100%;
+    height: auto;
 
     img {
       width: 100%;
