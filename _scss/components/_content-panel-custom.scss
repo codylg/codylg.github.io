@@ -101,19 +101,107 @@
 
     .content-panel-header {
       background-color: rgb(50, 170, 255);
-    }
 
-    .night-mode & {
-      background-color: rgb(34, 121, 198);
-
-      .content-panel-header {
-        background-color: rgb(50, 148, 217);
+      @media (max-width: $small-breakpoint) {
+        background-color: rgb(30, 150, 255);
       }
     }
 
+    // .night-mode & {
+    //   background-color: rgb(34, 121, 198);
+    //
+    //   .content-panel-header {
+    //     background-color: rgb(50, 148, 217);
+    //
+    //     @media (max-width: $small-breakpoint) {
+    //       background-color: rgb(34, 121, 198);
+    //     }
+    //   }
+    // }
+
     figure {
+      position: relative;
       background-image: url('/img/divvy-bg@2x.png');
       background-size: 98px;
+
+      @media (max-width: $small-breakpoint) {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-image: none;
+
+        > img {
+          display: none;
+        }
+      }
+    }
+
+    .divvy-recording {
+      position: absolute;
+      bottom: 0;
+      left: $page-padding * 2;
+      padding: 7px;
+      padding-bottom: 0;
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+      background-color: $charcoal;
+      box-shadow: 0 20px 60px rgba($charcoal, 0.33);
+
+      @media (max-width: $vertical-breakpoint) {
+        right: $page-padding;
+        left: auto;
+      }
+
+      @media (max-width: $small-breakpoint) {
+        position: relative;
+        right: auto;
+      }
+
+      img {
+        max-width: 240px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        @media (max-width: $vertical-breakpoint) {
+          max-width: 210px;
+        }
+
+        @media (max-width: $small-breakpoint) {
+          max-width: none;
+        }
+      }
+
+      .notch {
+        position: absolute;
+        top: 7px;
+        left: 25%;
+        width: 50%;
+        height: 4%;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 11px;
+        background-color: $charcoal;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 0;
+          height: 0;
+          border: 0.5px solid $charcoal;
+        }
+
+        &::before {
+          left: -1px;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+
+        &::after {
+          right: -1px;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+        }
+      }
     }
   }
 
