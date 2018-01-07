@@ -75,15 +75,10 @@
       }
 
       @media (max-width: $small-breakpoint) {
+        padding: $page-padding ($page-padding / 2);
 
-        img {
-          border-top: 1px solid $grey-light;
-          border-bottom: 1px solid $grey-light;
-          box-shadow: none;
-
-          &:last-child {
-            display: none;
-          }
+        img:last-child {
+          display: none;
         }
       }
     }
@@ -94,6 +89,10 @@
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 531px 504px;
+
+    @media (max-width: $small-breakpoint) {
+      background-position: 0 60%;
+    }
   }
 
   &.divvy-panel {
@@ -210,6 +209,10 @@
     figure {
       padding: 0;
       background-color: rgb(62, 42, 160);
+
+      @media (max-width: $small-breakpoint) {
+        padding-bottom: 40px;
+      }
     }
 
     @media (max-width: $large-breakpoint) {
@@ -245,9 +248,20 @@
 
     figure {
 
+      @media (max-width: $small-breakpoint) {
+        padding-top: 0;
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+
       img {
         max-width: 367px;
         margin: 95px auto;
+
+        @media (max-width: $small-breakpoint) {
+          margin-top: 0;
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -279,6 +293,11 @@
       img {
         max-width: 430px;
         margin: 125px auto;
+
+        @media (max-width: $small-breakpoint) {
+          margin-top: 0;
+          margin-bottom: 40px;
+        }
       }
     }
   }
