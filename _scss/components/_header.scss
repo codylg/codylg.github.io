@@ -5,9 +5,9 @@ header.page-header {
   left: 0;
   @include flex;
   @include prefix(flex-direction, column);
-  box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
+  box-sizing: border-box;
   width: $header-width;
   padding: $page-padding;
   padding-right: 0;
@@ -76,8 +76,8 @@ header.page-header {
     &::after {
       content: '';
       position: absolute;
-      box-sizing: border-box;
       display: block;
+      box-sizing: border-box;
     }
 
     &::before {
