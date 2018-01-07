@@ -2,7 +2,7 @@ var d = new Date();
 var h = d.getHours();
 var nightModeSwitch = document.getElementById("night-mode-switch");
 
-if ((h > 22 || h < 4) && location.pathname == "/") {
+if ((h > 23 || h < 4) && location.pathname == "/") {
   document.body.className = 'night-mode';
   nightModeSwitch.checked = true;
 }

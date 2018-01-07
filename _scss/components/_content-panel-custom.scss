@@ -1,7 +1,9 @@
 .content-panel {
 
   &.content-panel-small,
+  &.attract-panel,
   &.photo-collection-01-panel,
+  &.sharedesk-panel,
   &.ios86-panel {
 
     .night-mode & {
@@ -58,13 +60,24 @@
   }
 
   &.attract-panel {
-    background-color: rgb(255, 102, 111);
+
+    .night-mode & {
+
+      .content-panel-header {
+        background-color: $charcoal;
+      }
+
+      .figure {
+        background-color: rgb(255, 102, 111);
+      }
+    }
 
     .content-panel-header {
       background-color: $white;
     }
 
     figure {
+      background-color: rgb(255, 102, 111);
       background-image: url('/img/attract-pattern@2x.png');
       background-repeat: no-repeat;
       background-position: bottom;
@@ -105,18 +118,6 @@
         background-color: rgb(30, 150, 255);
       }
     }
-
-    // .night-mode & {
-    //   background-color: rgb(34, 121, 198);
-    //
-    //   .content-panel-header {
-    //     background-color: rgb(50, 148, 217);
-    //
-    //     @media (max-width: $small-breakpoint) {
-    //       background-color: rgb(34, 121, 198);
-    //     }
-    //   }
-    // }
 
     figure {
       position: relative;
@@ -243,7 +244,7 @@
     background-size: 400px;
 
     .night-mode & {
-      background-color: rgb(200, 97, 73);
+      background-color: rgb(230, 111, 81);
     }
 
     figure {
