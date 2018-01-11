@@ -58,13 +58,13 @@
   }
 
   &.attract-panel {
+    background-color: rgb(255, 102, 111);
+    background-image: url('/img/attract-pattern@2x.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 
     figure {
-      background-color: rgb(255, 102, 111);
-      background-image: url('/img/attract-pattern@2x.png');
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: contain;
 
       img {
         box-shadow: 0 10px 33px rgb(220, 70, 110);
@@ -83,24 +83,6 @@
 
       .content-panel-header {
         padding-bottom: 0;
-        background-color: rgb(255, 102, 111);
-
-        h1,
-        p {
-          color: $white;
-
-          &.grey-text {
-            opacity: 0.66;
-          }
-        }
-
-        a {
-          border-bottom-color: rgba($white, 0.33);
-
-          &:hover {
-            border-bottom-color: $white;
-          }
-        }
       }
     }
   }
