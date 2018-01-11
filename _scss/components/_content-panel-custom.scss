@@ -2,7 +2,6 @@
 
   &.content-panel-small,
   &.attract-panel,
-  &.photo-collection-01-panel,
   &.sharedesk-panel,
   &.ios86-panel {
 
@@ -233,6 +232,45 @@
 
         a:not(:hover) {
           border-bottom-color: rgba($white, 0.33);
+        }
+      }
+    }
+  }
+
+  &.photo-browser-panel {
+    background-color: $grey;
+    background-image: url('/photo/img/ijen-miner-01@2x.jpg');
+    background-position: center;
+    background-size: cover;
+
+    @supports (mix-blend-mode: exclusion) {
+
+      h1,
+      p,
+      hr {
+        color: $white;
+        mix-blend-mode: exclusion;
+      }
+    }
+
+    @media (max-width: $vertical-breakpoint) {
+
+      .content-panel-header {
+        padding-bottom: 50%;
+
+        p {
+          max-width: 70%;
+        }
+      }
+    }
+
+    @media (max-width: $small-breakpoint) {
+
+      .content-panel-header {
+        padding-bottom: 60%;
+
+        p {
+          max-width: 90%;
         }
       }
     }

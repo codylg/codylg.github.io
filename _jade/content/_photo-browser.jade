@@ -1,0 +1,18 @@
+extends content
+
+block variables
+  - var classname = "photo-browser"
+  - var smallpanel = false
+  - var photopanel = false
+  
+block description
+  h1
+    a(id="#{classname}", href="/photo") Photo browser
+  p
+    | I built a simple photo browser that responds to the viewport width and height ratio.
+  p.translucent
+    | Late 2017
+  hr
+  .btn-wrapper
+    a.button(href="/photo") &#128247; Browse photos
+    a.button(href="https://instagram.com/clg_aus", target="_blank") @clg_aus on Instagram &rarr;
