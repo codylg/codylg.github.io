@@ -3,11 +3,12 @@ extends content
 block variables
   - var classname = "photo-browser"
   - var smallpanel = false
-  - var photopanel = false
   
-block description
+block header
   h1
     a(id="#{classname}", href="/photo") Photo browser
+
+block description
   p
     | I built a simple photo browser that responds to the viewport width and height ratio.
   p.translucent
