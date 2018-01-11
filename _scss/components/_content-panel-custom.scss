@@ -282,24 +282,4 @@
     background-position: 75% 50%;
     background-size: cover;
   }
-
-  &.axex-constructions-panel {
-    background-color: $grey;
-    background-image: url('/img/axex-bg@2x.jpg');
-    background-position: center;
-    background-size: cover;
-
-    figure {
-
-      img {
-        max-width: 430px;
-        margin: 125px auto;
-
-        @media (max-width: $small-breakpoint) {
-          margin-top: 0;
-          margin-bottom: 40px;
-        }
-      }
-    }
-  }
 }
