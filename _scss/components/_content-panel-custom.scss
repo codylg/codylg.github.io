@@ -259,15 +259,15 @@
       }
     }
 
-    @supports (mix-blend-mode: exclusion) {
-
-      h1,
-      p,
-      hr {
-        color: $white;
-        mix-blend-mode: exclusion;
-      }
-    }
+    // @supports (mix-blend-mode: exclusion) {
+    //
+    //   h1,
+    //   p,
+    //   hr {
+    //     color: $white;
+    //     mix-blend-mode: exclusion;
+    //   }
+    // }
   }
 
   &.threads-network-panel {
