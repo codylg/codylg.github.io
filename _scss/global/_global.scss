@@ -51,9 +51,17 @@
     height: 100%;
     border: 0;
     border-radius: 2px;
+
+    @media (max-width: $small-breakpoint) {
+      border-radius: 0;
+    }
   }
 
   + img {
     margin-top: $page-padding / 2;
+
+    @media (max-width: $small-breakpoint) {
+      margin-top: 0;
+    }
   }
 }
