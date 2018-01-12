@@ -61,6 +61,11 @@
     }
   }
 
+  @media (max-width: $vertical-breakpoint) {
+    @include prefix(flex-direction, column);
+    min-height: 0;
+  }
+
   @media (max-width: $small-breakpoint) {
     margin-bottom: 0;
     border-radius: 0;
@@ -100,6 +105,10 @@
     width: $content-sidebar-width;
     @include prefix(flex-shrink, 0);
 
+    @media (max-width: $vertical-breakpoint) {
+      width: 100%;
+    }
+
     hr {
       margin: $page-padding 0;
     }
@@ -119,6 +128,10 @@
   figure {
     width: 100%;
     pointer-events: none;
+
+    &:empty {
+      padding: 0;
+    }
   }
 
   .image-gallery {

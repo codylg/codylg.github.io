@@ -7,52 +7,6 @@
 
 
 
-@media (max-width: 800px) {
-
-  .content-panel {
-    @include prefix(flex-direction, column);
-    min-height: 0;
-
-    .content-panel-header {
-      width: 100%;
-    }
-
-    figure {
-
-      &:empty {
-        padding: 0;
-      }
-    }
-  }
-
-  .threads-network-panel {
-
-    figure {
-
-      img {
-        margin-top: 0;
-        margin-bottom: $page-padding;
-      }
-    }
-  }
-
-  .ios86-panel {
-
-    figure {
-      min-height: 50vw;
-    }
-  }
-
-  .sarif-panel {
-
-    .content-panel-header {
-      background-color: rgba($charcoal, 0.33);
-    }
-  }
-}
-
-
-
 @media (max-width: $small-breakpoint) {
 
   .content-full {
