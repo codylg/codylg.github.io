@@ -32,6 +32,18 @@
   }
 }
 
+.tooltip-align-left {
+
+  &[data-tooltip]::after {
+    left: 0;
+    @include prefix(transform, perspective(300px) rotateX(-33deg));
+  }
+
+  &:hover[data-tooltip]::after {
+    @include prefix(transform, perspective(300px));
+  }
+}
+
 [data-tooltip] {
   position: relative;
 
