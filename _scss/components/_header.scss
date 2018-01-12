@@ -17,6 +17,10 @@ header.page-header {
     left: calc(50% - #{($page-padding * 4 + $content-sidebar-width + $content-width) / 2 + $header-width});
   }
 
+  @media (max-width: $large-breakpoint) and (min-width: $medium-breakpoint) {
+    width: $header-width - $page-padding;
+  }
+
   @media (max-width: $small-breakpoint) {
     padding: $page-padding / 2;
   }

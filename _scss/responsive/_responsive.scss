@@ -1,31 +1,3 @@
-@media (max-width: 1260px) and (min-width: 1024px) {
-
-  header.page-header {
-    width: $header-width - $page-padding;
-  }
-
-  .content-panels {
-    width: calc(100vw - #{$header-width - $page-padding});
-    padding-right: $page-padding / 2;
-    margin-left: $header-width - $page-padding;
-  }
-
-  .content-panel:not(.content-panel-small) {
-
-    .content-panel-header {
-      width: $content-sidebar-width - $page-padding * 2;
-      padding-right: $page-padding / 2;
-    }
-
-    figure {
-      padding-right: $page-padding / 2;
-      padding-left: $page-padding / 2;
-    }
-  }
-}
-
-
-
 @media (max-width: 1024px) {
 
   header.page-header {

@@ -11,6 +11,12 @@
     margin-left: auto;
   }
 
+  @media (max-width: $large-breakpoint) and (min-width: $medium-breakpoint) {
+    width: calc(100vw - #{$header-width - $page-padding});
+    padding-right: $page-padding / 2;
+    margin-left: $header-width - $page-padding;
+  }
+
   @media (max-width: $small-breakpoint) {
     padding: 0;
   }
@@ -30,6 +36,22 @@
 
   @media (min-height: 900px) {
     min-height: 800px;
+  }
+
+  @media (max-width: $large-breakpoint) and (min-width: $medium-breakpoint) {
+
+    &:not(.content-panel-small) {
+
+      .content-panel-header {
+        width: $content-sidebar-width - $page-padding * 2;
+        padding-right: $page-padding / 2;
+      }
+
+      figure {
+        padding-right: $page-padding / 2;
+        padding-left: $page-padding / 2;
+      }
+    }
   }
 
   @media (max-width: $small-breakpoint) {
