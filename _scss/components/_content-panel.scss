@@ -5,6 +5,10 @@
   padding: $page-padding;
   margin-left: $header-width;
   font-size: 0;
+
+  @media (max-width: $small-breakpoint) {
+    padding: 0;
+  }
 }
 
 .content-panel {
@@ -18,6 +22,12 @@
   box-shadow: 0 1px 3px rgba($black, 0.2);
   font-size: 0;
   @include transition($property: background-color);
+
+  @media (max-width: $small-breakpoint) {
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
 
   &:first-child,
   &:nth-child(2) {
@@ -41,6 +51,11 @@
   figure {
     box-sizing: border-box;
     padding: $page-padding;
+
+    @media (max-width: $small-breakpoint) {
+      padding-right: $page-padding / 2;
+      padding-left: $page-padding / 2;
+    }
   }
 
   .content-panel-header {
@@ -70,13 +85,29 @@
 
   .image-gallery {
 
+    @media (max-width: $small-breakpoint) {
+      padding: 0;
+    }
+
     img {
       border-radius: $radius;
       background-color: $grey-light;
       box-shadow: 0 1px 3px rgba($black, 0.2);
 
+      @media (max-width: $small-breakpoint) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
       + img {
         margin-top: $page-padding / 2;
+
+        @media (max-width: $small-breakpoint) {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -84,6 +115,10 @@
   .image-gallery-small {
     @include prefix(columns, 2 auto);
     @include prefix(column-gap, $page-padding / 2);
+
+    @media (max-width: $small-breakpoint) {
+      @include prefix(columns, 2);
+    }
 
     .gallery-span {
       @include prefix(column-span, all);
@@ -112,8 +147,22 @@
   width: calc(50% - #{$page-padding / 2});
   min-height: 360px;
 
+  @media (max-width: $small-breakpoint) {
+    width: 100%;
+    min-height: 0;
+    border-bottom: 1px solid $grey-light;
+
+    .night-mode & {
+      border-bottom-color: $grey-dark;
+    }
+  }
+
   + .content-panel-small {
     margin-left: $page-padding;
+
+    @media (max-width: $small-breakpoint) {
+      margin-left: 0;
+    }
   }
 
   .content-panel-header {

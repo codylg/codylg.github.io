@@ -46,7 +46,7 @@
     .content-panel-header {
       padding-bottom: 100px;
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $vertical-breakpoint) {
         background-color: rgba($white, 0.5);
       }
     }
@@ -115,6 +115,10 @@
 
     @media (max-width: $small-breakpoint) {
       background-position: 0 60%;
+
+      img:not(.gallery-span) {
+        display: none;
+      }
     }
   }
 

@@ -27,6 +27,10 @@
   @include prefix(columns, 3);
   list-style-type: none;
 
+  @media (max-width: $small-breakpoint) {
+    @include prefix(columns, 2);
+  }
+
   li {
     margin: 0;
   }

@@ -13,6 +13,10 @@ header.page-header {
   padding-right: 0;
   color: $charcoal;
 
+  @media (max-width: $small-breakpoint) {
+    padding: $page-padding / 2;
+  }
+
   .night-mode & {
     color: $grey;
 
