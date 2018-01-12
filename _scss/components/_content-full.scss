@@ -2,11 +2,11 @@
   max-width: $content-width;
   margin-top: $page-padding;
 
-  @media (max-width: $medium-breakpoint) {
+  @media (max-width: $medium-media) {
     max-width: none;
   }
 
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $mobile-media) {
     margin-top: 0;
 
     h2,
@@ -31,7 +31,7 @@
   hr {
     margin: $page-padding * 2 0;
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       display: none;
     }
   }
@@ -47,14 +47,14 @@
       border-radius: 2px;
       background-color: $grey-light;
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         border-radius: 0;
       }
 
       + img {
         margin-top: $page-padding / 2;
 
-        @media (max-width: $small-breakpoint) {
+        @media (max-width: $mobile-media) {
           margin-top: 0;
         }
       }
@@ -66,7 +66,7 @@
         display: inline-block;
         width: calc(50% - #{$page-padding / 4});
 
-        @media (max-width: $small-breakpoint) {
+        @media (max-width: $mobile-media) {
           display: block;
           width: 100%;
         }
@@ -74,7 +74,7 @@
         &:nth-of-type(odd) {
           margin-right: $page-padding / 2;
 
-          @media (max-width: $small-breakpoint) {
+          @media (max-width: $mobile-media) {
             margin-right: 0;
           }
         }
@@ -95,7 +95,7 @@
         vertical-align: top;
         padding: $page-padding / 2;
 
-        @media (max-width: $small-breakpoint) {
+        @media (max-width: $mobile-media) {
           display: block;
         }
 
@@ -103,7 +103,7 @@
           padding-left: 0;
           font-weight: 700;
 
-          @media (max-width: $small-breakpoint) {
+          @media (max-width: $mobile-media) {
             padding-left: $page-padding / 2;
           }
         }
@@ -111,7 +111,7 @@
         &:last-child {
           padding-right: 0;
 
-          @media (max-width: $small-breakpoint) {
+          @media (max-width: $mobile-media) {
             padding-right: $page-padding / 2;
           }
         }

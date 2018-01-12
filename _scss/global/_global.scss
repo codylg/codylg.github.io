@@ -27,7 +27,7 @@
   @include prefix(columns, 3);
   list-style-type: none;
 
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $mobile-media) {
     @include prefix(columns, 2);
   }
 
@@ -52,7 +52,7 @@
     border: 0;
     border-radius: 2px;
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       border-radius: 0;
     }
   }
@@ -60,7 +60,7 @@
   + img {
     margin-top: $page-padding / 2;
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       margin-top: 0;
     }
   }

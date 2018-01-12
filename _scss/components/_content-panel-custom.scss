@@ -39,14 +39,14 @@
     background-position: 100% 0;
     background-size: cover;
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       background-position: 80% 0;
     }
 
     .content-panel-header {
       padding-bottom: 100px;
 
-      @media (max-width: $vertical-breakpoint) {
+      @media (max-width: $small-media) {
         background-color: rgba($white, 0.5);
       }
     }
@@ -90,7 +90,7 @@
         box-shadow: 0 10px 33px rgb(220, 70, 110);
       }
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         padding: $page-padding ($page-padding / 2);
 
         img:last-child {
@@ -99,7 +99,7 @@
       }
     }
 
-    @media (max-width: $vertical-breakpoint) {
+    @media (max-width: $small-media) {
 
       .content-panel-header {
         padding-bottom: 0;
@@ -113,7 +113,7 @@
     background-position: 0 100%;
     background-size: 531px 504px;
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       background-position: 0 60%;
 
       img:not(.gallery-span) {
@@ -128,7 +128,7 @@
     .content-panel-header {
       background-color: rgb(50, 170, 255);
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         background-color: rgb(30, 150, 255);
       }
     }
@@ -138,7 +138,7 @@
       background-image: url('/img/divvy-bg@2x.png');
       background-size: 98px;
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         padding-top: 0;
         padding-bottom: 0;
         background-image: none;
@@ -160,12 +160,12 @@
       background-color: $charcoal;
       box-shadow: 0 20px 60px rgba($charcoal, 0.33);
 
-      @media (max-width: $vertical-breakpoint) {
+      @media (max-width: $small-media) {
         right: $page-padding;
         left: auto;
       }
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         position: relative;
         right: auto;
       }
@@ -175,11 +175,11 @@
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
 
-        @media (max-width: $vertical-breakpoint) {
+        @media (max-width: $small-media) {
           max-width: 210px;
         }
 
-        @media (max-width: $small-breakpoint) {
+        @media (max-width: $mobile-media) {
           max-width: none;
         }
       }
@@ -225,12 +225,12 @@
       padding: 0;
       background-color: rgb(62, 42, 160);
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         padding-bottom: 40px;
       }
     }
 
-    @media (max-width: $large-breakpoint) {
+    @media (max-width: $large-media) {
 
       &:not(.content-panel-small) figure {
         padding-right: 0;
@@ -238,7 +238,7 @@
       }
     }
 
-    @media (max-width: $vertical-breakpoint) {
+    @media (max-width: $small-media) {
       background-color: rgb(62, 42, 160);
 
       h1,
@@ -258,7 +258,7 @@
     background-position: center;
     background-size: cover;
 
-    @media (max-width: $vertical-breakpoint) {
+    @media (max-width: $small-media) {
       padding-bottom: 50%;
 
       p {
@@ -266,7 +266,7 @@
       }
     }
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       padding-bottom: 60%;
 
       p {
@@ -293,7 +293,7 @@
 
     figure {
 
-      @media (max-width: $small-breakpoint) {
+      @media (max-width: $mobile-media) {
         padding-top: 0;
         padding-right: 40px;
         padding-left: 40px;
@@ -303,12 +303,12 @@
         max-width: 367px;
         margin: 95px auto;
 
-        @media (max-width: $vertical-breakpoint) {
+        @media (max-width: $small-media) {
           margin-top: 0;
           margin-bottom: $page-padding;
         }
 
-        @media (max-width: $small-breakpoint) {
+        @media (max-width: $mobile-media) {
           margin-top: 0;
           margin-bottom: 40px;
         }
@@ -323,7 +323,7 @@
       background-position: center;
       background-size: cover;
 
-      @media (max-width: $vertical-breakpoint) {
+      @media (max-width: $small-media) {
         min-height: 50vw;
       }
     }
@@ -335,7 +335,7 @@
     background-position: 75% 50%;
     background-size: cover;
 
-    @media (max-width: $vertical-breakpoint) {
+    @media (max-width: $small-media) {
 
       .content-panel-header {
         background-color: rgba($charcoal, 0.33);

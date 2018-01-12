@@ -17,17 +17,17 @@ header.page-header {
     left: calc(50% - #{($page-padding * 4 + $content-sidebar-width + $content-width) / 2 + $header-width});
   }
 
-  @media (max-width: $large-breakpoint) and (min-width: $medium-breakpoint) {
+  @media (max-width: $large-media) and (min-width: $medium-media) {
     width: $header-width - $page-padding;
   }
 
-  @media (max-width: $medium-breakpoint) {
+  @media (max-width: $medium-media) {
     position: relative;
     width: 100vw;
     padding-right: $page-padding;
   }
 
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $mobile-media) {
     padding: $page-padding / 2;
   }
 
@@ -51,7 +51,7 @@ header.page-header {
     margin-top: 2.5em;
     @include prefix(animation, fade-in 1s ease-out 1);
 
-    @media (max-width: $medium-breakpoint) {
+    @media (max-width: $medium-media) {
       margin-top: 1.5em;
     }
   }
@@ -59,7 +59,7 @@ header.page-header {
   .no-underline {
     border-bottom: 0;
 
-    @media (max-width: $small-breakpoint) {
+    @media (max-width: $mobile-media) {
       padding-right: 20px;
     }
   }
@@ -74,14 +74,14 @@ header.page-header {
   @include prefix(animation-delay, 1s);
   @include prefix(animation-fill-mode, both);
 
-  @media (max-width: $medium-breakpoint) {
+  @media (max-width: $medium-media) {
     position: absolute;
     right: $page-padding;
     bottom: $page-padding;
     padding: 0;
   }
 
-  @media (max-width: $small-breakpoint) {
+  @media (max-width: $mobile-media) {
     right: $page-padding / 2;
     bottom: $page-padding;
   }
