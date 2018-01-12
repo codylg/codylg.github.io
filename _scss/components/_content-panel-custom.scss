@@ -64,6 +64,18 @@
     background-position: bottom;
     background-size: contain;
 
+    a {
+      border-bottom-color: rgb(220, 70, 110);
+
+      &:hover {
+        border-bottom-color: rgb(70, 20, 170);
+      }
+    }
+
+    hr {
+      @include dotted-line($color: rgb(220, 70, 110));
+    }
+
     figure {
 
       img {
