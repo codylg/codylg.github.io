@@ -1,21 +1,4 @@
-@media (max-width: 1024px) {
-
-  header.page-header {
-    position: relative;
-    width: 100vw;
-    padding-right: $page-padding;
-
-    p {
-      margin-top: 1.5em;
-    }
-  }
-
-  .content-panels {
-    width: 100%;
-    max-width: none;
-    padding-top: 0;
-    margin-left: 0;
-  }
+@media (max-width: $medium-breakpoint) {
 
   .content-full {
     max-width: none;

@@ -21,6 +21,12 @@ header.page-header {
     width: $header-width - $page-padding;
   }
 
+  @media (max-width: $medium-breakpoint) {
+    position: relative;
+    width: 100vw;
+    padding-right: $page-padding;
+  }
+
   @media (max-width: $small-breakpoint) {
     padding: $page-padding / 2;
   }
@@ -44,6 +50,10 @@ header.page-header {
   p {
     margin-top: 2.5em;
     @include prefix(animation, fade-in 1s ease-out 1);
+
+    @media (max-width: $medium-breakpoint) {
+      margin-top: 1.5em;
+    }
   }
 
   .no-underline {
