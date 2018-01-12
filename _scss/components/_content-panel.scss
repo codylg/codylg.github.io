@@ -6,6 +6,11 @@
   margin-left: $header-width;
   font-size: 0;
 
+  @media (min-width: $oversize-media) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   @media (max-width: $small-breakpoint) {
     padding: 0;
   }
@@ -22,6 +27,10 @@
   box-shadow: 0 1px 3px rgba($black, 0.2);
   font-size: 0;
   @include transition($property: background-color);
+
+  @media (min-height: 900px) {
+    min-height: 800px;
+  }
 
   @media (max-width: $small-breakpoint) {
     margin-bottom: 0;

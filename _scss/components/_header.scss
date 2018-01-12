@@ -13,6 +13,10 @@ header.page-header {
   padding-right: 0;
   color: $charcoal;
 
+  @media (min-width: $oversize-media) {
+    left: calc(50% - #{($page-padding * 4 + $content-sidebar-width + $content-width) / 2 + $header-width});
+  }
+
   @media (max-width: $small-breakpoint) {
     padding: $page-padding / 2;
   }
