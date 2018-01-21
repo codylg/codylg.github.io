@@ -19,6 +19,7 @@ svg.logo {
 }
 
 header.page-header {
+  z-index: 4;
   mix-blend-mode: exclusion;
 
   > div {
@@ -28,6 +29,7 @@ header.page-header {
 
 a.photo-insta-link {
   position: fixed;
+  z-index: 4;
   top: $page-padding;
   right: $page-padding;
   font-size: 13px;
@@ -41,10 +43,49 @@ figure.photo-gallery {
   height: 100vh;
 
   img {
+    position: relative;
+    z-index: 3;
     @include prefix(flex-shrink, 0);
     width: auto;
     height: 100%;
     pointer-events: none;
+
+    &:nth-of-type(1) {
+      z-index: 1;
+    }
+  }
+}
+
+.horz-scroll-indicator {
+  position: fixed;
+  z-index: 2;
+  top: $page-padding;
+  left: 50%;
+  @include prefix(transform, translateX(-50%));
+  font-size: 13px;
+  line-height: 1.6em;
+  color: $white;
+  mix-blend-mode: exclusion;
+
+  &::after {
+    content: '\2192';
+    position: relative;
+    margin-left: 5px;
+    @include prefix(animation, scroll-indicator 1.66s ease-in-out infinite);
+  }
+}
+
+@include keyframes(scroll-indicator) {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 10px;
+  }
+
+  100% {
+    left: 0;
   }
 }
 
@@ -59,6 +100,10 @@ figure.photo-gallery {
       width: 100%;
       height: auto;
     }
+  }
+
+  .horz-scroll-indicator {
+    display: none;
   }
 }
 
