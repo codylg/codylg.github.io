@@ -5,7 +5,7 @@
   -webkit-#{$property}: $values;
   -moz-#{$property}: $values;
   -ms-#{$property}: $values;
-  $property: $values;
+  #{$property}: $values;
 }
 
 @mixin font-antialias {
