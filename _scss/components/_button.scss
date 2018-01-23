@@ -20,10 +20,19 @@
   @include transition;
   transition-property: color, background-color;
 
+  @media (max-width: $mobile-media) {
+    width: 100%;
+  }
+
   + .button,
   + [class^="button-"],
   + [class*=" button-"] {
     margin-left: 0.5em;
+
+    @media (max-width: $mobile-media) {
+      margin-top: 0.5em;
+      margin-left: 0;
+    }
   }
 
   &:focus,
@@ -53,5 +62,16 @@
     &:hover {
       background-color: $grey-light;
     }
+  }
+}
+
+.btn-wrapper {
+  margin-top: -0.5em;
+  margin-right: -0.5em;
+
+  > * {
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    margin-left: 0;
   }
 }
