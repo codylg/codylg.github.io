@@ -69,7 +69,9 @@
   margin-top: -0.5em;
   margin-right: -0.5em;
 
-  > * {
+  > .button,
+  > [class^="button-"],
+  > [class*=" button-"] {
     margin-top: 0.5em;
     margin-right: 0.5em;
     margin-left: 0;
