@@ -92,8 +92,12 @@
       @media (max-width: $mobile-media) {
         padding: $page-padding ($page-padding / 2);
 
+        img {
+          border-radius: $radius;
+        }
+
         img:last-child {
-          display: none;
+          margin-top: $page-padding / 2;
         }
       }
     }
