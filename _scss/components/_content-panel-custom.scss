@@ -1,7 +1,6 @@
 .content-panel {
 
   &.content-panel-small,
-  &.sharedesk-panel,
   &.ios86-panel {
 
     .night-mode & {
@@ -214,39 +213,6 @@
           right: -1px;
           border-right-color: transparent;
           border-bottom-color: transparent;
-        }
-      }
-    }
-  }
-
-  &.sharedesk-panel {
-
-    figure {
-      padding: 0;
-      background-color: rgb(62, 42, 160);
-
-      @media (max-width: $mobile-media) {
-        padding-bottom: 40px;
-      }
-    }
-
-    @media (max-width: $large-media) {
-
-      &:not(.content-panel-small) figure {
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
-
-    @media (max-width: $small-media) {
-      background-color: rgb(62, 42, 160);
-
-      h1,
-      p:not(.grey-text) {
-        color: $white;
-
-        a:not(:hover) {
-          border-bottom-color: rgba($white, 0.33);
         }
       }
     }
