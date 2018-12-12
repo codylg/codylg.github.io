@@ -142,8 +142,7 @@
       background-size: 98px;
 
       @media (max-width: $mobile-media) {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 15%;
         background-image: none;
 
         > img {
@@ -156,10 +155,10 @@
       position: absolute;
       bottom: 0;
       left: $page-padding * 2;
-      padding: 7px;
+      padding: 9px;
       padding-bottom: 0;
-      border-top-left-radius: 22px;
-      border-top-right-radius: 22px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
       background-color: $charcoal;
       box-shadow: 0 20px 60px rgba($charcoal, 0.33);
 
@@ -175,8 +174,8 @@
 
       img {
         max-width: 240px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        border-top-left-radius: 21px;
+        border-top-right-radius: 21px;
 
         @media (max-width: $small-media) {
           max-width: 210px;
@@ -189,12 +188,12 @@
 
       .notch {
         position: absolute;
-        top: 7px;
-        left: 25%;
-        width: 50%;
+        top: 9px;
+        left: 24.5%;
+        width: 51%;
         height: 4%;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 13px;
+        border-bottom-left-radius: 13px;
         background-color: $charcoal;
 
         &::before,
@@ -204,17 +203,17 @@
           top: 0;
           width: 0;
           height: 0;
-          border: 0.5px solid $charcoal;
+          border: 1.5px solid $charcoal;
         }
 
         &::before {
-          left: -1px;
+          left: -2px;
           border-bottom-color: transparent;
           border-left-color: transparent;
         }
 
         &::after {
-          right: -1px;
+          right: -2px;
           border-right-color: transparent;
           border-bottom-color: transparent;
         }
