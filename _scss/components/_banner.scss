@@ -7,9 +7,13 @@ $orange-dark: rgb(174,54,9);
   @include prefix(align-items, center);
   @include prefix(justify-content, center);
   min-height: $banner-height;
-  padding: 15px 20px;
+  padding: 15px 25px;
   background-color: $orange;
   box-shadow: none;
+
+  @media (max-width: $mobile-media) {
+    padding: 30px 20px;
+  }
 
   + .content-panel {
     min-height: calc(100vh - #{$page-padding} * 4 - #{$banner-height});
