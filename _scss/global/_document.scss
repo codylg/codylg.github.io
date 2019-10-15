@@ -16,7 +16,7 @@ body {
   font-family: $font;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.6em;
+  line-height: 2rem;
   color: $charcoal;
   @include font-antialias;
   @include transition($property: background-color);
