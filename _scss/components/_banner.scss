@@ -1,0 +1,30 @@
+$banner-height: 50px;
+$orange: rgb(255,236,190);
+$orange-dark: rgb(174,54,9);
+
+.content-panel.banner {
+  @include flex;
+  @include prefix(align-items, center);
+  @include prefix(justify-content, center);
+  min-height: $banner-height;
+  padding: 15px 20px;
+  background-color: $orange;
+  box-shadow: none;
+
+  + .content-panel {
+    min-height: calc(100vh - #{$page-padding} * 4 - #{$banner-height});
+  }
+
+  p {
+    margin: 0;
+    color: $orange-dark;
+  }
+
+  a {
+    border-bottom-color: rgba($orange-dark, 0.33);
+
+    &:hover {
+      border-bottom-color: rgba($orange-dark, 0.66);
+    }
+  }
+}
