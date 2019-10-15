@@ -1,6 +1,7 @@
 $banner-height: 50px;
 $orange: rgb(255,236,190);
-$orange-dark: rgb(174,54,9);
+$orange-night: rgb(252,213,172);
+$orange-dark: rgb(171,52,9);
 
 .content-panel.banner {
   @include flex;
@@ -10,6 +11,10 @@ $orange-dark: rgb(174,54,9);
   padding: 15px 25px;
   background-color: $orange;
   box-shadow: none;
+
+  .night-mode & {
+    background-color: $orange-night;
+  }
 
   @media (max-width: $mobile-media) {
     padding: 30px 20px;
