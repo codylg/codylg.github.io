@@ -1,6 +1,6 @@
 header.page-header
   nav
-    a(href="/")
+    a.logo(href="/") clg
       include _logo
 
   div
@@ -13,17 +13,17 @@ header.page-header
         span(data-tooltip="🤘") heavy metal
         | .
       p.grey-dark-text
-        a(href="https://rexlabs.io", target="_blank") Rexlabs
+        a(href="https://rexlabs.io") Rexlabs
         | , 
-        a(href="https://attract.ai", target="_blank") Attract.ai
+        a(href="https://attract.ai") Attract.ai
         | , previously 
-        a(href="https://scrunch.com", target="_blank") Scrunch
+        a(href="https://scrunch.com") Scrunch
       p.grey-dark-text
-        a.tooltip-align-left(href="https://medium.com/@clg", target="_blank", data-tooltip="Posts about design/tech") Blog
-        |  &rarr;
+        a.tooltip-align-left(href="https://medium.com/@clg", data-tooltip="Posts about design/tech") Blog
+        | &nbsp;&rarr;
         br
-        a.tooltip-align-left(href="https://instagram.com/clg_aus", target="_blank", data-tooltip="Hobby photography") Photos
-        |  &rarr;
+        a.tooltip-align-left(href="https://instagram.com/clg_aus", data-tooltip="Hobby photography") Photos
+        | &nbsp;&rarr;
         br
         a(href="mailto:clg@clg.name") clg@clg.name
     else
@@ -34,6 +34,6 @@ header.page-header
   if frontPage
     .night-mode-toggle
       input(id="night-mode-switch", type="checkbox")
-      label(for="night-mode-switch", onclick="toggleNightMode()")
+      label(for="night-mode-switch", tabindex="0", role="button", onclick="toggleNightMode()", onKeyDown="toggleNightModeKeyboard(event)") Toggle dark mode
       span.on &#127773;
       span.off &#127770;

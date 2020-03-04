@@ -91,6 +91,9 @@ header.page-header {
     display: inline-block;
     width: 20px;
     height: 12px;
+    border-radius: 6px;
+    font-size: 0;
+    line-height: 0;
     cursor: pointer;
     @include prefix(user-select, none);
 
@@ -117,6 +120,11 @@ header.page-header {
       height: 100%;
       border: 2px solid $grey;
       border-radius: 6px;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px $orange-night;
     }
   }
 
@@ -151,6 +159,10 @@ header.page-header {
 
       &::after {
         border-color: rgb(246, 227, 100);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 4px rgba($orange, 0.2);
       }
     }
 

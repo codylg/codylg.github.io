@@ -129,7 +129,16 @@
     background-color: rgb(30, 150, 255);
 
     .content-panel-header {
-      background-color: rgb(50, 170, 255);
+      background-color: rgb(100, 180, 255);
+      color: rgb(10, 14, 30);
+
+      a {
+        border-bottom-color: rgb(25, 130, 245);
+
+        &:hover {
+          border-bottom-color: rgb(10, 14, 30);
+        }
+      }
 
       @media (max-width: $mobile-media) {
         background-color: rgb(30, 150, 255);
