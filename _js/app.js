@@ -10,7 +10,7 @@ function nightModeOff() {
   document.body.className = '';
 }
 
-// Turn on night mode at night automatically, unless it has been set manually
+// Turn on night mode if it has been set manually
 if (location.pathname == "/") {
 
   if (localStorage.getItem('nightModePref')) {
@@ -22,10 +22,6 @@ if (location.pathname == "/") {
     } else if (localStorage.getItem('nightModePref') == 'off') {
       nightModeOff();
     }
-
-  } else if ((h > 23 || h < 4)) {
-    nightModeOn();
-    nightModeSwitch.checked = true;
   }
 }
 
@@ -37,5 +33,20 @@ function toggleNightMode() {
   } else {
     nightModeOn();
     localStorage.setItem('nightModePref', 'on'); // User has manually set night mode on
+  }
+}
+
+function toggleNightModeKeyboard(e) {
+
+  if (e.keyCode == 13 || e.which == 13) {
+    if (nightModeSwitch.checked) {
+      nightModeOff();
+      nightModeSwitch.checked = false;
+      localStorage.setItem('nightModePref', 'off'); // User has manually set night mode off
+    } else {
+      nightModeOn();
+      nightModeSwitch.checked = true;
+      localStorage.setItem('nightModePref', 'on'); // User has manually set night mode on
+    }
   }
 }

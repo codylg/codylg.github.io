@@ -34,6 +34,6 @@ header.page-header
   if frontPage
     .night-mode-toggle
       input(id="night-mode-switch", type="checkbox")
-      label(for="night-mode-switch", onclick="toggleNightMode()") Toggle dark mode
+      label(for="night-mode-switch", tabindex="0", role="button", onclick="toggleNightMode()", onKeyDown="toggleNightModeKeyboard(event)") Toggle dark mode
       span.on &#127773;
       span.off &#127770;
