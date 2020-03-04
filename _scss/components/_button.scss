@@ -38,6 +38,11 @@
   &:focus,
   &:hover {
     background-color: $off-white;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($charcoal, 0.33);
   }
 
   &.button-full {
