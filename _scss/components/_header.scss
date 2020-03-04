@@ -91,6 +91,8 @@ header.page-header {
     display: inline-block;
     width: 20px;
     height: 12px;
+    font-size: 0;
+    line-height: 0;
     cursor: pointer;
     @include prefix(user-select, none);
 
