@@ -3,6 +3,7 @@
 @import '../global/colors';
 
 body {
+  height: 100vh;
   background-color: $charcoal;
   font-size: 0;
 }
@@ -90,6 +91,10 @@ figure.photo-gallery {
 }
 
 @media (orientation: portrait), (max-width: 600px) and (max-height: 600px) {
+
+  body {
+    height: auto;
+  }
 
   figure.photo-gallery {
     @include prefix(flex-direction, column);
