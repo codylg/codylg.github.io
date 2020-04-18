@@ -9,6 +9,10 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>http://clg.name/photo/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>http://clg.name/ios86/</loc>
     <changefreq>monthly</changefreq>
   </url>
