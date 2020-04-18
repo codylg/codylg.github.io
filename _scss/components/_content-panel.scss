@@ -157,19 +157,6 @@
     }
   }
 
-  .image-gallery-small {
-    @include prefix(columns, 2 auto);
-    @include prefix(column-gap, $page-padding / 2);
-
-    @media (max-width: $mobile-media) {
-      @include prefix(columns, 2);
-    }
-
-    .gallery-span {
-      @include prefix(column-span, all);
-    }
-  }
-
   h1 > a {
 
     &[href^="#"] {
