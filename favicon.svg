@@ -1,0 +1,18 @@
+<svg enable-background="new 0 0 60 60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path {
+      fill: none;
+      stroke: #26282e;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+    @media (prefers-color-scheme: dark) {
+      path {
+        stroke: #bec0cd;
+      }
+    }
+  </style>
+  <path d="m17.4 24s1.9-4.6-3.6-4c-8.1 1.4-15.1 18.7-4.2 20 16.2 2 31.7-36 28.4-36-2.7 0-15.6 36-11.4 36 3.1 0 17.9-20 23.7-20 5 0 3.7 4 3.7 4s1.3-4-3.7-4c-7.4 0-15.7 20-5.6 20 8.2 0 11.3-6 11.3-6s-5.6 22-8 22c-5.3 0 3-7 3-7"/>
+</svg>
