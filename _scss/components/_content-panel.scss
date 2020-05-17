@@ -207,6 +207,10 @@
 .seeya {
   margin: $page-padding 0 0;
   text-align: center;
+
+  @media (max-width: $mobile-media) {
+    margin-bottom: $page-padding;
+  }
 }
 
 @keyframes(fade-in) {
