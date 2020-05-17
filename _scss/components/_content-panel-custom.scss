@@ -181,7 +181,8 @@
         right: auto;
       }
 
-      img {
+      video {
+        display: block;
         max-width: 240px;
         border-top-left-radius: 21px;
         border-top-right-radius: 21px;
@@ -191,7 +192,7 @@
         }
 
         @media (max-width: $mobile-media) {
-          max-width: none;
+          max-width: 100%;
         }
       }
 
