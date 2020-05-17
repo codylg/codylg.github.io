@@ -119,7 +119,7 @@
     @media (max-width: $mobile-media) {
       background-position: 0 60%;
 
-      img:not(.gallery-span) {
+      img {
         display: none;
       }
     }

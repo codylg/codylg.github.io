@@ -131,6 +131,7 @@
   .image-gallery {
 
     @media (max-width: $mobile-media) {
+      max-width: 100%;
       padding: 0;
     }
 
