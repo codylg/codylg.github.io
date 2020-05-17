@@ -119,6 +119,10 @@
     @media (max-width: $mobile-media) {
       background-position: 0 60%;
 
+      video {
+        width: 100%;
+      }
+
       img {
         display: none;
       }
