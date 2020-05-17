@@ -89,6 +89,13 @@
         box-shadow: 0 10px 33px rgb(220, 70, 110);
       }
 
+      img.cards {
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        filter: drop-shadow(0 10px 33px rgb(220, 70, 110));
+      }
+
       @media (max-width: $mobile-media) {
         padding: $page-padding ($page-padding / 2);
 
