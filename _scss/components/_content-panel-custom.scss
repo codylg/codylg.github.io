@@ -251,6 +251,10 @@
       p {
         max-width: 90%;
       }
+
+      .button:not(:hover) {
+        background-color: rgba($grey-light, 0.85);
+      }
     }
 
     h1,
