@@ -86,23 +86,26 @@
     box-shadow: none;
   }
 
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3) {
-    @include prefix(animation, fade-in 1s ease-out 1);
-    @include prefix(animation-fill-mode, both);
-  }
+  @media (prefers-reduced-motion: no-preference) {
 
-  &:nth-child(1) {
-    @include prefix(animation-delay, 0.15s);
-  }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      @include prefix(animation, fade-in 1s ease-out 1);
+      @include prefix(animation-fill-mode, both);
+    }
 
-  &:nth-child(2) {
-    @include prefix(animation-delay, 0.33s);
-  }
+    &:nth-child(1) {
+      @include prefix(animation-delay, 0.15s);
+    }
 
-  &:nth-child(3) {
-    @include prefix(animation-delay, 0.66s);
+    &:nth-child(2) {
+      @include prefix(animation-delay, 0.33s);
+    }
+
+    &:nth-child(3) {
+      @include prefix(animation-delay, 0.66s);
+    }
   }
 
   &:last-of-type {
