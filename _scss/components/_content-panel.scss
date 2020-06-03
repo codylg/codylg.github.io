@@ -24,6 +24,11 @@
     margin-left: 0;
   }
 
+  @media (max-width: $small-media) {
+      padding-left: $page-padding / 2;
+      padding-right: $page-padding / 2;
+    }
+
   @media (max-width: $mobile-media) {
     padding: 0;
   }
