@@ -34,6 +34,10 @@ header.page-header {
   .night-mode & {
     color: $grey;
 
+    .grey-dark-text {
+      color: $grey;
+    }
+
     a {
       border-bottom-color: $grey-dark;
 
