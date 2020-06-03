@@ -11,17 +11,14 @@ function nightModeOff() {
 }
 
 // Turn on night mode if it has been set manually
-if (location.pathname == "/") {
+if (localStorage.getItem('nightModePref')) {
+  // The user has set a night mode preference
 
-  if (localStorage.getItem('nightModePref')) {
-    // The user has set a night mode preference
-
-    if (localStorage.getItem('nightModePref') == 'on') {
-      nightModeOn();
-      nightModeSwitch.checked = true;
-    } else if (localStorage.getItem('nightModePref') == 'off') {
-      nightModeOff();
-    }
+  if (localStorage.getItem('nightModePref') == 'on') {
+    nightModeOn();
+    nightModeSwitch.checked = true;
+  } else if (localStorage.getItem('nightModePref') == 'off') {
+    nightModeOff();
   }
 }
 

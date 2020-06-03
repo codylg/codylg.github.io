@@ -7,6 +7,10 @@ $black: rgb(0, 0, 0);
 
 body {
   background: rgb(246, 197, 182);
+
+  &.night-mode {
+    background: rgb(189, 124, 112);
+  }
 }
 
 header,
@@ -160,7 +164,11 @@ footer {
   }
 
   &.second {
-    background: rgb(255, 237, 182);
+    background: rgb(242, 224, 168);
+
+    .night-mode & {
+      background: rgb(223, 198, 123);
+    }
 
     figure {
       @include prefix(mask-image, url('/dede/2/mask@2x.png'));
@@ -173,6 +181,10 @@ footer {
   min-width: 100vw;
   min-height: 100vh;
   background: rgb(229, 255, 193);
+
+  .night-mode & {
+    background: rgb(180, 217, 129);
+  }
 
   section {
     box-sizing: border-box;

@@ -19,7 +19,6 @@ body {
   line-height: 2rem;
   color: $charcoal;
   @include font-antialias;
-  @include transition($property: background-color);
   -webkit-tap-highlight-color: transparent;
 
   &.night-mode {

@@ -23,12 +23,8 @@
     }
   }
 
-  hr {
-    margin: $page-padding * 2 0;
-
-    @media (max-width: $mobile-media) {
-      display: none;
-    }
+  h2 {
+    margin-top: $page-padding * 2;
   }
 
   figure {
@@ -79,38 +75,40 @@
 
   table {
 
-    tr {
-      border-bottom: 1px solid $grey-light;
+    td {
+      vertical-align: top;
+      padding: $page-padding / 2;
 
-      &:last-child {
-        border-bottom: 0;
+      @media (max-width: $mobile-media) {
+        display: block;
       }
 
-      td {
-        vertical-align: top;
-        padding: $page-padding / 2;
+      &:first-child {
+        padding-left: 0;
+        font-weight: 700;
 
         @media (max-width: $mobile-media) {
-          display: block;
-        }
-
-        &:first-child {
-          padding-left: 0;
-          font-weight: 700;
-
-          @media (max-width: $mobile-media) {
-            padding-left: $page-padding / 2;
-          }
-        }
-
-        &:last-child {
-          padding-right: 0;
-
-          @media (max-width: $mobile-media) {
-            padding-right: $page-padding / 2;
-          }
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-left: $page-padding / 2;
         }
       }
+
+      &:last-child {
+        padding-right: 0;
+
+        @media (max-width: $mobile-media) {
+          padding-top: 0;
+          padding-right: $page-padding / 2;
+        }
+      }
+    }
+  }
+
+  .night-mode & {
+
+    h2, h3, h4, p, ul, ol, td {
+      color: $grey;
     }
   }
 }

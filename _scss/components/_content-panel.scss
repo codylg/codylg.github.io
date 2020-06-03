@@ -32,6 +32,11 @@
   @media (max-width: $mobile-media) {
     padding: 0;
   }
+
+  // 404 text
+  .night-mode & > p {
+    color: $grey;
+  }
 }
 
 .content-panel {
