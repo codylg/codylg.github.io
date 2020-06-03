@@ -27,6 +27,33 @@ body {
   }
 }
 
+@supports (background: linear-gradient($black, $white)) {
+
+  @media (min-width: $mobile-media) {
+
+    $dot-space: 18px;
+    $dot-size: 1px;
+
+    body {
+      background:
+        linear-gradient($off-white ($dot-space - $dot-size), transparent $dot-size) center,
+        linear-gradient(90deg, $off-white ($dot-space - $dot-size), transparent $dot-size) center;
+      background-color: $grey;
+      background-size: $dot-space $dot-space;
+      background-position: top left;
+
+      &.night-mode {
+        background:
+          linear-gradient($charcoal-dark ($dot-space - $dot-size), transparent $dot-size) center,
+          linear-gradient(90deg, $charcoal-dark ($dot-space - $dot-size), transparent $dot-size) center;
+        background-color: $charcoal-light;
+        background-size: $dot-space $dot-space;
+        background-position: top left;
+      }
+    }
+  }
+}
+
 h1,
 h2,
 h3,
