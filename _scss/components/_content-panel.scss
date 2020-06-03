@@ -38,7 +38,7 @@
   @include flex;
   overflow: hidden;
   box-sizing: border-box;
-  min-height: calc(100vh - #{$page-padding} * 3);
+  min-height: 65vw;
   margin-bottom: $page-padding;
   border-radius: $radius;
   background-color: $white;
@@ -46,7 +46,11 @@
   font-size: 0;
   @include transition($property: background-color);
 
-  @media (min-height: 900px) {
+  @media (max-width: $small-media) {
+    min-height: 80vw;
+  }
+
+  @media (min-width: $large-media) {
     min-height: 800px;
   }
 
