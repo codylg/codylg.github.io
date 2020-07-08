@@ -118,8 +118,9 @@ ul > a,
   border-bottom: 2px solid $grey-light;
 
   &:focus {
+    transition: none;
     border-bottom: 0;
-    background-color: rgba($charcoal, 0.15);
+    background-color: rgba($charcoal, 0.2);
   }
 
   &:hover {

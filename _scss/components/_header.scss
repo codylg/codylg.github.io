@@ -44,6 +44,10 @@ header.page-header {
       &:hover {
         border-bottom-color: $grey;
       }
+
+      &:focus {
+        background-color: rgba($white, 0.2);
+      }
     }
   }
 

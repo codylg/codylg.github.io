@@ -13,6 +13,10 @@
         &:hover {
           border-bottom-color: $grey;
         }
+
+        &:focus {
+          background-color: rgba($white, 0.2) !important;
+        }
       }
 
       .grey-text {
@@ -24,9 +28,13 @@
         background-color: $grey-dark;
         color: $grey-light;
 
-        &:hover {
-          background-color: $grey;
+        &:hover,
+        &:focus {
           color: $white;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 4px rgba($white, 0.1);
         }
       }
     }
