@@ -32,6 +32,6 @@ header.page-header
 
   .night-mode-toggle
     input(id="night-mode-switch", type="checkbox")
-    label(for="night-mode-switch", tabindex="0", role="button", onclick="toggleNightMode()", onKeyDown="toggleNightModeKeyboard(event)") Toggle dark mode
+    label(id="night-mode-switch-label", for="night-mode-switch", tabindex="0", role="button", aria-pressed="false", onclick="toggleNightMode()", onKeyDown="toggleNightModeKeyboard(event)") Toggle dark mode
     span.on &#127773;
     span.off &#127770;

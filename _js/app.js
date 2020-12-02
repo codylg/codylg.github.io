@@ -1,13 +1,16 @@
 var d = new Date();
 var h = d.getHours();
 var nightModeSwitch = document.getElementById("night-mode-switch");
+var nightModeSwitchLabel = document.getElementById("night-mode-switch-label");
 
 function nightModeOn() {
   document.body.className = 'night-mode';
+  nightModeSwitchLabel.setAttribute("aria-pressed", "true");
 }
 
 function nightModeOff() {
   document.body.className = '';
+  nightModeSwitchLabel.setAttribute("aria-pressed", "false");
 }
 
 // Turn on night mode if it has been set manually
