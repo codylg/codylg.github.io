@@ -5,9 +5,10 @@ $banner-height: 50px;
   @include prefix(align-items, center);
   @include prefix(justify-content, center);
   min-height: $banner-height;
-  padding: 15px 25px;
+  padding: 12px 24px;
   background-color: $orange;
   box-shadow: none;
+  font-weight: 500;
 
   .night-mode & {
     background-color: $orange-night;

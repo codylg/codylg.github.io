@@ -55,6 +55,11 @@ header.page-header {
     @include prefix(flex-grow, 1);
   }
 
+  .my-links > a {
+    font-weight: 500;
+    line-height: 1.66em;
+  }
+
   p {
     margin-top: 2.5em;
 
