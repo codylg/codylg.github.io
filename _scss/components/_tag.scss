@@ -1,0 +1,10 @@
+.tag {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1em;
+  padding: 6px 8px;
+  border-radius: $radius;
+  background-color: $grey-light;
+  color: $grey-dark;
+}
