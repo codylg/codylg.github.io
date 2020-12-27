@@ -7,4 +7,9 @@
   border-radius: $radius;
   background-color: $grey-light;
   color: $grey-dark;
+
+  .night-mode & {
+    background-color: $grey-dark;
+    color: $grey-light;
+  }
 }
