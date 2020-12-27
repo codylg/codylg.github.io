@@ -1,0 +1,17 @@
+extends content
+
+block variables
+  - var classname = "post-list-overflow"
+  - var smallpanel = true
+
+block header
+  h1
+    a(id="#{classname}", href="https://medium.com/@clg/ui-tip-list-overflow-and-x-others-36453b5081f9") UI Tip: list overflow and '+x others'
+
+block description
+  p A problem of 
+    i just a little
+    |  too much bread.
+  .image-gallery
+    a(href="https://medium.com/@clg/ui-tip-list-overflow-and-x-others-36453b5081f9")
+      img(srcset="/img/post-list-overflow.jpg 1x, /img/post-list-overflow@2x.jpg 2x" src="/img/post-list-overflow@2x.jpg" alt="Various bread emojis")
