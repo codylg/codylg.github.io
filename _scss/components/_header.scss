@@ -51,7 +51,7 @@ header.page-header {
     }
   }
 
-  > div {
+  > div:first-of-type {
     @include prefix(flex-grow, 1);
   }
 
@@ -81,10 +81,56 @@ header.page-header {
   }
 }
 
+.acknowledgement-of-country {
+
+  @media (min-width: $mobile-media) {
+    margin-bottom: 0;
+  }
+
+  a {
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    margin-left: 8px;
+    border: 0;
+    border-radius: 1px;
+    background-color: $black;
+    font-size: 0;
+
+    .night-mode & {
+      box-shadow: 0 0 8px rgba($white, 0.1);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 4px;
+      left: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: #FFFD54;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      display: inline-block;
+      width: 24px;
+      height: 8px;
+      border-radius: 0 0 1px 1px;
+      background-color: #BB261A;
+    }
+  }
+}
+
 .night-mode-toggle {
   @include flex;
   @include prefix(align-items, flex-end);
-  @include prefix(flex-grow, 1);
   padding-top: $page-padding;
 
   @media (prefers-reduced-motion: no-preference) {
@@ -95,14 +141,14 @@ header.page-header {
 
   @media (max-width: $medium-media) {
     position: absolute;
+    top: $page-padding;
     right: $page-padding;
-    bottom: $page-padding;
     padding: 0;
   }
 
   @media (max-width: $mobile-media) {
-    right: $page-padding / 2;
-    bottom: $page-padding;
+    top: $page-padding / 1.5;
+    right: $page-padding / 1.5;
   }
 
   label {
@@ -161,7 +207,7 @@ header.page-header {
   span {
     margin-left: 5px;
     font-size: 11px;
-    line-height: 0.9em;
+    line-height: 1em;
 
     &.on {
       display: none;
