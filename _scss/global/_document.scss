@@ -125,6 +125,10 @@ ul > a,
 
   &:hover {
     border-bottom-color: $grey;
+
+    + .rarr:not(.noanim) {
+      width: 12px;
+    }
   }
 }
 

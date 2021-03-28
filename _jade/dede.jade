@@ -41,7 +41,7 @@ block content
   footer
     nav
       p.prev
-        | &larr; 
+        span.rarr.larr.noanim
         block double-exposure-previous
           a(href="./2") Previous
             span &nbsp;exposure
@@ -49,6 +49,6 @@ block content
         block double-exposure-previous-next
           a(href="./2") Next
             span &nbsp;exposure
-        | &nbsp;&rarr;
+        span.rarr.noanim
   
   script(type="text/javascript", src="/dede/dede.js")
