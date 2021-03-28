@@ -3,7 +3,7 @@
   &.content-panel-small,
   &.ios86-panel {
 
-    .night-mode & {
+    @media (prefers-color-scheme: dark) {
       background-color: $charcoal;
       color: $grey;
 

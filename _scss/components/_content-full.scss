@@ -105,7 +105,7 @@
     }
   }
 
-  .night-mode & {
+  @media (prefers-color-scheme: dark) {
 
     h2, h3, h4, p, ul, ol, td {
       color: $grey;

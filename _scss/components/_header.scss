@@ -31,7 +31,7 @@ header.page-header {
     padding: $page-padding / 2;
   }
 
-  .night-mode & {
+  @media (prefers-color-scheme: dark) {
     color: $grey;
 
     .grey-dark-text {
@@ -107,7 +107,7 @@ header.page-header {
     background-color: $black;
     font-size: 0;
 
-    .night-mode & {
+    @media (prefers-color-scheme: dark) {
       box-shadow: 0 0 8px rgba($white, 0.1);
     }
 
@@ -132,122 +132,6 @@ header.page-header {
       height: 8px;
       border-radius: 0 0 1px 1px;
       background-color: #BB261A;
-    }
-  }
-}
-
-.night-mode-toggle {
-  @include flex;
-  @include prefix(align-items, flex-end);
-  padding-top: $page-padding;
-
-  @media (prefers-reduced-motion: no-preference) {
-    @include prefix(animation, fade-in 1s ease-out 1);
-    @include prefix(animation-delay, 1s);
-    @include prefix(animation-fill-mode, both);
-  }
-
-  @media (max-width: $medium-media) {
-    position: absolute;
-    top: $page-padding;
-    right: $page-padding;
-    padding: 0;
-  }
-
-  @media (max-width: $mobile-media) {
-    top: $page-padding / 1.5;
-    right: $page-padding / 1.5;
-  }
-
-  label {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 12px;
-    border-radius: 6px;
-    font-size: 0;
-    line-height: 0;
-    cursor: pointer;
-    @include prefix(user-select, none);
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      box-sizing: border-box;
-    }
-
-    &::before {
-      top: 3px;
-      left: 3px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: $grey;
-      @include transition;
-    }
-
-    &::after {
-      width: 100%;
-      height: 100%;
-      border: 2px solid $grey;
-      border-radius: 6px;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 4px $orange-night;
-    }
-  }
-
-  input {
-    display: none;
-
-    &:checked {
-
-      + label::before {
-        left: 11px;
-      }
-    }
-  }
-
-  span {
-    margin-left: 5px;
-    font-size: 11px;
-    line-height: 1em;
-
-    &.on {
-      display: none;
-    }
-  }
-
-  .night-mode & {
-
-    label {
-
-      &::before {
-        background-color: rgb(246, 227, 100);
-      }
-
-      &::after {
-        border-color: rgb(246, 227, 100);
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 4px rgba($orange, 0.2);
-      }
-    }
-
-    span {
-
-      &.on {
-        display: inline-block;
-      }
-
-      &.off {
-        display: none;
-      }
     }
   }
 }

@@ -8,7 +8,7 @@ $black: rgb(0, 0, 0);
 body {
   background: rgb(246, 197, 182);
 
-  &.night-mode {
+  @media (prefers-color-scheme: dark) {
     background: rgb(189, 124, 112);
   }
 }
@@ -166,7 +166,7 @@ footer {
   &.second {
     background: rgb(242, 224, 168);
 
-    .night-mode & {
+    @media (prefers-color-scheme: dark) {
       background: rgb(223, 198, 123);
     }
 
@@ -182,7 +182,7 @@ footer {
   min-height: 100vh;
   background: rgb(229, 255, 193);
 
-  .night-mode & {
+  @media (prefers-color-scheme: dark) {
     background: rgb(180, 217, 129);
   }
 

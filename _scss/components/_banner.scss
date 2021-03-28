@@ -10,7 +10,7 @@ $banner-height: 50px;
   box-shadow: none;
   font-weight: 500;
 
-  .night-mode & {
+  @media (prefers-color-scheme: dark) {
     background-color: $orange-night;
   }
 

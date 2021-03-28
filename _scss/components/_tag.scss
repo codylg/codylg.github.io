@@ -8,7 +8,7 @@
   background-color: $grey-light;
   color: $grey-dark;
 
-  .night-mode & {
+  @media (prefers-color-scheme: dark) {
     background-color: $grey-dark;
     color: $grey-light;
   }
