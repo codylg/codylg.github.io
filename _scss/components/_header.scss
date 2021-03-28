@@ -31,7 +31,7 @@ header.page-header {
     padding: $page-padding / 2;
   }
 
-  .night-mode & {
+  @media (prefers-color-scheme: dark) {
     color: $grey;
 
     .grey-dark-text {
@@ -107,7 +107,7 @@ header.page-header {
     background-color: $black;
     font-size: 0;
 
-    .night-mode & {
+    @media (prefers-color-scheme: dark) {
       box-shadow: 0 0 8px rgba($white, 0.1);
     }
 

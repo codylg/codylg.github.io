@@ -21,7 +21,7 @@ body {
   @include font-antialias;
   -webkit-tap-highlight-color: transparent;
 
-  &.night-mode {
+  @media (prefers-color-scheme: dark) {
     background-color: $charcoal-dark;
   }
 }
@@ -41,7 +41,7 @@ body {
       background-size: $dot-space $dot-space;
       background-position: top left;
 
-      &.night-mode {
+      @media (prefers-color-scheme: dark) {
         background:
           linear-gradient($charcoal-dark ($dot-space - $dot-size), transparent $dot-size) center,
           linear-gradient(90deg, $charcoal-dark ($dot-space - $dot-size), transparent $dot-size) center;

@@ -10,7 +10,7 @@ svg.logo {
     @include prefix(animation-fill-mode, backwards);
     @include transition($property: stroke-dashoffset, $duration: 2s, $timing: ease-out);
 
-    .night-mode & {
+    @media (prefers-color-scheme: dark) {
       stroke: $grey;
     }
   }

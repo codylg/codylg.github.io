@@ -34,8 +34,10 @@
   }
 
   // 404 text
-  .night-mode & > p {
-    color: $grey;
+  @media (prefers-color-scheme: dark) {
+    > p {
+      color: $grey;
+    }
   }
 }
 
@@ -206,7 +208,7 @@
     min-height: 0;
     border-bottom: 1px solid $grey-light;
 
-    .night-mode & {
+    @media (prefers-color-scheme: dark) {
       border-bottom-color: $grey-dark;
     }
   }
