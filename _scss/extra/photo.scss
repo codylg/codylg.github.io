@@ -24,16 +24,6 @@ header.page-header {
   mix-blend-mode: exclusion;
 }
 
-a.photo-insta-link {
-  position: fixed;
-  z-index: 4;
-  top: $page-padding;
-  right: $page-padding;
-  font-size: 13px;
-  line-height: 1.6em;
-  mix-blend-mode: exclusion;
-}
-
 figure.photo-gallery {
   @include flex($property: inline-flex);
   @include prefix(flex-direction, row);
