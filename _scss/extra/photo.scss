@@ -1,6 +1,6 @@
+@import '../global/colors';
 @import '../global/vars';
 @import '../global/mixins';
-@import '../global/colors';
 
 body {
   height: 100vh;
@@ -22,10 +22,6 @@ svg.logo {
 header.page-header {
   z-index: 4;
   mix-blend-mode: exclusion;
-
-  > div {
-    display: none;
-  }
 }
 
 a.photo-insta-link {
