@@ -291,6 +291,13 @@
         min-height: 50vw;
       }
     }
+
+    @media (prefers-color-scheme: dark) {
+      .grey-dark-text {
+        color: $grey;
+        opacity: 0.7;
+      }
+    }
   }
 
   &.sarif-panel {
