@@ -3,9 +3,8 @@ header.page-header
     a.logo(href="/") clg
       include _logo
 
-  div
-  
-    if frontPage
+  if frontPage
+    div
       p
         | Cody Lindsay Gordon is an Australian 
         strong product designer &amp; developer
@@ -26,11 +25,10 @@ header.page-header
         span.rarr
       p.grey-dark-text.my-links
         a(href="mailto:clg@clg.name") clg@clg.name
-    else
-      p
-        span.rarr.larr.noanim
-        a(href="/") Back to home
-
-  p.acknowledgement-of-country.grey-dark-text
-    | I live and work on Yuggera country, and acknowledge the Traditional Custodians of the land, the Turrbal and Jagera people.
-    a(href="http://paytherent.net.au") Pay the Rent
+    p.acknowledgement-of-country.grey-dark-text
+      | I live and work on Yuggera country, and acknowledge the Traditional Custodians of the land, the Turrbal and Jagera people.
+      a(href="http://paytherent.net.au") Pay the Rent
+  else
+    p
+      span.rarr.larr.noanim
+      a(href="/") Back to home
