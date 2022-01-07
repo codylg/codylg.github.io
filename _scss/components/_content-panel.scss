@@ -159,11 +159,9 @@
       max-width: 100%;
       border-radius: $radius;
       background-color: $grey-light;
-      box-shadow: $card-shadow;
 
       @media (max-width: $mobile-media) {
         margin: 0;
-        border-radius: 0;
         box-shadow: none;
       }
 
@@ -175,6 +173,15 @@
         }
       }
     }
+
+    a:focus img {
+      box-shadow: 0 0 0 4px rgba($charcoal, 0.33);
+
+      @media (prefers-color-scheme: dark) {
+        box-shadow: 0 0 0 4px rgba(white, 0.33);
+      }
+    }
+
   }
 
   h1 {
