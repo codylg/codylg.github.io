@@ -12,8 +12,8 @@
   opacity: 0;
   box-shadow: 0 0 20px rgba($black, 0.05);
   font-family: $font;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
   line-height: 2em;
   white-space: nowrap;
   color: $white;
@@ -21,6 +21,10 @@
   @include transition;
   transition-property: margin-top, margin-left, opacity, transform;
   pointer-events: none;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $black;
+  }
 }
 
 .button,
