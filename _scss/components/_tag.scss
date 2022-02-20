@@ -8,6 +8,10 @@
   background-color: $grey-light;
   color: $grey-dark;
 
+  @media (max-width: $mobile-media) {
+    font-size: 1.2rem;
+  }
+
   @media (prefers-color-scheme: dark) {
     background-color: $grey-dark;
     color: $grey-light;
