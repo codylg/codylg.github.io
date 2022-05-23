@@ -11,6 +11,10 @@ body {
   @media (prefers-color-scheme: dark) {
     background: rgb(189, 124, 112);
   }
+
+  &::before, &::after {
+    display: none;
+  }
 }
 
 header,

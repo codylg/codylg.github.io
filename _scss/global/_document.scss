@@ -13,6 +13,8 @@ body {
   max-width: 100%;
   margin: 0;
   background-color: $off-white;
+  background-image: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+  background-attachment: fixed;
   font-family: $font;
   font-weight: 400;
   font-size: 1.6rem;
@@ -21,34 +23,47 @@ body {
   @include font-antialias;
   -webkit-tap-highlight-color: transparent;
 
+  &::before, &::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 100%;
+  }
+
+  &::before {
+    width: 440px;
+    height: 440px;
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+
+    @media (max-width: $mobile-media) {
+      width: 320px;
+      height: 320px;
+    }
+  }
+
+  &::after {
+    width: 170px;
+    height: 170px;
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+
+    @media (max-width: $mobile-media) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     background-color: $charcoal-dark;
-  }
-}
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
 
-@supports (background: linear-gradient($black, $white)) {
+    &::before {
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
+    }
 
-  @media (min-width: $mobile-media) {
-
-    $dot-space: 18px;
-    $dot-size: 1px;
-
-    body {
-      background:
-        linear-gradient($off-white ($dot-space - $dot-size), transparent $dot-size) center,
-        linear-gradient(90deg, $off-white ($dot-space - $dot-size), transparent $dot-size) center;
-      background-color: $grey;
-      background-size: $dot-space $dot-space;
-      background-position: top left;
-
-      @media (prefers-color-scheme: dark) {
-        background:
-          linear-gradient($charcoal-dark ($dot-space - $dot-size), transparent $dot-size) center,
-          linear-gradient(90deg, $charcoal-dark ($dot-space - $dot-size), transparent $dot-size) center;
-        background-color: $charcoal-light;
-        background-size: $dot-space $dot-space;
-        background-position: top left;
-      }
+    &::after {
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
     }
   }
 }

@@ -6,6 +6,10 @@ body {
   height: 100vh;
   background: $charcoal;
   font-size: 0;
+
+  &::before, &::after {
+    display: none;
+  }
 }
 
 svg.logo {
