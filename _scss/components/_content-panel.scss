@@ -12,9 +12,8 @@
   }
 
   @media (max-width: $large-media) and (min-width: $medium-media) {
-    width: calc(100vw - #{$header-width - $page-padding});
+    padding-left: $page-padding / 2;
     padding-right: $page-padding / 2;
-    margin-left: $header-width - $page-padding;
   }
 
   @media (max-width: $medium-media) {

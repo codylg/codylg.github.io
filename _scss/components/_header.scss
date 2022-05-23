@@ -18,7 +18,9 @@ header.page-header {
   }
 
   @media (max-width: $large-media) and (min-width: $medium-media) {
-    width: $header-width - $page-padding;
+    // width: $header-width - $page-padding;
+    // width: $header-width - $page-padding / 2;
+    // padding-left: $page-padding / 2;
   }
 
   @media (max-width: $medium-media) {
