@@ -17,12 +17,6 @@ header.page-header {
     left: calc(50% - #{($page-padding * 4 + $content-sidebar-width + $content-width) / 2 + $header-width});
   }
 
-  @media (max-width: $large-media) and (min-width: $medium-media) {
-    // width: $header-width - $page-padding;
-    // width: $header-width - $page-padding / 2;
-    // padding-left: $page-padding / 2;
-  }
-
   @media (max-width: $medium-media) {
     position: relative;
     width: 100vw;
