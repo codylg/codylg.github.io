@@ -4,6 +4,7 @@
 
 body {
   height: 100vh;
+  overflow-y: hidden;
   background: $charcoal;
   font-size: 0;
 
@@ -38,7 +39,6 @@ figure.photo-gallery {
     overflow-x: hidden;
   }
 
-
   img {
     position: relative;
     z-index: 3;
@@ -53,43 +53,11 @@ figure.photo-gallery {
   }
 }
 
-.horz-scroll-indicator {
-  position: fixed;
-  z-index: 2;
-  top: $page-padding;
-  left: 50%;
-  @include prefix(transform, translateX(-50%));
-  font-size: 13px;
-  line-height: 1.6em;
-  color: $white;
-  mix-blend-mode: exclusion;
-
-  &::after {
-    content: '\2192';
-    position: relative;
-    margin-left: 5px;
-    @include prefix(animation, scroll-indicator 1.66s ease-in-out infinite);
-  }
-}
-
-@include keyframes(scroll-indicator) {
-  0% {
-    left: 0;
-  }
-
-  50% {
-    left: 10px;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
 @media (orientation: portrait), (max-width: 600px) and (max-height: 600px) {
 
   body {
     height: auto;
+    overflow-y: auto;
   }
 
   figure.photo-gallery {
@@ -101,10 +69,6 @@ figure.photo-gallery {
       width: 100%;
       height: auto;
     }
-  }
-
-  .horz-scroll-indicator {
-    display: none;
   }
 }
 
