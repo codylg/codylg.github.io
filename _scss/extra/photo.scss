@@ -22,14 +22,14 @@ svg.logo {
 
 header.page-header {
   z-index: 2;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
 }
 
 .photo-gallery {
-  @include flex($property: inline-flex);
-  @include prefix(flex-direction, row);
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
   width: 100vw;
+  height: 100vh;
 
   &.hijacked {
     overflow-x: hidden;
@@ -37,33 +37,29 @@ header.page-header {
 
   figure {
     position: relative;
-    z-index: 1;
     width: auto;
     height: 100%;
-    display: flex;
-    flex-flow: column;
+  }
 
-    img {
-      width: auto;
-      height: 100%;
-      pointer-events: none;
-    }
+  img {
+    width: auto;
+    height: 100%;
+  }
 
-    figcaption {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: $page-padding;
-      font-family: $font;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: $white;
-      mix-blend-mode: exclusion;
-      @include transition;
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: $page-padding;
+    font-family: $font;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $white;
+    mix-blend-mode: difference;
+    @include transition;
 
-      &:hover {
-        opacity: 0;
-      }
+    &:hover {
+      opacity: 0;
     }
   }
 }
@@ -76,8 +72,7 @@ header.page-header {
   }
 
   .photo-gallery {
-    @include prefix(flex-direction, column);
-    width: 100%;
+    flex-direction: column;
     height: auto;
 
     figure, img {
@@ -99,6 +94,5 @@ header.page-header {
   header.page-header {
     position: fixed;
     width: $header-width;
-    padding-right: 0;
   }
 }
