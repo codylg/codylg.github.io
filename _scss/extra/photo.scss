@@ -32,6 +32,12 @@ figure.photo-gallery {
   @include flex($property: inline-flex);
   @include prefix(flex-direction, row);
   height: 100vh;
+  width: 100vw;
+
+  &.hijacked {
+    overflow-x: hidden;
+  }
+
 
   img {
     position: relative;
