@@ -5,8 +5,7 @@
 body {
   height: 100vh;
   overflow-y: hidden;
-  background: $charcoal;
-  font-size: 0;
+  background: $charcoal-dark;
 
   &::before, &::after {
     display: none;
@@ -22,6 +21,8 @@ svg.logo {
 
 header.page-header {
   z-index: 2;
+  bottom: auto;
+  width: auto;
   mix-blend-mode: difference;
 }
 
@@ -47,16 +48,31 @@ header.page-header {
   }
 
   figcaption {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     left: 0;
+    display: inline-block;
     padding: $page-padding;
     font-family: $font;
-    font-size: 1.6rem;
     font-weight: 700;
+    font-size: 1.4rem;
     color: $white;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
     @include transition;
+
+    &::before {
+      content: '';
+      position: relative;
+      top: -1px;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+      border-radius: 50%;
+      border-bottom-right-radius: 0;
+      border: 1px solid $white;
+      transform: rotate(45deg);
+    }
 
     &:hover {
       opacity: 0;
@@ -78,6 +94,11 @@ header.page-header {
     figure, img {
       width: 100%;
       height: auto;
+    }
+
+    figcaption {
+      position: absolute;
+      padding: $page-padding / 2;
     }
   }
 }
