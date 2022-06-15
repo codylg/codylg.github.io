@@ -56,8 +56,7 @@ header.page-header {
     font-family: $font;
     font-weight: 700;
     font-size: 1.4rem;
-    color: $white;
-    mix-blend-mode: exclusion;
+    color: $off-white;
     @include transition;
 
     &::before {
@@ -99,6 +98,11 @@ header.page-header {
     figcaption {
       position: absolute;
       padding: $page-padding / 2;
+      font-size: 1.2rem;
+
+      &::before {
+        display: none;
+      }
     }
   }
 }
