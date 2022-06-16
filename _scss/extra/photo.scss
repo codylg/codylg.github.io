@@ -38,7 +38,7 @@ header.page-header {
 
   figure {
     position: relative;
-    width: auto;
+    flex-shrink: 0;
     height: 100%;
   }
 
