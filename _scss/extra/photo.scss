@@ -15,6 +15,10 @@ svg.logo {
 
   path.script {
     stroke: $white;
+
+    &:hover path.script {
+      stroke-dashoffset: 0;
+    }
   }
 }
 
