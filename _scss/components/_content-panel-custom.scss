@@ -42,7 +42,7 @@
 
   &.dede-panel {
     background-color: $grey-light;
-    background-image: url('/img/dede-bg@2x.jpg');
+    background-image: url('/img/dede-bg.webp');
     background-position: 100% 0;
     background-size: cover;
 
@@ -74,7 +74,7 @@
 
   &.attract-panel {
     background-color: rgb(255, 102, 111);
-    background-image: url('/img/attract-pattern@2x.png');
+    background-image: url('/img/attract-pattern.webp');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -126,7 +126,7 @@
   }
 
   &.scrunch-panel {
-    background-image: url('/img/scrunch-pattern-bg@2x.jpg');
+    background-image: url('/img/scrunch-pattern-bg.webp');
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 531px 504px;
@@ -248,7 +248,7 @@
 
   &.photo-browser-panel {
     background-color: $grey;
-    background-image: url('/img/ijen-miner@2x.jpg');
+    background-image: url('/img/ijen-miner.webp');
     background-position: center;
     background-size: cover;
 
@@ -283,7 +283,7 @@
   &.ios86-panel {
 
     figure {
-      background-image: url('/img/ios86-bg@2x.jpg');
+      background-image: url('/img/ios86-bg.webp');
       background-position: center;
       background-size: cover;
 
@@ -302,7 +302,7 @@
 
   &.sarif-panel {
     background-color: $grey-dark;
-    background-image: url('/img/sarif-bg@2x.jpg');
+    background-image: url('/img/sarif-bg.webp');
     background-position: 75% 50%;
     background-size: cover;
 
