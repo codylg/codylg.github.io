@@ -4,7 +4,7 @@ block append variables
   - var title = "Double exposure depth experiment"
   - var description = "A web experiment exploring tangible methods of interacting with digital photographs."
   - var slug = "dede"
-  - var card = "dede/backup@2x.jpg"
+  - var card = "dede/backup.webp"
   - var frontPage = false
   - var deClass = "first"
   
@@ -28,14 +28,14 @@ block content
   #double-exposure(class="#{deClass}")
     #double-exposure-outer(onmousemove="addTransform(event)", onmouseout="clearTransform()")
       #double-exposure-wrapper
-        img#base(src="base@2x.jpg")
+        img#base(src="base.webp")
         figure
           block double-exposure-figure
-            img#depth-1(src="bokeh-1@2x.jpg")
-            img#depth-2(src="bokeh-2@2x.jpg")
-            img#depth-3(src="bokeh-3@2x.jpg")
-            img#depth-4(src="bokeh-4@2x.jpg")
-            img#exposure(src="exposure@2x.jpg")
+            img#depth-1(src="bokeh-1.webp")
+            img#depth-2(src="bokeh-2.webp")
+            img#depth-3(src="bokeh-3.webp")
+            img#depth-4(src="bokeh-4.webp")
+            img#exposure(src="exposure.webp")
         #gloss
 
   footer
