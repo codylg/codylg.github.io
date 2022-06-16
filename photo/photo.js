@@ -1,10 +1,5 @@
 var touchScreen = false;
 
-// window.onLoad = function() {
-//   console.log("loaded");
-//   document.querySelector(".photo-gallery").classList.add("loading");
-// }
-
 window.addEventListener('touchstart', function() {
   touchScreen == true;
   scrollContainer.classList.remove("hijacked");
