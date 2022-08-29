@@ -100,13 +100,22 @@ h5 {
   font-size: 1.6rem;
 }
 
+p,
 article ol,
 article ul,
-article td,
-p {
+.content-panel-header ul,
+article td
+ {
   margin: 1.5em 0;
   font-family: $font;
   font-size: 1.4rem;
+}
+
+article ol,
+article ul,
+.content-panel-header ul
+ {
+  padding-left: 2em;
 }
 
 a,

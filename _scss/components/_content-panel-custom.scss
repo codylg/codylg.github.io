@@ -40,106 +40,6 @@
     }
   }
 
-  &.dede-panel {
-    background-color: $grey-light;
-    background-image: url('/img/dede-bg.webp');
-    background-position: 100% 0;
-    background-size: cover;
-
-    @media (max-width: $mobile-media) {
-      background-position: 80% 0;
-    }
-
-    .content-panel-header {
-      padding-bottom: 100px;
-
-      @media (max-width: $small-media) {
-        background: linear-gradient(0deg, rgba($white, 0), rgba($white, 0.66));
-      }
-    }
-
-    h1,
-    p {
-      text-shadow: 1px 1px rgba($white, 0.33);
-    }
-
-    a {
-      border-bottom-color: $grey;
-
-      &:hover {
-        border-bottom-color: $grey-dark;
-      }
-    }
-  }
-
-  &.attract-panel {
-    background-color: rgb(255, 102, 111);
-    background-image: url('/img/attract-pattern.webp');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-
-    a {
-      border-bottom-color: rgb(220, 70, 110);
-
-      &:hover {
-        border-bottom-color: rgb(70, 20, 170);
-      }
-    }
-
-    hr {
-      @include dotted-line($color: rgb(220, 70, 110));
-    }
-
-    figure {
-
-      img {
-        box-shadow: 0 10px 33px rgb(220, 70, 110);
-      }
-
-      img.cards {
-        border-radius: 0;
-        background-color: transparent;
-        box-shadow: none;
-        filter: drop-shadow(0 10px 33px rgb(220, 70, 110));
-      }
-
-      @media (max-width: $mobile-media) {
-        padding: $page-padding ($page-padding / 2);
-
-        img {
-          border-radius: $radius;
-        }
-
-        img:last-child {
-          margin-top: $page-padding / 2;
-        }
-      }
-    }
-
-    @media (max-width: $small-media) {
-
-      .content-panel-header {
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  &.scrunch-panel {
-    background-image: url('/img/scrunch-pattern-bg.webp');
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-size: 531px 504px;
-
-    @media (max-width: $mobile-media) {
-      background-position: 0 60%;
-
-      img {
-        display: none;
-      }
-    }
-  }
-
   &.divvy-panel {
     background-color: rgb(30, 150, 255);
 
@@ -242,6 +142,149 @@
           border-right-color: transparent;
           border-bottom-color: transparent;
         }
+      }
+    }
+  }
+
+  &.icons-panel {
+    background-color: #6E7960;
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23616350\" fill-rule=\"evenodd\"/></svg>");
+
+    h1,
+    p,
+    ul,
+    .button {
+      color: #352C15;
+    }
+
+    a {
+      border-bottom-color: #616350;
+
+      &:hover {
+        border-bottom-color: #352C15;
+      }
+    }
+
+    .button {
+      background-color: #C3C8BD;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    .content-panel-header {
+      background-color: rgba(255,255,255,0.02);
+    }
+
+    figure {
+      background-image: url('/img/icons.svg');
+      background-position: center;
+      background-size: cover;
+
+      @media (max-width: $small-media) {
+        height: 40vw;
+        background-image: url('/img/icons-wide.svg');
+      }
+    }
+  }
+
+  &.dede-panel {
+    background-color: $grey-light;
+    background-image: url('/img/dede-bg.webp');
+    background-position: 100% 0;
+    background-size: cover;
+
+    @media (max-width: $mobile-media) {
+      background-position: 80% 0;
+    }
+
+    .content-panel-header {
+      padding-bottom: 100px;
+
+      @media (max-width: $small-media) {
+        background: linear-gradient(0deg, rgba($white, 0), rgba($white, 0.66));
+      }
+    }
+
+    h1,
+    p {
+      text-shadow: 1px 1px rgba($white, 0.33);
+    }
+
+    a {
+      border-bottom-color: $grey;
+
+      &:hover {
+        border-bottom-color: $grey-dark;
+      }
+    }
+  }
+
+  &.attract-panel {
+    background-color: rgb(255, 102, 111);
+    background-image: url('/img/attract-pattern.webp');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+    a {
+      border-bottom-color: rgb(220, 70, 110);
+
+      &:hover {
+        border-bottom-color: rgb(70, 20, 170);
+      }
+    }
+
+    hr {
+      @include dotted-line($color: rgb(220, 70, 110));
+    }
+
+    figure {
+
+      img {
+        box-shadow: 0 10px 33px rgb(220, 70, 110);
+      }
+
+      img.cards {
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        filter: drop-shadow(0 10px 33px rgb(220, 70, 110));
+      }
+
+      @media (max-width: $mobile-media) {
+        padding: $page-padding ($page-padding / 2);
+
+        img {
+          border-radius: $radius;
+        }
+
+        img:last-child {
+          margin-top: $page-padding / 2;
+        }
+      }
+    }
+
+    @media (max-width: $small-media) {
+
+      .content-panel-header {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.scrunch-panel {
+    background-image: url('/img/scrunch-pattern-bg.webp');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 531px 504px;
+
+    @media (max-width: $mobile-media) {
+      background-position: 0 60%;
+
+      img {
+        display: none;
       }
     }
   }
