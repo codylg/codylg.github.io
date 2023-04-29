@@ -58,6 +58,10 @@
 
   @media (min-width: $large-media) {
     min-height: 800px;
+
+    &:first-of-type {
+      min-height: calc(100vh - #{$page-padding} * 3);
+    }
   }
 
   @media (max-width: $large-media) and (min-width: $medium-media) {
@@ -229,15 +233,6 @@
 
   .content-panel-header {
     width: 100%;
-  }
-}
-
-.seeya {
-  margin: $page-padding 0 0;
-  text-align: center;
-
-  @media (max-width: $mobile-media) {
-    margin-bottom: $page-padding;
   }
 }
 

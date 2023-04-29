@@ -1,39 +1,31 @@
-$banner-height: 50px;
-
 .content-panel.banner {
   @include flex;
   @include prefix(align-items, center);
   @include prefix(justify-content, center);
-  min-height: $banner-height;
-  padding: 12px 24px;
-  background-color: $orange;
+  min-height: 0;
+  padding: 0;
+  background-color: transparent;
   box-shadow: none;
   font-weight: 500;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $orange-night;
-  }
 
   @media (max-width: $mobile-media) {
     padding: 30px 20px;
   }
 
-  @media (min-height: 780px) and (max-height: 1010px) {
-    + .content-panel {
-      min-height: calc(100vh - #{$page-padding} * 4 - #{$banner-height});
+  p {
+    margin: 0;
+    color: $charcoal;
+
+    @media (prefers-color-scheme: dark) {
+      color: $white;
     }
   }
 
-  p {
-    margin: 0;
-    color: $orange-dark;
-  }
-
   a {
-    border-bottom-color: rgba($orange-dark, 0.33);
+    border-bottom-color: $grey-dark;
 
     &:hover {
-      border-bottom-color: rgba($orange-dark, 0.66);
+      border-bottom-color: $grey;
     }
   }
 }
