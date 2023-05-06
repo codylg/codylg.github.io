@@ -5,9 +5,12 @@ block variables
   - var smallpanel = false
 
 block header
-  h1
-    a(id="#{classname}", href="/ios86") iOS'86
-  
+  if frontPage
+    h1
+      a(id="#{classname}", href="/ios86") iOS'86
+  else
+    h1 iOS'86
+
 block description
   p
     | iOS'86 was a personal project that developed into one of the most expansive iPhone themes of the time. Based on the concept designed by 
