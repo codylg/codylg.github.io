@@ -2,6 +2,20 @@
   max-width: $content-width;
   margin-top: $page-padding;
 
+  &.article-page {
+    padding-bottom: $page-padding * 4;
+
+    @media (min-width: $large-media) {
+      padding-right: $header-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .tag + h1 {
+    margin-top: 0.5em;
+  }
+
   @media (max-width: $medium-media) {
     max-width: none;
   }
@@ -14,7 +28,8 @@
     h3,
     p,
     ol,
-    ul {
+    ul,
+    .tag {
       margin-right: $page-padding / 2;
       margin-left: $page-padding / 2;
     }
@@ -24,20 +39,36 @@
     }
   }
 
-  h2 {
+  h2, h3 {
     margin-top: $page-padding * 2;
   }
 
   figure {
     margin-top: $page-padding;
 
+    &.large {
+
+      @media (min-width: $medium-media) {
+        width: 108%;
+        margin-left: -4%;
+      }
+
+      @media (min-width: $large-media) {
+        width: 120%;
+        margin-left: -10%;
+      }
+    }
+
     &:first-child {
       margin-top: 0;
     }
 
     img {
-      border-radius: 2px;
-      background-color: $grey-light;
+
+      &:not(.transparent) {
+        border-radius: 2px;
+        background-color: $grey-light;
+      }
 
       @media (max-width: $mobile-media) {
         border-radius: 0;
@@ -71,6 +102,10 @@
           }
         }
       }
+    }
+
+    figcaption {
+      margin-bottom: $page-padding * 2;
     }
   }
 

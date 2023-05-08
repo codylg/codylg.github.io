@@ -1,0 +1,16 @@
+extends content
+
+block variables
+  - var classname = "post-process-engine"
+  - var smallpanel = true
+
+block header
+  span.tag Case study
+  h1
+    a(id="#{classname}", href="/process-engine") Process Engine Case Study
+
+block description
+  p A case study of the Process Engine design project for the Rex Property Management platform.
+  .image-gallery
+    a(href="/process-engine")
+      img(src="/img/post-process-engine.webp" alt="A UI showing a checklist of tasks")

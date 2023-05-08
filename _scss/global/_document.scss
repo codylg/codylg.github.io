@@ -82,10 +82,14 @@ h6 {
 
 h1 {
   font-size: 3rem;
+
+  &.large {
+    font-size: 4rem;
+  }
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
 h3 {
@@ -109,6 +113,12 @@ article td
   margin: 1.5em 0;
   font-family: $font;
   font-size: 1.4rem;
+  line-height: 1.5em;
+
+  &.large {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+  }
 }
 
 article ol,
@@ -164,9 +174,13 @@ hr {
   display: block;
   width: 100%;
   height: 1px;
-  margin: 2em 0;
+  margin: $page-padding 0;
   border: 0;
   @include dotted-line;
+
+  &.spacer {
+    margin: ($page-padding * 2) 0;
+  }
 
   &.white-line {
     @include dotted-line($color: $white);
@@ -180,10 +194,40 @@ hr {
 figure {
   padding: 0;
   margin: 0;
+
+  figcaption p {
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+aside.callout {
+  padding: $page-padding;
+  margin: ($page-padding * 2) 0;
+  border-radius: $radius;
+  background-color: $grey;
+
+  @media (max-width: $mobile-media) {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $charcoal-light;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
