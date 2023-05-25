@@ -189,38 +189,6 @@
     }
   }
 
-  &.dede-panel {
-    background-color: $grey-light;
-    background-image: url('/img/dede-bg.webp');
-    background-position: 100% 0;
-    background-size: cover;
-
-    @media (max-width: $mobile-media) {
-      background-position: 80% 0;
-    }
-
-    .content-panel-header {
-      padding-bottom: 100px;
-
-      @media (max-width: $small-media) {
-        background: linear-gradient(0deg, rgba($white, 0), rgba($white, 0.66));
-      }
-    }
-
-    h1,
-    p {
-      text-shadow: 1px 1px rgba($white, 0.33);
-    }
-
-    a {
-      border-bottom-color: $grey;
-
-      &:hover {
-        border-bottom-color: $grey-dark;
-      }
-    }
-  }
-
   &.attract-panel {
     background-color: rgb(255, 102, 111);
     background-image: url('/img/attract-pattern.webp');
