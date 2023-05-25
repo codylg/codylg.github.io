@@ -257,40 +257,6 @@
     }
   }
 
-  &.photo-browser-panel {
-    background-color: $grey;
-    background-image: url('/img/ijen-miner.webp');
-    background-position: center;
-    background-size: cover;
-
-    @media (max-width: $small-media) {
-      padding-bottom: 50%;
-
-      p {
-        max-width: 70%;
-      }
-    }
-
-    @media (max-width: $mobile-media) {
-      padding-bottom: 60%;
-
-      p {
-        max-width: 90%;
-      }
-
-      .button:not(:hover) {
-        background-color: rgba($grey-light, 0.85);
-      }
-    }
-
-    h1,
-    p,
-    hr {
-      color: $white;
-      mix-blend-mode: exclusion;
-    }
-  }
-
   &.ios86-panel {
 
     figure {
