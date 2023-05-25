@@ -52,16 +52,12 @@
   font-size: 0;
   @include transition($property: background-color);
 
-  @media (max-width: $small-media) {
-    min-height: 80vw;
-  }
-
   @media (min-width: $large-media) {
     min-height: 800px;
 
-    &:first-of-type {
-      min-height: calc(100vh - #{$page-padding} * 3);
-    }
+    // &:first-of-type {
+    //   min-height: calc(100vh - #{$page-padding} * 3);
+    // }
   }
 
   @media (max-width: $large-media) and (min-width: $medium-media) {
@@ -105,11 +101,11 @@
     }
 
     &:nth-child(2) {
-      @include prefix(animation-delay, 0.33s);
+      @include prefix(animation-delay, 0.3s);
     }
 
     &:nth-child(3) {
-      @include prefix(animation-delay, 0.66s);
+      @include prefix(animation-delay, 0.45s);
     }
   }
 
@@ -211,7 +207,6 @@
 
   @media (max-width: $mobile-media) {
     width: 100%;
-    min-height: 0;
     border-bottom: 1px solid $grey-light;
 
     @media (prefers-color-scheme: dark) {
