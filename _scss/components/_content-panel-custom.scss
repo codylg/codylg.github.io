@@ -44,14 +44,14 @@
     background-color: rgb(30, 150, 255);
 
     .content-panel-header {
-      background-color: rgb(100, 180, 255);
-      color: rgb(10, 14, 30);
+      background-color: rgb(85, 175, 255);
+      color: rgb(3, 24, 42);
 
       a {
         border-bottom-color: rgb(25, 130, 245);
 
         &:hover {
-          border-bottom-color: rgb(10, 14, 30);
+          border-bottom-color: rgb(3, 24, 42);
         }
       }
 
@@ -79,12 +79,13 @@
       position: absolute;
       bottom: 0;
       left: $page-padding * 2;
-      padding: 9px;
-      padding-bottom: 0;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
-      background-color: $charcoal;
-      box-shadow: 0 20px 60px rgba($charcoal, 0.33);
+      overflow: hidden;
+      border: solid 8px rgb(3, 24, 42);
+      border-bottom: 0;
+      border-top-left-radius: 32px;
+      border-top-right-radius: 32px;
+      background-color: rgb(3, 24, 42);
+      box-shadow: 0 20px 60px rgba(3, 24, 42, 0.33);
 
       @media (max-width: $small-media) {
         right: $page-padding;
@@ -94,13 +95,12 @@
       @media (max-width: $mobile-media) {
         position: relative;
         right: auto;
+        margin-bottom: -80px;
       }
 
       video {
         display: block;
         max-width: 240px;
-        border-top-left-radius: 21px;
-        border-top-right-radius: 21px;
 
         @media (max-width: $small-media) {
           max-width: 210px;
@@ -108,39 +108,6 @@
 
         @media (max-width: $mobile-media) {
           max-width: 100%;
-        }
-      }
-
-      .notch {
-        position: absolute;
-        top: 9px;
-        left: 24.5%;
-        width: 51%;
-        height: 4%;
-        border-bottom-right-radius: 13px;
-        border-bottom-left-radius: 13px;
-        background-color: $charcoal;
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          width: 0;
-          height: 0;
-          border: 1.5px solid $charcoal;
-        }
-
-        &::before {
-          left: -2px;
-          border-bottom-color: transparent;
-          border-left-color: transparent;
-        }
-
-        &::after {
-          right: -2px;
-          border-right-color: transparent;
-          border-bottom-color: transparent;
         }
       }
     }
