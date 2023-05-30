@@ -23,6 +23,10 @@ body {
   @include font-antialias;
   -webkit-tap-highlight-color: transparent;
 
+  @media (max-width: $mobile-media) {
+    background-attachment: scroll;
+  }
+
   &::before, &::after {
     content: '';
     position: fixed;
@@ -30,6 +34,10 @@ body {
     top: 0;
     left: 0;
     border-bottom-right-radius: 100%;
+
+    @media (max-width: $mobile-media) {
+      position: absolute;
+    }
   }
 
   &::before {
