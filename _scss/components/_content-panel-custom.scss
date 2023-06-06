@@ -79,11 +79,10 @@
       position: absolute;
       bottom: 0;
       left: $page-padding * 2;
-      overflow: hidden;
-      border: solid 8px rgb(3, 24, 42);
+      border-color: rgb(3, 24, 42);
       border-bottom: 0;
-      border-top-left-radius: 32px;
-      border-top-right-radius: 32px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       background-color: rgb(3, 24, 42);
       box-shadow: 0 20px 60px rgba(3, 24, 42, 0.33);
 
@@ -108,6 +107,88 @@
 
         @media (max-width: $mobile-media) {
           max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.rex-panel {
+    background-color: rgb(246, 244, 238);
+    background-image: url('/img/rex-blob.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 84%;
+
+    a {
+      border-bottom-color: rgb(178, 162, 150);
+
+      &:hover {
+        border-bottom-color: rgb(85, 70, 57);
+      }
+    }
+
+    .grey-dark-text {
+      color: rgb(85, 70, 57);
+    }
+
+    figure {
+      position: relative;
+
+      img {
+        box-shadow: 0 10px 33px rgba(85, 70, 57, 0.33);
+      }
+    }
+
+    .rex-mobile {
+      position: absolute;
+      top: 18%;
+      right: 18%;
+      width: 200px;
+
+      @media (max-width: $large-media) {
+        top: 24%;
+      }
+
+      @media (max-width: $medium-media) {
+        top: 12%;
+        width: 180px;
+      }
+
+      @media (max-width: $small-media) {
+        top: 0%;
+        right: 12%;
+      }
+
+      @media (max-width: $mobile-media) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $small-media) {
+      background-size: 140%;
+
+      .content-panel-header {
+        padding-bottom: 0;
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @media (max-width: $mobile-media) {
+      background-size: 120%;
+      background-position: right 66%;
+
+      .content-panel-header {
+        padding-bottom: $page-padding;
+      }
+
+      figure {
+
+        img {
+          border-radius: 0;
+          box-shadow: none;
         }
       }
     }
@@ -171,8 +252,8 @@
       }
     }
 
-    hr {
-      @include dotted-line($color: rgb(220, 70, 110));
+    .grey-dark-text {
+      color: rgb(155, 45, 55);
     }
 
     figure {
@@ -205,6 +286,10 @@
 
       .content-panel-header {
         padding-bottom: 0;
+
+        p:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -257,4 +342,12 @@
       }
     }
   }
+}
+
+.iphone-frame {
+  overflow: hidden;
+  border: solid 8px rgb(2, 0, 2);
+  border-radius: 32px;
+  background-color: rgb(2, 0, 2);
+  box-shadow: 0 20px 60px rgba(2, 0, 2, 0.33);
 }

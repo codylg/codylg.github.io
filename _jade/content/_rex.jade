@@ -1,0 +1,27 @@
+extends content
+
+block variables
+  - var classname = "rex"
+  - var smallpanel = false
+
+block header
+  h1
+    a(id="#{classname}", href="https://rexsoftware.com") Rex
+
+block description
+
+  p Rex provides a suite of products to over 10,000 agents in the real estate industry across Australia, New Zealand, and the United Kingdom. As UX Lead, I work alongside a product team to:
+  ul
+    li Develop the strategic direction of the product based on data analysis, feedback, and technical feasibility
+    li Facilitate research projects to gather insights and understand user problems
+    li Prototype, iterate, and validate potential solutions that fit within the architecture of our products
+    li Collaborate with engineers and product managers on how to build and iterate on those solutions
+    li Build and maintain our design system
+    li Mentor junior designers
+  p.grey-dark-text Awarded Rex Ultimate Problem Solver 2021
+  p.grey-dark-text Early 2018 &ndash; present
+
+block figure
+  figure.image-gallery
+    img(src="/process-engine/process-checklist.webp" alt="A screenshot from a property management application showing a move in task with a checklist of subtasks to be completed")
+    img.iphone-frame.rex-mobile(src="/process-engine/move-out-mobile.webp" alt="A screenshot from a property management mobile application showing a move in task with a checklist of subtasks to be completed")

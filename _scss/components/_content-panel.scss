@@ -152,8 +152,11 @@
     video {
       display: block;
       max-width: 100%;
-      border-radius: $radius;
       background-color: $grey-light;
+
+      &:not(.iphone-frame) {
+        border-radius: $radius;
+      }
 
       @media (max-width: $mobile-media) {
         margin: 0;

@@ -65,9 +65,20 @@
 
     img {
 
-      &:not(.transparent) {
+      &:not(.transparent, .iphone-frame) {
         border-radius: 2px;
         background-color: $grey-light;
+      }
+
+      &.iphone-frame {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: $mobile-media) {
+          max-width: none;
+          border: 0;
+        }
       }
 
       @media (max-width: $mobile-media) {
