@@ -1,0 +1,16 @@
+extends content
+
+block variables
+  - var classname = "post-global-search"
+  - var smallpanel = true
+
+block header
+  span.tag Case study
+  h1
+    a(id="#{classname}", href="https://medium.com/@clg/redesigning-our-search-experience-97f253cffb22") Redesigning Our Search Experience
+
+block description
+  p A case study on the Global Search project at Rex Software and how we rebuilt our search experience to elevate our overall app experience.
+  .image-gallery
+    a(href="https://medium.com/@clg/redesigning-our-search-experience-97f253cffb22")
+      img(src="/img/post-global-search.webp" alt="A screenshot of an application showing a search experience and several results including contacts and properties.")
