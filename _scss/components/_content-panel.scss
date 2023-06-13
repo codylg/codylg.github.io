@@ -208,8 +208,15 @@
   width: calc(50% - #{$page-padding / 2});
   min-height: 0;
 
-  @media (max-width: $mobile-media) {
+  @media (max-width: $large-media) {
+    width: calc(50% - #{$page-padding / 4});
+  }
+
+  @media (max-width: $small-media) {
     width: 100%;
+  }
+
+  @media (max-width: $mobile-media) {
     border-bottom: 1px solid $grey-light;
 
     @media (prefers-color-scheme: dark) {
@@ -220,7 +227,11 @@
   + .content-panel-small {
     margin-left: $page-padding;
 
-    @media (max-width: $mobile-media) {
+    @media (max-width: $large-media) {
+      margin-left: $page-padding / 2;
+    }
+
+    @media (max-width: $small-media) {
       margin-left: 0;
     }
   }
