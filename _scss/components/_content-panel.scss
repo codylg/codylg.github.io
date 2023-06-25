@@ -217,10 +217,13 @@
   }
 
   @media (max-width: $mobile-media) {
-    border-bottom: 1px solid $grey-light;
 
-    @media (prefers-color-scheme: dark) {
-      border-bottom-color: $grey-dark;
+    + .content-panel-small {
+      border-top: 1px solid $grey-light;
+
+      @media (prefers-color-scheme: dark) {
+        border-top-color: $charcoal-light;
+      }
     }
   }
 
