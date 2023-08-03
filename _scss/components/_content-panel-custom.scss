@@ -126,7 +126,7 @@
 
   &.rex-panel {
     background-color: rgb(246, 244, 238);
-    background-image: url('/img/rex-blob.svg');
+    background-image: url('/img/rex-blob.webp');
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 84%;
@@ -146,7 +146,8 @@
     figure {
       position: relative;
 
-      img {
+      img,
+      .iphone-frame {
         box-shadow: 0 10px 33px rgba(85, 70, 57, 0.33);
       }
     }
