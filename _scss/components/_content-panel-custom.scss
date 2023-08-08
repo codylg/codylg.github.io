@@ -212,27 +212,27 @@
     }
   }
 
-  &.icons-panel {
-    background-color: #6E7960;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23616350\" fill-rule=\"evenodd\"/></svg>");
+  &.component-library-panel {
+    background-color: #75836F;
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23626A59\" fill-rule=\"evenodd\"/></svg>");
 
     h1,
     p,
     ul,
     .button {
-      color: #352C15;
+      color: #262921;
     }
 
     a {
-      border-bottom-color: #616350;
+      border-bottom-color: #59624B;
 
       &:hover {
-        border-bottom-color: #352C15;
+        border-bottom-color: #3A422E;
       }
     }
 
     .button {
-      background-color: #C3C8BD;
+      background-color: #CED7CA;
 
       &:hover {
         background-color: $white;
@@ -240,17 +240,54 @@
     }
 
     .content-panel-header {
-      background-color: rgba(255,255,255,0.02);
+      background-color: rgba(255,255,255,0.04);
     }
 
     figure {
-      background-image: url('/img/icons.svg');
-      background-position: center;
-      background-size: cover;
+      position: relative;
 
       @media (max-width: $small-media) {
-        height: 40vw;
-        background-image: url('/img/icons-wide.svg');
+        background-image: url('/img/component-library-icons.svg');
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+      }
+
+      img.component-library {
+        box-shadow: none;
+        border-radius: 0;
+
+        @media (max-width: $small-media) {
+          display: none;
+        }
+      }
+
+      .iphone-frame {
+        box-shadow: 0 24px 48px rgba(25, 27, 20, 0.32);
+      }
+    }
+
+    .component-library-mobile {
+      position: absolute;
+      top: 12%;
+      right: 8%;
+      width: 250px;
+      border-color: #181A15;
+      border-radius: 44px;
+      background-color: #181A15;
+
+      @media (max-width: $large-media) {
+        width: 230px;
+      }
+
+      @media (max-width: $medium-media) {
+        width: 220px;
+      }
+
+      @media (max-width: $small-media) {
+        position: relative;
+        top: 0;
+        right: 0;
       }
     }
   }

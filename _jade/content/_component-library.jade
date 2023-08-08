@@ -1,0 +1,23 @@
+extends content
+
+block variables
+  - var classname = "component-library"
+  - var smallpanel = false
+
+block header
+  h1
+    a(id="#{classname}", href="https://www.figma.com/community/file/1126654475671329438") Figma Component & Icon Library
+
+block description
+  p A design system boilerplate utlising Figma's latest features with variable components, design tokens, light and dark themes, and over 550 icons.
+  p The icon library is available as a free download, and the components will be available soon.
+
+  hr.black-line
+  a.button(href="https://www.figma.com/community/file/1126654475671329438") Open Icons in Figma
+    span.rarr
+
+block figure
+  figure
+    img.component-library(src="/img/component-library.webp" alt="A screenshot of a dialog in Figma showing a list of variables used as design tokens")
+    video(autoplay, loop, muted, playsinline).iphone-frame.component-library-mobile
+      source(src="/img/component-library-demo.mp4", type="video/mp4")
