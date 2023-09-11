@@ -4,4 +4,4 @@
 /* YouTube: Shorts */ ytm-feed-filter-chip-bar-renderer, ytm-rich-grid-renderer .rich-grid-renderer-header.rich-grid-sticky-header, .reel-shelf-header, div[tab-title="Home"] ytm-rich-section-renderer, ytm-pivot-bar-item-renderer:has(.pivot-shorts), .feed-nudge-wrapper { display: none !important; }
 /* Reddit: App prompt */ .AppMainPage .XPromoPopupRpl, .AppMainPage .TopNav__promoButton { display: none !important; }
 /* Reddit: Scroll blocking */ body.sw-body-class.scroll-disabled { height: auto !important; overflow: auto !important; position: relative !important; }
-/* Reddit: Promoted post */ article.Post:has(.PostHeader__promoted-post-descriptor) { display: none !important; }
+/* Reddit: Ads */ article.Post:has(.PostHeader__promoted-post-descriptor), .CommentsPage article:has(.adLinkBar)  { display: none !important; }
