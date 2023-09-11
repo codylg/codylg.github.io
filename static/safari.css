@@ -1,0 +1,4 @@
+/* Google: One tap sign in */ iframe[src="/auth/google_one_tap"] { display: none !important; }
+/* Google: Google recommends using Chrome */ div[data-hveid="1"] > div:nth-child(1) iframe[role="presentation"][name="callout"] { display: none !important; }
+/* YouTube: Promo*/ yt-mealbar-promo-renderer[has-full-height-image] { display: none !important; }
+/* Reddit app prompt */ .AppMainPage .XPromoPopupRpl, .AppMainPage .TopNav__promoButton { display: none !important; }
