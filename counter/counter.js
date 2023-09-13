@@ -48,7 +48,10 @@ function resetNumber(inputNumber) {
 function handleInput(event) {
   const inputValue = event.target.value;
   event.target.style.width = characterLength(inputValue);
-  if inputValue != 0 {
+
+  if (inputValue == "0") {
+    event.target.classList.add("empty");
+  } else {
     event.target.classList.remove("empty");
   }
 }
