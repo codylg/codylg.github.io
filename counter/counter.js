@@ -50,10 +50,17 @@ function handleInput(event) {
   event.target.style.width = characterLength(inputValue);
 }
 
+// Function to highlight text in the input when clicked
+function highlightInputText(event) {
+  const inputElement = event.target;
+  inputElement.select();
+}
+
 // Get all text input elements
 const inputs = document.querySelectorAll('input[type="number"]');
 
 // Attach an event listener to each input
 inputs.forEach((input) => {
   input.addEventListener("input", handleInput);
+  input.addEventListener('click', highlightInputText);
 });
