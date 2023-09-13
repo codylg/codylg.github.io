@@ -18,7 +18,7 @@ body::before, body::after {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 4px;
+  padding: 12px;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
