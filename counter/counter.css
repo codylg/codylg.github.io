@@ -177,6 +177,10 @@ body::before, body::after {
           justify-content: flex-start;
 }
 
+.mtg-counter .counter .reset {
+  font-size: 16px;
+}
+
 .mtg-counter .counter#storm input {
   color: #FFC544;
 }
