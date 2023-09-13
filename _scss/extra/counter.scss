@@ -24,13 +24,17 @@ body {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
   touch-action: manipulation;
 
   .counter-group {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+
+    &:last-child {
+      padding-bottom: calc(env(safe-area-inset-bottom) - 4px);
+    }
 
     @media (max-width: 580px) {
       flex-wrap: wrap;

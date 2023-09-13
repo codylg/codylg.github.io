@@ -18,7 +18,7 @@ body::before, body::after {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 12px;
+  padding: 4px;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
@@ -33,6 +33,10 @@ body::before, body::after {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.mtg-counter .counter-group:last-child {
+  padding-bottom: calc(env(safe-area-inset-bottom) - 4px);
 }
 
 @media (max-width: 580px) {
