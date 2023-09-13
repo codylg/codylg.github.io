@@ -25,6 +25,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   padding: 4px;
+  touch-action: manipulation;
 
   .counter-group {
     display: flex;

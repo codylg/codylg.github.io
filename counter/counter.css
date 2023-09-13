@@ -19,6 +19,8 @@ body::before, body::after {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 4px;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 .mtg-counter .counter-group {
