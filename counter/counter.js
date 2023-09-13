@@ -48,6 +48,9 @@ function resetNumber(inputNumber) {
 function handleInput(event) {
   const inputValue = event.target.value;
   event.target.style.width = characterLength(inputValue);
+  if inputValue != 0 {
+    event.target.classList.remove("empty");
+  }
 }
 
 // Function to highlight text in the input when clicked
