@@ -13,7 +13,7 @@ function increaseNumber(inputNumber, amount = 1) {
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
 
-  if (currentValue == -1) {
+  if (currentValue == (amount * -1)) {
     inputElement.classList.add("empty");
   } else {
     inputElement.classList.remove("empty");
@@ -29,7 +29,7 @@ function decreaseNumber(inputNumber, amount = 1) {
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
 
-  if (currentValue == 1) {
+  if (currentValue == amount) {
     inputElement.classList.add("empty");
   } else {
     inputElement.classList.remove("empty");
@@ -49,6 +49,7 @@ function handleInput(event) {
   const inputValue = event.target.value;
   event.target.style.width = characterLength(inputValue);
 
+  // Add or remove the empty class if the value is 0 or not
   if (inputValue == "0") {
     event.target.classList.add("empty");
   } else {
