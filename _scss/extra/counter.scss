@@ -64,12 +64,14 @@ body {
       font-weight: 400;
       font-size: 13px;
       color: $charcoal-light;
+      user-select: none;
     }
 
     img.mana-symbol {
       position: absolute;
       top: 12px;
       width: 16px;
+      user-select: none;
     }
 
     input {
@@ -121,6 +123,7 @@ body {
       font-size: 20px;
       color: $charcoal-light;
       transition: background-color 0.1s;
+      user-select: none;
 
       &:active {
         background-color: rgba($white, 0.03);

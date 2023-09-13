@@ -87,12 +87,20 @@ body::before, body::after {
   font-weight: 400;
   font-size: 13px;
   color: #44464c;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .mtg-counter .counter img.mana-symbol {
   position: absolute;
   top: 12px;
   width: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .mtg-counter .counter input {
@@ -159,6 +167,10 @@ body::before, body::after {
   font-size: 20px;
   color: #44464c;
   transition: background-color 0.1s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .mtg-counter .counter .increase:active, .mtg-counter .counter .decrease:active, .mtg-counter .counter .reset:active {
