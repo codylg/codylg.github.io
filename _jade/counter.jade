@@ -1,0 +1,77 @@
+extends layout
+
+block append variables
+  - var title = "Altar Tron Counter"
+  - var description = "A counter for Magic: The Gathering"
+  - var slug = "counter"
+  - var frontPage = false
+  - var fullScreenPage = true
+
+block headExtra
+  link(rel="stylesheet", href="counter.css", async)
+
+block header
+
+block content
+
+  div.mtg-counter
+    div.counter-group.group-1
+      div.counter#opponent
+        h1 Opponent
+        input#number1.wide(type="number", inputmode="numeric", value="20", placeholder="🧙")
+        button.increase(onclick="increaseNumber(1)") +
+        button.decrease(onclick="decreaseNumber(1)") -
+      div.counter#player
+        h1 Self
+        input#number2.wide(type="number", inputmode="numeric", value="20", placeholder="🧙")
+        button.increase(onclick="increaseNumber(2)") +
+        button.decrease(onclick="decreaseNumber(2)") -
+      div.counter#storm
+        h1 Storm
+        input#number11.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(11)") +
+        button.reset(onclick="resetNumber(11)") ↺
+    div.counter-group.group-2
+      div.counter#colourless
+        img.mana-symbol(src="C.png" alt="Colourless mana symbol")
+        input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(3)") +
+        button.decrease(onclick="decreaseNumber(3)") -
+      div.counter#black
+        img.mana-symbol(src="B.png" alt="Black mana symbol")
+        input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(4)") +
+        button.decrease(onclick="decreaseNumber(4)") -
+      div.counter#red
+        img.mana-symbol(src="R.png" alt="Red mana symbol")
+        input#number5.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(5)") +
+        button.decrease(onclick="decreaseNumber(5)") -
+      div.counter#green
+        img.mana-symbol(src="G.png" alt="Green mana symbol")
+        input#number6.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(6)") +
+        button.decrease(onclick="decreaseNumber(6)") -
+    div.counter-group.group-3
+      div.counter#foundry1
+        h1 Foundry 1
+        input#number7.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(7)") +
+        button.decrease(onclick="decreaseNumber(7, 3)") -3
+      div.counter#foundry2
+        h1 Foundry 2
+        input#number8.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(8)") +
+        button.decrease(onclick="decreaseNumber(8, 3)") -3
+      div.counter#foundry3
+        h1 Foundry 3
+        input#number9.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(9)") +
+        button.decrease(onclick="decreaseNumber(9, 3)") -3
+      div.counter#foundry4
+        h1 Foundry 4
+        input#number10.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+        button.increase(onclick="increaseNumber(10)") +
+        button.decrease(onclick="decreaseNumber(10, 3)") -3
+
+  script(type="text/javascript", src="/counter/counter.js")
