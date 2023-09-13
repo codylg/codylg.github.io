@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+body {
+  background-image: none;
+  background-color: #232128;
+}
+
+body::before, body::after {
+  display: none;
+}
+
+.mtg-counter {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4px;
+}
+
+.mtg-counter .counter-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 580px) {
+  .mtg-counter .counter-group {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.mtg-counter .counter {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px 8px;
+  margin: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(248, 249, 250, 0.05);
+  border-radius: 8px;
+  background-color: #26282e;
+}
+
+@media (max-width: 580px) {
+  .mtg-counter .counter {
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+  }
+}
+
+.mtg-counter .counter h1 {
+  position: absolute;
+  top: 12px;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 13px;
+  color: #44464c;
+}
+
+.mtg-counter .counter img.mana-symbol {
+  position: absolute;
+  top: 12px;
+  width: 16px;
+}
+
+.mtg-counter .counter input {
+  z-index: 10;
+  width: 1ch;
+  min-width: 1ch;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  font-family: "Space Mono", monospace;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  color: #f8f9fa;
+  outline: 0;
+  -moz-appearance: textfield;
+}
+
+.mtg-counter .counter input.wide {
+  width: 2ch;
+}
+
+.mtg-counter .counter input::-webkit-outer-spin-button, .mtg-counter .counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mtg-counter .counter input.empty {
+  opacity: 0.33;
+}
+
+.mtg-counter .counter input::-webkit-input-placeholder {
+  font-size: 28px;
+}
+
+.mtg-counter .counter input::-moz-placeholder {
+  font-size: 28px;
+}
+
+.mtg-counter .counter input:-ms-input-placeholder {
+  font-size: 28px;
+}
+
+.mtg-counter .counter input::placeholder {
+  font-size: 28px;
+}
+
+.mtg-counter .counter .increase, .mtg-counter .counter .decrease, .mtg-counter .counter .reset {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  color: #44464c;
+  transition: background-color 0.1s;
+}
+
+.mtg-counter .counter .increase:active, .mtg-counter .counter .decrease:active, .mtg-counter .counter .reset:active {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.mtg-counter .counter .increase {
+  right: 0;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.mtg-counter .counter .decrease, .mtg-counter .counter .reset {
+  left: 0;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.mtg-counter .counter#storm input {
+  color: #FFC544;
+}
+
+.mtg-counter .counter#storm input:not(.empty) {
+  -webkit-filter: drop-shadow(0 0 12px #FFC544);
+          filter: drop-shadow(0 0 12px #FFC544);
+}
+
+.mtg-counter .counter#colourless input {
+  color: #CAC2C0;
+}
+
+.mtg-counter .counter#colourless input:not(.empty) {
+  -webkit-filter: drop-shadow(0 0 12px #CAC2C0);
+          filter: drop-shadow(0 0 12px #CAC2C0);
+}
+
+.mtg-counter .counter#black input {
+  color: #120C0E;
+}
+
+.mtg-counter .counter#black input:not(.empty) {
+  -webkit-filter: drop-shadow(0 0 12px white);
+          filter: drop-shadow(0 0 12px white);
+}
+
+.mtg-counter .counter#black input.empty {
+  opacity: 0.66;
+}
+
+.mtg-counter .counter#red input {
+  color: #EEAD94;
+}
+
+.mtg-counter .counter#red input:not(.empty) {
+  -webkit-filter: drop-shadow(0 0 12px #EEAD94);
+          filter: drop-shadow(0 0 12px #EEAD94);
+}
+
+.mtg-counter .counter#green input {
+  color: #A7D1B1;
+}
+
+.mtg-counter .counter#green input:not(.empty) {
+  -webkit-filter: drop-shadow(0 0 12px #A7D1B1);
+          filter: drop-shadow(0 0 12px #A7D1B1);
+}
+
+.mtg-counter .counter#foundry1 .decrease, .mtg-counter .counter#foundry2 .decrease, .mtg-counter .counter#foundry3 .decrease, .mtg-counter .counter#foundry4 .decrease {
+  font-size: 16px;
+}
