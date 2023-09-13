@@ -33,7 +33,7 @@ body {
     flex-grow: 1;
 
     &:last-child {
-      padding-bottom: calc(env(safe-area-inset-bottom) - 4px);
+      padding-bottom: env(safe-area-inset-bottom);
     }
 
     @media (max-width: 580px) {
