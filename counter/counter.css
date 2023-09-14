@@ -27,6 +27,18 @@ body::before, body::after {
       touch-action: manipulation;
 }
 
+@media (max-height: 400px) {
+  .mtg-counter {
+    width: calc(100vw - 6px);
+    height: calc(100vh - 6px);
+    padding-top: calc(env(safe-area-inset-top) - 6px);
+    padding-right: calc(env(safe-area-inset-right) - 6px);
+    padding-bottom: calc(env(safe-area-inset-bottom) - 6px);
+    padding-left: calc(env(safe-area-inset-left) - 6px);
+    margin: 3px;
+  }
+}
+
 .mtg-counter .counter-group {
   position: relative;
   display: -webkit-flex;
@@ -107,8 +119,14 @@ body::before, body::after {
   }
 }
 
+@media (max-height: 400px) {
+  .mtg-counter .card {
+    margin: 3px;
+  }
+}
+
 .mtg-counter .counter {
-  padding: 24px 8px;
+  min-height: 96px;
 }
 
 .mtg-counter .counter h1 {
