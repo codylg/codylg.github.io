@@ -21,12 +21,16 @@ body {
 }
 
 .mtg-counter {
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - 8px);
+  height: calc(100vh - 8px);
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  padding: 4px;
+  padding-top: calc(env(safe-area-inset-top) - 8px);
+  padding-right: calc(env(safe-area-inset-right) - 8px);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
+  padding-left: calc(env(safe-area-inset-left) - 8px);
+  margin: 4px;
   touch-action: manipulation;
 
   .counter-group {
@@ -34,10 +38,6 @@ body {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-
-    &:last-child {
-      padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
-    }
 
     @media (max-width: 580px) {
       flex-wrap: wrap;
