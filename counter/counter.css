@@ -143,6 +143,12 @@ body::before, body::after {
           user-select: none;
 }
 
+@media (max-height: 400px) {
+  .mtg-counter .counter h1 {
+    top: 10px;
+  }
+}
+
 .mtg-counter .counter img.mana-symbol {
   position: absolute;
   top: 12px;
@@ -151,6 +157,12 @@ body::before, body::after {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+@media (max-height: 400px) {
+  .mtg-counter .counter img.mana-symbol {
+    top: 10px;
+  }
 }
 
 .mtg-counter .counter input {
@@ -168,6 +180,12 @@ body::before, body::after {
   color: #f8f9fa;
   outline: 0;
   -moz-appearance: textfield;
+}
+
+@media (max-height: 400px) {
+  .mtg-counter .counter input {
+    font-size: 36px;
+  }
 }
 
 .mtg-counter .counter input.life {

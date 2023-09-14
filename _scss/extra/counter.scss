@@ -111,6 +111,10 @@ body {
       font-size: 13px;
       color: $charcoal-light;
       user-select: none;
+
+      @media (max-height: 400px) {
+        top: 10px;
+      }
     }
 
     img.mana-symbol {
@@ -118,6 +122,10 @@ body {
       top: 12px;
       width: 16px;
       user-select: none;
+
+      @media (max-height: 400px) {
+        top: 10px;
+      }
     }
 
     input {
@@ -135,6 +143,10 @@ body {
       color: $off-white;
       outline: 0;
       -moz-appearance: textfield;
+
+      @media (max-height: 400px) {
+        font-size: 36px;
+      }
 
       &.life {
         width: 2ch;
