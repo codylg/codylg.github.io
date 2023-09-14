@@ -58,6 +58,10 @@ body {
     min-height: 48px;
     max-height: 48px;
 
+    .card {
+      background-color: $charcoal-dark;
+    }
+
     button {
       width: 100%;
       height: 100%;
@@ -68,9 +72,10 @@ body {
       font-size: 12px;
       color: $grey;
       text-size-adjust: none;
+      user-select: none;
 
       &:active {
-        background-color: rgba($white, 0.024);
+        background-color: rgba($white, 0.08);
       }
     }
   }
@@ -87,7 +92,7 @@ body {
     overflow: hidden;
     border-radius: 8px;
     background-color: $charcoal;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H4V4H3V3Z\" fill=\"%233C3E46\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9H10V10H9V9Z\" fill=\"%233C3E46\"/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H4V4H3V3Z\" fill=\"%23363840\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9H10V10H9V9Z\" fill=\"%233C3E46\"/></svg>");
     box-shadow: 0 1px 0 rgba($off-white, 0.15) inset, 0 0 0 1px rgba($off-white, 0.05) inset, 0 -48px 32px rgba($black, 0.12) inset;
 
     @media (max-width: 580px) {
@@ -125,6 +130,7 @@ body {
 
       @media (max-height: 400px) {
         top: 10px;
+        width: 14px;
       }
     }
 
@@ -178,9 +184,9 @@ body {
       padding: 20px;
       border: 0;
       background-color: transparent;
+      font-family: $counter-font;
       font-size: 20px;
       color: $charcoal-light;
-      transition: background-color 0.1s;
       user-select: none;
     }
 
@@ -189,7 +195,7 @@ body {
       justify-content: flex-end;
 
       &:active {
-        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.06) 100%);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%);
       }
     }
 
@@ -198,12 +204,8 @@ body {
       justify-content: flex-start;
 
       &:active {
-        background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.06) 100%);
+        background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%);
       }
-    }
-
-    .reset {
-      font-size: 16px;
     }
 
     &#storm input {
@@ -253,7 +255,7 @@ body {
     &#foundry1, &#foundry2, &#foundry3, &#foundry4 {
 
       .decrease {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
   }
