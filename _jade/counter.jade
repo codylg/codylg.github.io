@@ -13,65 +13,73 @@ block headExtra
   meta(name="apple-mobile-web-app-capable", content="yes")
   meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
 
+block viewport
+  meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
+
 block header
 
 block content
 
   div.mtg-counter(ontouchstart="")
-    div.counter-group.group-1
-      div.counter#opponent
+    div.counter-group.control-group
+      div.card
+        button#new-game(onclick="newGame()") New Game
+      div.card
+        button(onclick="emptyManaPool()") Empty Mana Pool
+    div.counter-group
+      div.counter.card#opponent
         h1 Opponent
-        input#number1.wide(type="number", inputmode="numeric", value="20", placeholder="🧙")
+        input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
         button.increase(onclick="increaseNumber(1)") +
         button.decrease(onclick="decreaseNumber(1)") -
-      div.counter#player
+      div.counter.card#player
         h1 Self
-        input#number2.wide(type="number", inputmode="numeric", value="20", placeholder="🧙")
+        input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
         button.increase(onclick="increaseNumber(2)") +
         button.decrease(onclick="decreaseNumber(2)") -
-      div.counter#storm
+      div.counter.card#storm
         h1 Storm
         input#number11.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(11)") +
         button.reset(onclick="resetNumber(11)") ↺
-    div.counter-group.group-2
-      div.counter#colourless
+    div.counter-group#mana-pool
+      div.counter.card#colourless
         img.mana-symbol(src="C.png" alt="Colourless mana symbol")
         input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(3)") +
         button.decrease(onclick="decreaseNumber(3)") -
-      div.counter#black
+      div.counter.card#black
         img.mana-symbol(src="B.png" alt="Black mana symbol")
         input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(4)") +
         button.decrease(onclick="decreaseNumber(4)") -
-      div.counter#red
+      div.counter.card#red
         img.mana-symbol(src="R.png" alt="Red mana symbol")
         input#number5.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(5)") +
         button.decrease(onclick="decreaseNumber(5)") -
-      div.counter#green
+      div.counter.card#green
         img.mana-symbol(src="G.png" alt="Green mana symbol")
         input#number6.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(6)") +
         button.decrease(onclick="decreaseNumber(6)") -
-    div.counter-group.group-3
-      div.counter#foundry1
+    div.counter-group
+      div.counter.card#foundry1
         h1 Foundry 1
         input#number7.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(7)") +
         button.decrease(onclick="decreaseNumber(7, 3)") -3
-      div.counter#foundry2
+      div.counter.card#foundry2
         h1 Foundry 2
         input#number8.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(8)") +
         button.decrease(onclick="decreaseNumber(8, 3)") -3
-      div.counter#foundry3
+      div.counter.card#foundry3
         h1 Foundry 3
         input#number9.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(9)") +
         button.decrease(onclick="decreaseNumber(9, 3)") -3
-      div.counter#foundry4
+      div.counter.card#foundry4
         h1 Foundry 4
         input#number10.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(10)") +

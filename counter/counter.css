@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 body {
   background-image: none;
-  background-color: #232128;
+  background-color: black;
 }
 
 body::before, body::after {
@@ -24,6 +24,7 @@ body::before, body::after {
 }
 
 .mtg-counter .counter-group {
+  position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +37,7 @@ body::before, body::after {
 }
 
 .mtg-counter .counter-group:last-child {
-  padding-bottom: calc(env(safe-area-inset-bottom) - 4px);
+  padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
 }
 
 @media (max-width: 580px) {
@@ -47,7 +48,27 @@ body::before, body::after {
   }
 }
 
-.mtg-counter .counter {
+.mtg-counter .control-group {
+  min-height: 48px;
+  max-height: 48px;
+}
+
+.mtg-counter .control-group button {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: 0;
+  background-color: transparent;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  color: #bec0cd;
+}
+
+.mtg-counter .control-group button:active {
+  background-color: rgba(255, 255, 255, 0.024);
+}
+
+.mtg-counter .card {
   position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,20 +88,24 @@ body::before, body::after {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 24px 8px;
   margin: 4px;
   overflow: hidden;
-  border: 1px solid rgba(248, 249, 250, 0.05);
   border-radius: 8px;
   background-color: #26282e;
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3H4V4H3V3Z" fill="%233C3E46"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 9H10V10H9V9Z" fill="%233C3E46"/></svg>');
+  box-shadow: 0 1px 0 rgba(248, 249, 250, 0.15) inset, 0 0 0 1px rgba(248, 249, 250, 0.05) inset, 0 -48px 32px rgba(0, 0, 0, 0.12) inset;
 }
 
 @media (max-width: 580px) {
-  .mtg-counter .counter {
+  .mtg-counter .card {
     -webkit-flex-basis: 40%;
         -ms-flex-preferred-size: 40%;
             flex-basis: 40%;
   }
+}
+
+.mtg-counter .counter {
+  padding: 24px 8px;
 }
 
 .mtg-counter .counter h1 {
@@ -124,7 +149,7 @@ body::before, body::after {
   -moz-appearance: textfield;
 }
 
-.mtg-counter .counter input.wide {
+.mtg-counter .counter input.life {
   width: 2ch;
 }
 
@@ -177,10 +202,6 @@ body::before, body::after {
           user-select: none;
 }
 
-.mtg-counter .counter .increase:active, .mtg-counter .counter .decrease:active, .mtg-counter .counter .reset:active {
-  background-color: rgba(255, 255, 255, 0.03);
-}
-
 .mtg-counter .counter .increase {
   right: 0;
   -webkit-justify-content: flex-end;
@@ -188,11 +209,19 @@ body::before, body::after {
           justify-content: flex-end;
 }
 
+.mtg-counter .counter .increase:active {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 100%);
+}
+
 .mtg-counter .counter .decrease, .mtg-counter .counter .reset {
   left: 0;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.mtg-counter .counter .decrease:active, .mtg-counter .counter .reset:active {
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 100%);
 }
 
 .mtg-counter .counter .reset {

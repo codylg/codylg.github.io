@@ -14,11 +14,12 @@ html(lang="en")
     meta(name="description", content="#{description}")
     meta(name="theme-color", content="#26282e")
     meta(charset="utf-8")
-    meta(name="viewport", content="initial-scale=1")
     meta(name="author", content="Cody Lindsay Gordon")
     meta(name="google-site-verification", content="ZkjeR5dDgGZ5iIrCxvCjqgPrhHp6dco-Jck7IWutYZo")
+    
+    block viewport
+      meta(name="viewport", content="initial-scale=1")
 
-    //- Opengraph
     meta(property="og:title", content="#{title}")
     meta(property="og:site_name", content="Cody Lindsay Gordon")
     meta(property="og:description", content="#{description}")
@@ -26,9 +27,9 @@ html(lang="en")
     meta(property="og:url", content="http://clg.name/#{slug}")
     meta(property="og:image", content="http://clg.name/#{card}")
 
-    //- iOS webclip
-    meta(name="apple-mobile-web-app-title", content="clg")
-    link(rel="apple-touch-icon", href="apple-touch-icon.png")
+    block webApp
+      meta(name="apple-mobile-web-app-title", content="clg")
+      link(rel="apple-touch-icon", href="apple-touch-icon.png")
 
     link(rel="icon", href="/favicon.svg")
     link(rel="stylesheet", href="/static/styles.css", async)

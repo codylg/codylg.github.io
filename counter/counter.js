@@ -71,3 +71,43 @@ inputs.forEach((input) => {
   input.addEventListener("input", handleInput);
   input.addEventListener('click', highlightInputText);
 });
+
+// Function to empty mana pool by resetting all mana values to 0
+const manaInputs = document.querySelectorAll("#mana-pool input");
+
+function emptyManaPool() {
+  manaInputs.forEach((manaInput) => {
+    manaInput.value = 0;
+    manaInput.style.width = "1ch";
+    manaInput.classList.add("empty");
+  });
+}
+
+// Function to reset the game
+function newGame() {
+
+  // Require double tap to confirm reset
+  const newGameButton = document.getElementById("new-game");
+
+  if (newGameButton.textContent == "New Game") {
+    newGameButton.textContent = "Are You Sure?";
+
+    // Reset back if no confirmation
+    setTimeout(function() {
+      newGameButton.textContent = "New Game";
+    }, 3000);
+  } else {
+    newGameButton.textContent = "New Game";
+    inputs.forEach((input) => {
+      if (input.classList.contains("life")) {
+        input.value = 20;
+        input.style.width = "2ch";
+        input.classList.remove("empty");
+      } else {
+        input.value = 0;
+        input.style.width = "1ch";
+        input.classList.add("empty");
+      }
+    });
+  }
+}

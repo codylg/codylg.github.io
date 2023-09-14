@@ -4,14 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+$counter-font: "Space Mono", monospace;
 $mana-colourless: #CAC2C0;
 $mana-black: #120C0E;
 $mana-green: #A7D1B1;
 $mana-red: #EEAD94;
 
+
 body {
   background-image: none;
-  background-color: $charcoal-dark;
+  background-color: $black;
 
   &::before, &::after {
     display: none;
@@ -28,12 +30,13 @@ body {
   touch-action: manipulation;
 
   .counter-group {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
 
     &:last-child {
-      padding-bottom: calc(env(safe-area-inset-bottom) - 4px);
+      padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
     }
 
     @media (max-width: 580px) {
@@ -41,7 +44,27 @@ body {
     }
   }
 
-  .counter {
+  .control-group {
+    min-height: 48px;
+    max-height: 48px;
+
+    button {
+      width: 100%;
+      height: 100%;
+      padding: 8px;
+      border: 0;
+      background-color: transparent;
+      font-family: $counter-font;
+      font-size: 12px;
+      color: $grey;
+
+      &:active {
+        background-color: rgba($white, 0.024);
+      }
+    }
+  }
+
+  .card {
     position: relative;
     display: flex;
     flex-grow: 1;
@@ -49,22 +72,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px 8px;
     margin: 4px;
     overflow: hidden;
-    border: 1px solid rgba($off-white, 0.05);
     border-radius: 8px;
     background-color: $charcoal;
+    background-image: url("data:image/svg+xml;utf8,<svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H4V4H3V3Z\" fill=\"%233C3E46\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9H10V10H9V9Z\" fill=\"%233C3E46\"/></svg>");
+    box-shadow: 0 1px 0 rgba($off-white, 0.15) inset, 0 0 0 1px rgba($off-white, 0.05) inset, 0 -48px 32px rgba($black, 0.12) inset;
 
     @media (max-width: 580px) {
       flex-basis: 40%;
     }
+  }
+
+  .counter {
+    padding: 24px 8px;
 
     h1 {
       position: absolute;
       top: 12px;
       margin: 0;
-      font-family: "Space Mono", monospace;
+      font-family: $counter-font;
       font-weight: 400;
       font-size: 13px;
       color: $charcoal-light;
@@ -86,7 +113,7 @@ body {
       margin: 0;
       border: 0;
       background-color: transparent;
-      font-family: "Space Mono", monospace;
+      font-family: $counter-font;
       font-size: 40px;
       font-weight: 400;
       text-align: center;
@@ -94,7 +121,7 @@ body {
       outline: 0;
       -moz-appearance: textfield;
 
-      &.wide {
+      &.life {
         width: 2ch;
       }
 
@@ -128,20 +155,24 @@ body {
       color: $charcoal-light;
       transition: background-color 0.1s;
       user-select: none;
-
-      &:active {
-        background-color: rgba($white, 0.03);
-      }
     }
 
     .increase {
       right: 0;
       justify-content: flex-end;
+
+      &:active {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.06) 100%);
+      }
     }
 
     .decrease, .reset {
       left: 0;
       justify-content: flex-start;
+
+      &:active {
+        background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.06) 100%);
+      }
     }
 
     .reset {
