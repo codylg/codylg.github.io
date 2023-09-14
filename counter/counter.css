@@ -62,6 +62,9 @@ body::before, body::after {
   font-family: "Space Mono", monospace;
   font-size: 12px;
   color: #bec0cd;
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
 .mtg-counter .control-group button:active {
