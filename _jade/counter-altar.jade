@@ -3,17 +3,17 @@ extends layout
 block append variables
   - var title = "Altar Tron Counter for Magic: The Gathering"
   - var description = "A custom counter to assist tracking information when playing Altar Tron"
-  - var slug = "counter"
-  - var card = "card-counter.png"
+  - var slug = "counter/altar"
+  - var card = "counter/altar/card-counter-altar.png"
   - var frontPage = false
   - var fullScreenPage = true
 
 block headExtra
-  link(rel="stylesheet", href="counter.css", async)
+  link(rel="stylesheet", href="/counter/counter.css", async)
   meta(name="apple-mobile-web-app-title", content="Altar Tron")
   meta(name="apple-mobile-web-app-capable", content="yes")
   meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
-  link(rel="apple-touch-icon", href="icon-counter.png")
+  link(rel="apple-touch-icon", href="/counter/altar/icon-counter-altar.png")
 
 block viewport
   meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
@@ -46,22 +46,22 @@ block content
         button.reset(onclick="resetNumber(11)") ↺
     div.counter-group#mana-pool
       div.counter.card#colourless
-        img.mana-symbol(src="C.png" alt="Colourless mana symbol")
+        img.mana-symbol(src="/counter/C.png" alt="Colourless mana symbol")
         input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(3)") +
         button.decrease(onclick="decreaseNumber(3)") −
       div.counter.card#black
-        img.mana-symbol(src="B.png" alt="Black mana symbol")
+        img.mana-symbol(src="/counter/B.png" alt="Black mana symbol")
         input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(4)") +
         button.decrease(onclick="decreaseNumber(4)") −
       div.counter.card#red
-        img.mana-symbol(src="R.png" alt="Red mana symbol")
+        img.mana-symbol(src="/counter/R.png" alt="Red mana symbol")
         input#number5.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(5)") +
         button.decrease(onclick="decreaseNumber(5)") −
       div.counter.card#green
-        img.mana-symbol(src="G.png" alt="Green mana symbol")
+        img.mana-symbol(src="/counter/G.png" alt="Green mana symbol")
         input#number6.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
         button.increase(onclick="increaseNumber(6)") +
         button.decrease(onclick="decreaseNumber(6)") −

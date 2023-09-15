@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kiln Fiend Counter for Magic: The Gathering &rarr; Cody Lindsay Gordon</title>
+    <meta name="description" content="A custom counter to assist tracking information when playing Kiln Fiend">
+    <meta name="theme-color" content="#26282e">
+    <meta charset="utf-8">
+    <meta name="author" content="Cody Lindsay Gordon">
+    <meta name="google-site-verification" content="ZkjeR5dDgGZ5iIrCxvCjqgPrhHp6dco-Jck7IWutYZo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta property="og:title" content="Kiln Fiend Counter for Magic: The Gathering">
+    <meta property="og:site_name" content="Cody Lindsay Gordon">
+    <meta property="og:description" content="A custom counter to assist tracking information when playing Kiln Fiend">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clg.name/counter/kiln">
+    <meta property="og:image" content="https://clg.name/counter/kiln/card-counter-kiln.png">
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/static/styles.css" async>
+    <link rel="stylesheet" href="/counter/counter.css" async>
+    <meta name="apple-mobile-web-app-title" content="Kiln Fiend">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/counter/kiln/icon-counter-kiln.png">
+  </head>
+  <body>
+    <div ontouchstart="" class="mtg-counter">
+      <div class="counter-group control-group">
+        <div class="card">
+          <button id="new-game" onclick="newGame()">New Game</button>
+        </div>
+      </div>
+      <div class="counter-group">
+        <div id="opponent" class="counter card">
+          <h1>Opponent</h1>
+          <input id="number1" type="number" inputmode="numeric" value="20" placeholder="🧙" class="life">
+          <button onclick="increaseNumber(1)" class="increase">+</button>
+          <button onclick="decreaseNumber(1)" class="decrease">−</button>
+        </div>
+        <div id="player" class="counter card">
+          <h1>Self</h1>
+          <input id="number2" type="number" inputmode="numeric" value="20" placeholder="🧙" class="life">
+          <button onclick="increaseNumber(2)" class="increase">+</button>
+          <button onclick="decreaseNumber(2)" class="decrease">−</button>
+        </div>
+        <div id="prowess" class="counter card">
+          <h1>Prowess</h1>
+          <input id="prowess-counter" type="number" value="0" readonly class="empty">
+          <button onclick="increaseProwess()" class="increase">+</button>
+          <button onclick="resetProwess()" class="reset">↺</button>
+        </div>
+      </div>
+      <div id="kiln-counts" class="counter-group">
+        <div class="counter card">
+          <h1>Swiftspear</h1>
+          <input id="swiftspear-counter" type="text" value="+0/+0" readonly class="empty">
+        </div>
+        <div class="counter card">
+          <h1>Crasher</h1>
+          <input id="crasher-counter" type="text" value="+0/+0" readonly class="empty">
+        </div>
+        <div class="counter card">
+          <h1>Kiln Fiend</h1>
+          <input id="kiln-counter" type="text" value="+0/+0" readonly class="empty">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/counter/counter.js"></script>
+  </body>
+</html>

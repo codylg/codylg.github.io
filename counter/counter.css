@@ -144,7 +144,7 @@ body::before, body::after {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-size: 13px;
-  color: #44464c;
+  color: #646973;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -323,4 +323,22 @@ body::before, body::after {
 
 .mtg-counter .counter#foundry1 .decrease, .mtg-counter .counter#foundry2 .decrease, .mtg-counter .counter#foundry3 .decrease, .mtg-counter .counter#foundry4 .decrease {
   font-size: 14px;
+}
+
+.mtg-counter .counter#prowess input {
+  color: #EEAD94;
+  pointer-events: none;
+}
+
+.mtg-counter .counter#prowess input:not(.empty) {
+  -webkit-filter: drop-shadow(0 0 12px #EEAD94);
+          filter: drop-shadow(0 0 12px #EEAD94);
+}
+
+.mtg-counter #kiln-counts input {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }

@@ -4,6 +4,7 @@ function characterLength(value) {
   return characterCount + "ch";
 }
 
+// Function to increase a counter by an amount
 function increaseNumber(inputNumber, amount = 1) {
   var inputElement = document.getElementById("number" + inputNumber);
   var currentValue = parseInt(inputElement.value);
@@ -20,6 +21,7 @@ function increaseNumber(inputNumber, amount = 1) {
   }
 }
 
+// Function to decrease a counter by an amount
 function decreaseNumber(inputNumber, amount = 1) {
   var inputElement = document.getElementById("number" + inputNumber);
   var currentValue = parseInt(inputElement.value);
@@ -109,5 +111,49 @@ function newGame() {
         input.classList.add("empty");
       }
     });
+    swiftspearCounter.value = "+0/+0";
+    swiftspearCounter.classList.add("empty");
+    crasherCounter.value = "+0/+0";
+    crasherCounter.classList.add("empty");
+    kilnCounter.value = "+0/+0";
+    kilnCounter.classList.add("empty");
   }
+}
+
+// Kiln fiend specific
+const prowessCounter = document.getElementById("prowess-counter");
+const swiftspearCounter = document.getElementById("swiftspear-counter");
+const crasherCounter = document.getElementById("crasher-counter");
+const kilnCounter = document.getElementById("kiln-counter");
+
+// Function to increase the prowess count and update creature counters
+function increaseProwess() {
+  var currentValue = parseInt(prowessCounter.value);
+  var newValue = currentValue + 1;
+
+  prowessCounter.value = newValue;
+  prowessCounter.style.width = characterLength(newValue);
+
+  swiftspearCounter.value = `+${newValue}/+${newValue}`;
+  crasherCounter.value = `+${(newValue * 2)}/+0`;
+  kilnCounter.value = `+${(newValue * 3)}/+0`;
+
+  if (currentValue == "0") {
+    prowessCounter.classList.remove("empty");
+    swiftspearCounter.classList.remove("empty");
+    crasherCounter.classList.remove("empty");
+    kilnCounter.classList.remove("empty");
+  }
+}
+
+function resetProwess() {
+  prowessCounter.value = 0;
+  prowessCounter.style.width = "1ch";
+  prowessCounter.classList.add("empty");
+  swiftspearCounter.value = "+0/+0";
+  swiftspearCounter.classList.add("empty");
+  crasherCounter.value = "+0/+0";
+  crasherCounter.classList.add("empty");
+  kilnCounter.value = "+0/+0";
+  kilnCounter.classList.add("empty");
 }

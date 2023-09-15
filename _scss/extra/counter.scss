@@ -114,7 +114,7 @@ body {
       font-family: $counter-font;
       font-weight: 400;
       font-size: 13px;
-      color: $charcoal-light;
+      color: $grey-dark;
       user-select: none;
 
       @media (max-height: 400px) {
@@ -258,5 +258,19 @@ body {
         font-size: 14px;
       }
     }
+
+    &#prowess input {
+      color: $mana-red;
+      pointer-events: none;
+
+      &:not(.empty) {
+        filter: drop-shadow(0 0 12px $mana-red);
+      }
+    }
+  }
+
+  #kiln-counts input {
+    width: 100%;
+    user-select: none;
   }
 }

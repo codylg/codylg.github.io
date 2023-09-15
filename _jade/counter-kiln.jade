@@ -1,0 +1,56 @@
+extends layout
+
+block append variables
+  - var title = "Kiln Fiend Counter for Magic: The Gathering"
+  - var description = "A custom counter to assist tracking information when playing Kiln Fiend"
+  - var slug = "counter/kiln"
+  - var card = "counter/kiln/card-counter-kiln.png"
+  - var frontPage = false
+  - var fullScreenPage = true
+
+block headExtra
+  link(rel="stylesheet", href="/counter/counter.css", async)
+  meta(name="apple-mobile-web-app-title", content="Kiln Fiend")
+  meta(name="apple-mobile-web-app-capable", content="yes")
+  meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+  link(rel="apple-touch-icon", href="/counter/kiln/icon-counter-kiln.png")
+
+block viewport
+  meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
+
+block header
+
+block content
+
+  div.mtg-counter(ontouchstart="")
+    div.counter-group.control-group
+      div.card
+        button#new-game(onclick="newGame()") New Game
+    div.counter-group
+      div.counter.card#opponent
+        h1 Opponent
+        input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+        button.increase(onclick="increaseNumber(1)") +
+        button.decrease(onclick="decreaseNumber(1)") −
+      div.counter.card#player
+        h1 Self
+        input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+        button.increase(onclick="increaseNumber(2)") +
+        button.decrease(onclick="decreaseNumber(2)") −
+      div.counter.card#prowess
+        h1 Prowess
+        input#prowess-counter.empty(type="number", value="0", readonly)
+        button.increase(onclick="increaseProwess()") +
+        button.reset(onclick="resetProwess()") ↺
+    div.counter-group#kiln-counts
+      div.counter.card
+        h1 Swiftspear
+        input#swiftspear-counter.empty(type="text", value="+0/+0" readonly)
+      div.counter.card
+        h1 Crasher
+        input#crasher-counter.empty(type="text", value="+0/+0" readonly)
+      div.counter.card
+        h1 Kiln Fiend
+        input#kiln-counter.empty(type="text", value="+0/+0" readonly)
+
+  script(type="text/javascript", src="/counter/counter.js")
