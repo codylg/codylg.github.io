@@ -33,8 +33,14 @@
   }
 
   // 404 text
-  @media (prefers-color-scheme: dark) {
-    > p {
+  > p {
+
+    @media (max-width: $mobile-media) {
+      padding-left: $page-padding / 2;
+      padding-right: $page-padding / 2;
+    }
+
+    @media (prefers-color-scheme: dark) {
       color: $grey;
     }
   }
