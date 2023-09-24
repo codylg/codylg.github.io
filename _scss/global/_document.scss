@@ -216,28 +216,3 @@ img {
   width: 100%;
   height: auto;
 }
-
-aside.callout {
-  padding: $page-padding;
-  margin: ($page-padding * 2) 0;
-  border-radius: $radius;
-  background-color: $grey;
-
-  @media (max-width: $mobile-media) {
-    padding-right: 0;
-    padding-left: 0;
-    border-radius: 0;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $charcoal-light;
-  }
-
-  > *:first-child {
-    margin-top: 0;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-}
