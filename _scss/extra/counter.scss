@@ -152,6 +152,7 @@ body {
       color: $off-white;
       outline: 0;
       -moz-appearance: textfield;
+      -webkit-touch-callout: none;
 
       @media (max-height: 380px) {
         font-size: 36px;

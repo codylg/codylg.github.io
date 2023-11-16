@@ -192,6 +192,7 @@ body::before, body::after {
   color: #f8f9fa;
   outline: 0;
   -moz-appearance: textfield;
+  -webkit-touch-callout: none;
 }
 
 @media (max-height: 380px) {
