@@ -73,6 +73,7 @@ body {
       color: $grey;
       text-size-adjust: none;
       user-select: none;
+      -webkit-touch-callout: none;
 
       &:active {
         background-color: rgba($white, 0.08);
@@ -116,6 +117,7 @@ body {
       font-size: 13px;
       color: $grey-dark;
       user-select: none;
+      -webkit-touch-callout: none;
 
       @media (max-height: 400px) {
         top: 10px;
@@ -127,6 +129,7 @@ body {
       top: 12px;
       width: 16px;
       user-select: none;
+      -webkit-touch-callout: none;
 
       @media (max-height: 400px) {
         top: 10px;
@@ -150,7 +153,7 @@ body {
       outline: 0;
       -moz-appearance: textfield;
 
-      @media (max-height: 400px) {
+      @media (max-height: 380px) {
         font-size: 36px;
       }
 
@@ -188,6 +191,7 @@ body {
       font-size: 20px;
       color: $charcoal-light;
       user-select: none;
+      -webkit-touch-callout: none;
     }
 
     .increase {
@@ -229,6 +233,7 @@ body {
 
       &:not(.empty) {
         filter: drop-shadow(0 0 12px $white);
+        text-shadow: 0 0 4px rgba($white, 0.24);
       }
 
       &.empty {
@@ -272,5 +277,6 @@ body {
   #kiln-counts input {
     width: 100%;
     user-select: none;
+    -webkit-touch-callout: none;
   }
 }
