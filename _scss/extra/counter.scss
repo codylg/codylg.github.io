@@ -6,7 +6,6 @@
 
 $counter-font: "Space Mono", monospace;
 $mana-colourless: #CAC2C0;
-$mana-black: #120C0E;
 $mana-green: #A7D1B1;
 $mana-red: #EEAD94;
 
@@ -230,11 +229,11 @@ body {
     }
 
     &#black input {
-      color: $mana-black;
+      color: $black;
 
       &:not(.empty) {
         filter: drop-shadow(0 0 12px $white);
-        text-shadow: 0 0 4px rgba($white, 0.24);
+        text-shadow: 0 0 4px rgba($white, 0.32);
       }
 
       &.empty {

@@ -296,13 +296,13 @@ body::before, body::after {
 }
 
 .mtg-counter .counter#black input {
-  color: #120C0E;
+  color: black;
 }
 
 .mtg-counter .counter#black input:not(.empty) {
   -webkit-filter: drop-shadow(0 0 12px white);
           filter: drop-shadow(0 0 12px white);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.24);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.32);
 }
 
 .mtg-counter .counter#black input.empty {
