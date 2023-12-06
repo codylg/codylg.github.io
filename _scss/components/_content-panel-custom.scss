@@ -4,37 +4,33 @@
   &.ios86-panel {
 
     @media (prefers-color-scheme: dark) {
-      background-color: $charcoal;
-      color: $grey;
+      background-color: $b;
+      color: $w-dark;
 
       a {
-        border-bottom-color: $grey-dark;
-
-        &:hover {
-          border-bottom-color: $grey;
-        }
+        border-bottom-color: $b;
 
         &:focus {
-          background-color: rgba($white, 0.2) !important;
+          background-color: rgba($w-dark, 0.2) !important;
         }
       }
 
       .grey-text {
-        color: $grey-dark;
+        color: $g-dark;
       }
 
       .button,
       .button-black {
-        background-color: $grey-dark;
-        color: $grey-light;
+        background-color: $g-dark;
+        color: $w-dark;
 
         &:hover,
         &:focus {
-          color: $white;
+          color: $w;
         }
 
         &:focus {
-          box-shadow: 0 0 0 4px rgba($white, 0.1);
+          box-shadow: 0 0 0 4px rgba($w, 0.1);
         }
       }
     }
@@ -125,22 +121,22 @@
   }
 
   &.rex-panel {
-    background-color: rgb(246, 244, 238);
-    background-image: url('/img/rex-blob.webp');
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 84%;
+    // background-color: rgb(246, 244, 238);
+    // background-image: url('/img/rex-blob.webp');
+    // background-repeat: no-repeat;
+    // background-position: bottom right;
+    // background-size: 84%;
 
     a {
-      border-bottom-color: rgb(178, 162, 150);
+      // border-bottom-color: rgb(178, 162, 150);
 
       &:hover {
-        border-bottom-color: rgb(85, 70, 57);
+        // border-bottom-color: rgb(85, 70, 57);
       }
     }
 
     .grey-dark-text {
-      color: rgb(85, 70, 57);
+      // color: rgb(85, 70, 57);
     }
 
     figure {
@@ -148,7 +144,7 @@
 
       img,
       .iphone-frame {
-        box-shadow: 0 10px 33px rgba(85, 70, 57, 0.33);
+        // box-shadow: 0 10px 33px rgba(85, 70, 57, 0.33);
       }
     }
 
@@ -157,7 +153,7 @@
       top: 18%;
       right: 18%;
       width: 200px;
-      background-color: #0F2C65;
+      // background-color: #0F2C65;
 
       @media (max-width: $large-media) {
         top: 24%;
@@ -213,34 +209,34 @@
   }
 
   &.component-library-panel {
-    background-color: #75836F;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23626A59\" fill-rule=\"evenodd\"/></svg>");
+    // background-color: #75836F;
+    // background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23626A59\" fill-rule=\"evenodd\"/></svg>");
 
     h1,
     p,
     ul,
     .button {
-      color: #262921;
+      // color: #262921;
     }
 
     a {
-      border-bottom-color: #59624B;
+      // border-bottom-color: #59624B;
 
       &:hover {
-        border-bottom-color: #3A422E;
+        // border-bottom-color: #3A422E;
       }
     }
 
     .button {
-      background-color: #CED7CA;
+      // background-color: #CED7CA;
 
       &:hover {
-        background-color: $white;
+        // background-color: $white;
       }
     }
 
     .content-panel-header {
-      background-color: rgba(255,255,255,0.04);
+      // background-color: rgba(255,255,255,0.04);
     }
 
     figure {
@@ -263,7 +259,7 @@
       }
 
       .iphone-frame {
-        box-shadow: 0 24px 48px rgba(25, 27, 20, 0.32);
+        // box-shadow: 0 24px 48px rgba(25, 27, 20, 0.32);
       }
     }
 
@@ -293,35 +289,35 @@
   }
 
   &.attract-panel {
-    background-color: rgb(255, 102, 111);
-    background-image: url('/img/attract-pattern.webp');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    // background-color: rgb(255, 102, 111);
+    // background-image: url('/img/attract-pattern.webp');
+    // background-repeat: no-repeat;
+    // background-position: bottom;
+    // background-size: contain;
 
     a {
-      border-bottom-color: rgb(220, 70, 110);
+      // border-bottom-color: rgb(220, 70, 110);
 
       &:hover {
-        border-bottom-color: rgb(70, 20, 170);
+        // border-bottom-color: rgb(70, 20, 170);
       }
     }
 
     .grey-dark-text {
-      color: rgb(155, 45, 55);
+      // color: rgb(155, 45, 55);
     }
 
     figure {
 
       img {
-        box-shadow: 0 10px 33px rgb(220, 70, 110);
+        // box-shadow: 0 10px 33px rgb(220, 70, 110);
       }
 
       img.cards {
         border-radius: 0;
         background-color: transparent;
         box-shadow: none;
-        filter: drop-shadow(0 10px 33px rgb(220, 70, 110));
+        // filter: drop-shadow(0 10px 33px rgb(220, 70, 110));
       }
 
       @media (max-width: $mobile-media) {
@@ -350,13 +346,13 @@
   }
 
   &.scrunch-panel {
-    background-image: url('/img/scrunch-pattern-bg.webp');
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-size: 531px 504px;
+    // background-image: url('/img/scrunch-pattern-bg.webp');
+    // background-repeat: no-repeat;
+    // background-position: 0 100%;
+    // background-size: 531px 504px;
 
     @media (max-width: $mobile-media) {
-      background-position: 0 60%;
+      // background-position: 0 60%;
 
       img {
         display: none;

@@ -1,19 +1,26 @@
 .tag {
   display: inline-block;
+  box-sizing: border-box;
+  min-height: 25px;
+  padding: 6px 8px;
   font-weight: 500;
   font-size: 1.1rem;
   line-height: 1em;
-  padding: 6px 8px;
-  border-radius: $radius;
-  background-color: $grey-light;
-  color: $grey-dark;
+  // border-radius: $radius;
+  // background-color: $grey-light;
+  background-image: $dither-g-4;
+  color: $b;
+  // -webkit-text-stroke: 2px $b;
+  // text-shadow: 1px 1px 0 $b, -1px 1px 0 $b, 1px -1px 0 $b, -1px -1px 0 $b;
+  text-shadow: $text-outline-w;
 
   @media (max-width: $mobile-media) {
     font-size: 1.2rem;
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $grey-dark;
-    color: $grey-light;
+    color: $w-dark;
+    text-shadow: $text-outline-b;
+    background-image: $dither-g-dark-4;
   }
 }

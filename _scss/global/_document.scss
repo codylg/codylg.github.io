@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
 
 ::selection {
-  background-color: $charcoal;
+  background-color: $b;
   text-shadow: none;
-  color: $white;
+  color: $w;
 }
 
 html {
@@ -14,16 +14,21 @@ body {
   width: 100vw;
   max-width: 100%;
   margin: 0;
-  background-color: $off-white;
-  background-image: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+  background-color: $w;
+  // background-image: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+  background-image: $dither-g-16;
   background-attachment: fixed;
   font-family: $font;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.33em;
-  color: $charcoal;
+  color: $b;
   @include font-antialias;
   -webkit-tap-highlight-color: transparent;
+
+  @media (prefers-color-scheme: dark) {
+    color: $w-dark;
+  }
 
   @media (max-width: $mobile-media) {
     background-attachment: scroll;
@@ -42,39 +47,40 @@ body {
     }
   }
 
-  &::before {
-    width: 440px;
-    height: 440px;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+  // &::before {
+  //   width: 440px;
+  //   height: 440px;
+  //   background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+  //
+  //   @media (max-width: $mobile-media) {
+  //     width: 320px;
+  //     height: 320px;
+  //   }
+  // }
 
-    @media (max-width: $mobile-media) {
-      width: 320px;
-      height: 320px;
-    }
-  }
-
-  &::after {
-    width: 170px;
-    height: 170px;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
-
-    @media (max-width: $mobile-media) {
-      width: 150px;
-      height: 150px;
-    }
-  }
+  // &::after {
+  //   width: 170px;
+  //   height: 170px;
+  //   background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23BEC0CD\" fill-rule=\"evenodd\"/></svg>");
+  //
+  //   @media (max-width: $mobile-media) {
+  //     width: 150px;
+  //     height: 150px;
+  //   }
+  // }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $charcoal-dark;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
+    background-color: $b;
+    background-image: $dither-g-dark-16;
+    // background-image: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
 
-    &::before {
-      background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
-    }
+    // &::before {
+    //   background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
+    // }
 
-    &::after {
-      background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
-    }
+    // &::after {
+    //   background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%2344464C\" fill-rule=\"evenodd\"/></svg>");
+    // }
   }
 }
 
@@ -159,16 +165,16 @@ p > a,
 ol > a,
 ul > a,
 .underline-link {
-  border-bottom: 2px solid $grey-light;
+  border-bottom: 2px solid $w;
 
   &:focus {
     transition: none;
     border-bottom: 0;
-    background-color: rgba($charcoal, 0.2);
+    background-color: rgba($b, 0.2);
   }
 
   &:hover {
-    border-bottom-color: $grey;
+    border-bottom-color: $w;
 
     + .rarr:not(.noanim) {
       width: 12px;
@@ -193,11 +199,21 @@ hr {
   }
 
   &.white-line {
-    @include dotted-line($color: $white);
+    @include dotted-line($color: $w);
   }
 
   &.black-line {
-    @include dotted-line($color: $charcoal);
+    @include dotted-line($color: $b);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &.white-line {
+      @include dotted-line($color: $b);
+    }
+
+    &.black-line {
+      @include dotted-line($color: $w-dark);
+    }
   }
 }
 

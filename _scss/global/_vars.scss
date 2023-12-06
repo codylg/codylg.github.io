@@ -4,6 +4,7 @@ $header-width: 280px;
 $content-width: 700px;
 $content-sidebar-width: 360px;
 $radius: 2px;
+$radius-l: 16px;
 $card-shadow: 0 1px 1px rgba($black, 0.1);
 
 $oversize-media: 1780px;
@@ -11,3 +12,18 @@ $large-media: 1260px;
 $medium-media: 1024px;
 $small-media: 800px;
 $mobile-media: 600px;
+
+// $dither-w-1: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23C8C3BE\" fill-rule=\"evenodd\"/></svg>");
+// $dither-w-2: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"%23C8C3BE\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 2H3V3H2V2Z\" fill=\"%23C8C3BE\"/></svg>");
+$dither-g-4: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-esc}\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 2H3V3H2V2Z\" fill=\"#{$g-esc}\"/></svg>");
+$dither-g-6: url("data:image/svg+xml;utf8,<svg width=\"6\" height=\"6\" viewBox=\"0 0 6 6\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-esc}\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H4V4H3V3Z\" fill=\"#{$g-esc}\"/></svg>");
+$dither-g-8: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-esc}\"/></svg>");
+$dither-g-16: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-esc}\"/></svg>");
+
+$dither-g-dark-4: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-dark-esc}\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 2H3V3H2V2Z\" fill=\"#{$g-dark-esc}\"/></svg>");
+$dither-g-dark-6: url("data:image/svg+xml;utf8,<svg width=\"6\" height=\"6\" viewBox=\"0 0 6 6\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-dark-esc}\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H4V4H3V3Z\" fill=\"#{$g-dark-esc}\"/></svg>");
+$dither-g-dark-8: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-dark-esc}\"/></svg>");
+$dither-g-dark-16: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"#{$g-dark-esc}\"/></svg>");
+
+$text-outline-b: 1px 1px 0 rgba($b,0.5), -1px 1px 0 rgba($b,0.5), 1px -1px 0 rgba($b,0.5), -1px -1px 0 rgba($b,0.5);
+$text-outline-w: 1px 1px 0 rgba($w,0.5), -1px 1px 0 rgba($w,0.5), 1px -1px 0 rgba($w,0.5), -1px -1px 0 rgba($w,0.5);

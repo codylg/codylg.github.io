@@ -41,7 +41,7 @@
     }
 
     @media (prefers-color-scheme: dark) {
-      color: $grey;
+      color: $w-dark;
     }
   }
 }
@@ -53,10 +53,28 @@
   min-height: 65vw;
   margin-bottom: $page-padding;
   border-radius: $radius;
-  background-color: $white;
-  box-shadow: $card-shadow;
+  background-color: $w;
+  // box-shadow: $card-shadow;
   font-size: 0;
   @include transition($property: background-color);
+
+  //TODO tidy
+  // border: 3px solid $w;
+  // border-radius: $radius-l;
+  border: 1px solid $g;
+  border-radius: 8px;
+  // border-radius: 0;
+  // border-width: 12px;
+  // border-image-source: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H1V1H0V0Z\" fill=\"%2376726F\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 2H3V3H2V2Z\" fill=\"%2376726F\"/></svg>");
+  // border-image-outset: 0;
+  // border-image-repeat: repeat;
+  // border-image-width: 4px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $b;
+    border-color: $g-dark;
+  }
+
 
   @media (min-width: $large-media) {
     min-height: 800px;
@@ -158,7 +176,7 @@
     video {
       display: block;
       max-width: 100%;
-      background-color: $grey-light;
+      background-color: $g;
 
       &:not(.iphone-frame) {
         border-radius: $radius;
@@ -179,7 +197,7 @@
     }
 
     a:focus img {
-      box-shadow: 0 0 0 4px rgba($charcoal, 0.33);
+      box-shadow: 0 0 0 4px rgba($b, 0.33);
 
       @media (prefers-color-scheme: dark) {
         box-shadow: 0 0 0 4px rgba(white, 0.33);
@@ -225,10 +243,10 @@
   @media (max-width: $mobile-media) {
 
     + .content-panel-small {
-      border-top: 1px solid $grey-light;
+      border-top: 1px solid $w;
 
       @media (prefers-color-scheme: dark) {
-        border-top-color: $charcoal-light;
+        border-top-color: $b;
       }
     }
   }

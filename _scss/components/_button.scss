@@ -7,19 +7,24 @@
   padding: 1em 1.2em;
   border: 0;
   border-radius: $radius * 2;
-  background-color: $grey-light;
+  background-color: $b;
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1em;
   letter-spacing: 0.01em;
   text-align: center;
-  color: $charcoal-light;
+  color: $w;
   @include font-antialias;
   outline: none;
   cursor: pointer;
   @include prefix(appearance, none);
   @include transition;
   transition-property: color, background-color;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $w-dark;
+    color: $b;
+  }
 
   @media (max-width: $mobile-media) {
     width: 100%;

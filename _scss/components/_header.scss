@@ -11,7 +11,8 @@ header.page-header {
   width: $header-width;
   padding: $page-padding;
   padding-right: 0;
-  color: $charcoal;
+  color: $b;
+  text-shadow: $text-outline-w;
 
   @media (min-width: $oversize-media) {
     left: calc(50% - #{($page-padding * 4 + $content-sidebar-width + $content-width) / 2 + $header-width});
@@ -28,21 +29,22 @@ header.page-header {
   }
 
   @media (prefers-color-scheme: dark) {
-    color: $grey;
+    color: $w-dark;
+    text-shadow: $text-outline-b;
 
     .grey-dark-text {
-      color: $grey;
+      color: $w-dark;
     }
 
     a {
-      border-bottom-color: $grey-dark;
+      border-bottom-color: $g-dark;
 
       &:hover {
-        border-bottom-color: $grey;
+        border-bottom-color: $g;
       }
 
       &:focus {
-        background-color: rgba($white, 0.2);
+        background-color: rgba($w, 0.2);
       }
     }
   }
