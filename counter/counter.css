@@ -1,7 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+:root {
+  --a: #EFEDEA;
+  --b: #A29D99;
+  --c: #23211F;
+  --dither-2: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/><rect x="1" y="1" width="1" height="1" fill="%23A29D99"/></svg>');
+  --dither-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/><rect x="2" y="2" width="1" height="1" fill="%23A29D99"/></svg>');
+  --dither-6: url('data:image/svg+xml;utf8,<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/><rect x="3" y="3" width="1" height="1" fill="%23A29D99"/></svg>');
+  --grid-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/></svg>');
+  --grid-8: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/></svg>');
+  --grid-16: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/></svg>');
+  --text-outline: 1px 1px 0 var(--a), -1px 1px 0 var(--a), 1px -1px 0 var(--a), -1px -1px 0 var(--a);
+  --rad-s: 2px;
+  --rad-m: 5px;
+  --rad-l: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --a: #23211F;
+    --b: #635F5C;
+    --c: #D0C8C2;
+    --dither-2: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/><rect x="1" y="1" width="1" height="1" fill="%23635F5C"/></svg>');
+    --dither-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/><rect x="2" y="2" width="1" height="1" fill="%23635F5C"/></svg>');
+    --dither-6: url('data:image/svg+xml;utf8,<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/><rect x="3" y="3" width="1" height="1" fill="%23635F5C"/></svg>');
+    --grid-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+    --grid-8: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+    --grid-16: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+  }
+}
+
 body {
   background-image: none;
-  background-color: black;
+  background-color: #000000;
 }
 
 body::before, body::after {
@@ -117,7 +147,7 @@ body::before, body::after {
   border-radius: 8px;
   background-color: #26282e;
   background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3H4V4H3V3Z" fill="%23363840"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 9H10V10H9V9Z" fill="%233C3E46"/></svg>');
-  box-shadow: 0 1px 0 rgba(248, 249, 250, 0.15) inset, 0 0 0 1px rgba(248, 249, 250, 0.05) inset, 0 -48px 32px rgba(0, 0, 0, 0.12) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 -48px 32px rgba(0, 0, 0, 0.12) inset;
 }
 
 @media (max-width: 580px) {
@@ -296,7 +326,7 @@ body::before, body::after {
 }
 
 .mtg-counter .counter#black input {
-  color: black;
+  color: #000000;
 }
 
 .mtg-counter .counter#black input:not(.empty) {

@@ -6,21 +6,7 @@
   font-weight: 500;
   font-size: 1.1rem;
   line-height: 1em;
-  // border-radius: $radius;
-  // background-color: $grey-light;
-  background-image: $dither-g-4;
-  color: $b;
-  // -webkit-text-stroke: 2px $b;
-  // text-shadow: 1px 1px 0 $b, -1px 1px 0 $b, 1px -1px 0 $b, -1px -1px 0 $b;
-  text-shadow: $text-outline-w;
-
-  @media (max-width: $mobile-media) {
-    font-size: 1.2rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: $w-dark;
-    text-shadow: $text-outline-b;
-    background-image: $dither-g-dark-4;
-  }
+  background-image: var(--dither-4);
+  color: var(--c);
+  text-shadow: var(--text-outline);
 }

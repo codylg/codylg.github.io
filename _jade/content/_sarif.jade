@@ -1,19 +1,19 @@
 extends content
 
 block variables
-  - var classname = "sarif"
+  - var classname = "no-border sarif"
   - var smallpanel = false
 
 block header
   if frontPage
-    h1.white-text
+    h1
       a(id="#{classname}", href="/sarif") Sarif
   else
-    h1.white-text Sarif
+    h1 Sarif
 
 block description
-  p.white-text Sarif is an iPhone theme built to accomodate user customisation with a library of UI styles, widgets, icons, and more &mdash; all available from within Winterboard. Sarif also supports a huge range of popular third party apps and tweaks, ensuring a complete revamp of your device across the board. Available on iOS 4, 5, and 6. 
-  p.white-text.translucent Early 2012 &ndash; late 2013
+  p Sarif is an iPhone theme built to accomodate user customisation with a library of UI styles, widgets, icons, and more &mdash; all available from within Winterboard. Sarif also supports a huge range of popular third party apps and tweaks, ensuring a complete revamp of your device across the board. Available on iOS 4, 5, and 6. 
+  span.tag Archived project from 2012&ndash;13
 
   if frontPage
     hr

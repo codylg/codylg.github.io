@@ -1,10 +1,10 @@
-@import '../global/colors';
 @import '../global/vars';
 @import '../global/mixins';
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 $counter-font: "Space Mono", monospace;
+$mana-black: #000000;
 $mana-colourless: #CAC2C0;
 $mana-green: #A7D1B1;
 $mana-red: #EEAD94;
@@ -12,9 +12,10 @@ $mana-red: #EEAD94;
 
 body {
   background-image: none;
-  background-color: $black;
+  background-color: #000000;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     display: none;
   }
 }
@@ -58,7 +59,7 @@ body {
     max-height: 48px;
 
     .card {
-      background-color: $charcoal-dark;
+      background-color: rgb(35, 33, 40);
     }
 
     button {
@@ -69,13 +70,13 @@ body {
       background-color: transparent;
       font-family: $counter-font;
       font-size: 12px;
-      color: $grey;
+      color: rgb(190, 192, 205);
       text-size-adjust: none;
       user-select: none;
       -webkit-touch-callout: none;
 
       &:active {
-        background-color: rgba($white, 0.08);
+        background-color: rgba(255, 255, 255, 0.08);
       }
     }
   }
@@ -91,9 +92,9 @@ body {
     margin: 4px;
     overflow: hidden;
     border-radius: 8px;
-    background-color: $charcoal;
+    background-color: rgb(38, 40, 46);
     background-image: url("data:image/svg+xml;utf8,<svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H4V4H3V3Z\" fill=\"%23363840\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9H10V10H9V9Z\" fill=\"%233C3E46\"/></svg>");
-    box-shadow: 0 1px 0 rgba($off-white, 0.15) inset, 0 0 0 1px rgba($off-white, 0.05) inset, 0 -48px 32px rgba($black, 0.12) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 -48px 32px rgba(0, 0, 0, 0.12) inset;
 
     @media (max-width: 580px) {
       flex-basis: 40%;
@@ -114,7 +115,7 @@ body {
       font-family: $counter-font;
       font-weight: 400;
       font-size: 13px;
-      color: $grey-dark;
+      color: rgb(100, 105, 115);
       user-select: none;
       -webkit-touch-callout: none;
 
@@ -148,7 +149,7 @@ body {
       font-size: 40px;
       font-weight: 400;
       text-align: center;
-      color: $off-white;
+      color: rgb(248, 249, 250);
       outline: 0;
       -moz-appearance: textfield;
       -webkit-touch-callout: none;
@@ -189,7 +190,7 @@ body {
       background-color: transparent;
       font-family: $counter-font;
       font-size: 20px;
-      color: $charcoal-light;
+      color: rgb(68, 70, 76);
       user-select: none;
       -webkit-touch-callout: none;
     }
@@ -229,11 +230,11 @@ body {
     }
 
     &#black input {
-      color: $black;
+      color: $mana-black;
 
       &:not(.empty) {
-        filter: drop-shadow(0 0 12px $white);
-        text-shadow: 0 0 4px rgba($white, 0.32);
+        filter: drop-shadow(0 0 12px rgb(255, 255, 255));
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.32);
       }
 
       &.empty {

@@ -1,6 +1,3 @@
-// Vendor prefix required for some mixins
-// scss-lint:disable VendorPrefix
-
 @mixin prefix($property, $values...) {
   -webkit-#{$property}: $values;
   -moz-#{$property}: $values;
@@ -12,17 +9,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-// Dupe display required for fallback
-// scss-lint:disable DuplicateProperty
-
-@mixin flex($property: flex) {
-  display: -webkit-#{$property};
-  display: -ms-#{$property};
-  display: $property;
-}
-
-// scss-lint:enable DuplicateProperty
 
 @mixin transition($property: all, $duration: 0.33s, $timing: cubic-bezier(0.19, 1, 0.22, 1)) {
   transition: $property $duration $timing;
@@ -36,21 +22,3 @@
     @content;
   }
 }
-
-@mixin linear-gradient($angle, $colors...) {
-  background-image: -webkit-linear-gradient(#{$angle}deg, $colors);
-  background-image: -moz-linear-gradient(#{$angle}deg, $colors);
-  background-image: -o-linear-gradient(#{$angle}deg, $colors);
-  background-image: linear-gradient(#{$angle}deg, $colors);
-}
-
-$dotted-line-spacing: 6;
-
-@mixin dotted-line($color: $grey, $alignment: bottom) {
-  background-image: linear-gradient(to right, $color 0%, $color (100% / $dotted-line-spacing), transparent (100% / $dotted-line-spacing));
-  background-position: 0 $alignment;
-  background-size: ($dotted-line-spacing + px) 1px;
-  background-repeat: repeat-x;
-}
-
-// scss-lint:enable VendorPrefix

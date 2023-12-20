@@ -1,25 +1,185 @@
-.white-text {
-  color: $white;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
 
-  a {
-    border-bottom-color: rgba($white, 0.33);
+::selection {
+  background-color: var(--c);
+  text-shadow: none;
+  color: var(--a);
+}
 
-    &:hover {
-      border-bottom-color: $white;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  background-color: var(--a);
+  background-image: var(--grid-16);
+  font-family: $font;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.33em;
+  color: var(--c);
+  @include font-antialias;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (min-width: $mobile-media) {
+    background-attachment: fixed;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 100%;
+
+    @media (max-width: $mobile-media) {
+      position: absolute;
+    }
+  }
+
+  &::before {
+    width: 440px;
+    height: 440px;
+    background-image: var(--grid-8);
+
+    @media (max-width: $mobile-media) {
+      width: 320px;
+      height: 320px;
+    }
+  }
+
+  &::after {
+    width: 170px;
+    height: 170px;
+    background-image: var(--grid-4);
+
+    @media (max-width: $mobile-media) {
+      width: 150px;
+      height: 150px;
     }
   }
 }
 
-.translucent {
-  opacity: 0.66;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+  font-family: $font;
+  font-weight: 800;
+  line-height: 1.2em;
 }
 
-.grey-dark-text {
-  color: $grey-dark;
+h1 {
+  font-size: 3rem;
+}
 
-  .rarr {
-    background-color: $grey-dark;
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+p,
+article ol,
+article ul,
+.content-panel-header ul,
+article td {
+  margin: 1.5em 0;
+  font-family: $font;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+
+  &.large {
+    font-size: 1.7rem;
+    line-height: 1.6em;
   }
+}
+
+article ol,
+article ul,
+.content-panel-header ul {
+  padding-left: 2em;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+a,
+a:visited {
+  text-decoration-thickness: 1px;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration-style: solid;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+p a:not([tabindex="-1"]):focus,
+h1 a:focus {
+  background-color: var(--c);
+  color: var(--a);
+  text-decoration: none;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: $page-padding 0;
+  border: 0;
+  background-image: var(--grid-8);
+
+  &.spacer {
+    margin: ($page-padding * 2) 0;
+  }
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+
+  figcaption p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.translucent {
+  opacity: 0.75;
 }
 
 .column-list {
@@ -40,7 +200,7 @@
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
-  background-color: $grey-light;
+  background-color: var(--b);
 
   iframe {
     position: absolute;

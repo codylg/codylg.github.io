@@ -1,12 +1,16 @@
 .content-panel.banner {
-  @include flex;
-  @include prefix(align-items, center);
-  @include prefix(justify-content, center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 0;
   padding: 0;
   background-color: transparent;
   box-shadow: none;
   font-weight: 500;
+
+  @media (max-width: $large-media) and (min-width: $mobile-media) {
+    margin-top: $page-padding;
+  }
 
   @media (max-width: $mobile-media) {
     padding: 30px 20px;
@@ -14,18 +18,5 @@
 
   p {
     margin: 0;
-    color: $charcoal;
-
-    @media (prefers-color-scheme: dark) {
-      color: $grey;
-    }
-  }
-
-  a {
-    border-bottom-color: $grey-dark;
-
-    &:hover {
-      border-bottom-color: $grey;
-    }
   }
 }
