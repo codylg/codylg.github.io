@@ -1,19 +1,12 @@
 .tag {
   display: inline-block;
+  box-sizing: border-box;
+  min-height: 25px;
+  padding: 6px 8px;
   font-weight: 500;
   font-size: 1.1rem;
   line-height: 1em;
-  padding: 6px 8px;
-  border-radius: $radius;
-  background-color: $grey-light;
-  color: $grey-dark;
-
-  @media (max-width: $mobile-media) {
-    font-size: 1.2rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $grey-dark;
-    color: $grey-light;
-  }
+  background-image: var(--dither-4);
+  color: var(--c);
+  text-shadow: var(--text-outline);
 }

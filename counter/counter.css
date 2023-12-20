@@ -1,7 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+:root {
+  --a: #EFEDEA;
+  --b: #A29D99;
+  --c: #23211F;
+  --dither-2: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/><rect x="1" y="1" width="1" height="1" fill="%23A29D99"/></svg>');
+  --dither-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/><rect x="2" y="2" width="1" height="1" fill="%23A29D99"/></svg>');
+  --dither-6: url('data:image/svg+xml;utf8,<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/><rect x="3" y="3" width="1" height="1" fill="%23A29D99"/></svg>');
+  --grid-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/></svg>');
+  --grid-8: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/></svg>');
+  --grid-16: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23A29D99"/></svg>');
+  --text-outline: 1px 1px 0 var(--a), -1px 1px 0 var(--a), 1px -1px 0 var(--a), -1px -1px 0 var(--a);
+  --rad-s: 2px;
+  --rad-m: 5px;
+  --rad-l: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --a: #23211F;
+    --b: #635F5C;
+    --c: #D0C8C2;
+    --dither-2: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/><rect x="1" y="1" width="1" height="1" fill="%23635F5C"/></svg>');
+    --dither-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/><rect x="2" y="2" width="1" height="1" fill="%23635F5C"/></svg>');
+    --dither-6: url('data:image/svg+xml;utf8,<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/><rect x="3" y="3" width="1" height="1" fill="%23635F5C"/></svg>');
+    --grid-4: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+    --grid-8: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+    --grid-16: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+  }
+}
+
 body {
   background-image: none;
-  background-color: black;
+  background-color: #000000;
 }
 
 body::before, body::after {
@@ -116,8 +146,26 @@ body::before, body::after {
   overflow: hidden;
   border-radius: 8px;
   background-color: #26282e;
-  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3H4V4H3V3Z" fill="%23363840"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 9H10V10H9V9Z" fill="%233C3E46"/></svg>');
-  box-shadow: 0 1px 0 rgba(248, 249, 250, 0.15) inset, 0 0 0 1px rgba(248, 249, 250, 0.05) inset, 0 -48px 32px rgba(0, 0, 0, 0.12) inset;
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23363840"/><rect x="6" y="6" width="1" height="1" fill="%23363840"/></svg>');
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 -48px 32px rgba(0, 0, 0, 0.12) inset;
+  transition: all 0.2s ease-in-out;
+}
+
+.mtg-counter .card.mana-count.active, .mtg-counter .card.golem-foundry.can-golem {
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%2326282E" opacity="0.15"/><rect x="6" y="6" width="1" height="1" fill="%2326282E" opacity="0.15"/></svg>');
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 -48px 32px rgba(0, 0, 0, 0.06) inset;
+}
+
+.mtg-counter .card.mana-count.active .increase, .mtg-counter .card.mana-count.active .decrease, .mtg-counter .card.mana-count.active .reset, .mtg-counter .card.golem-foundry.can-golem .increase, .mtg-counter .card.golem-foundry.can-golem .decrease, .mtg-counter .card.golem-foundry.can-golem .reset {
+  color: rgba(38, 40, 46, 0.36);
+}
+
+.mtg-counter .card.mana-count.active .increase:active, .mtg-counter .card.golem-foundry.can-golem .increase:active {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.36) 100%);
+}
+
+.mtg-counter .card.mana-count.active .decrease:active, .mtg-counter .card.mana-count.active .reset:active, .mtg-counter .card.golem-foundry.can-golem .decrease:active, .mtg-counter .card.golem-foundry.can-golem .reset:active {
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.36) 100%);
 }
 
 @media (max-width: 580px) {
@@ -145,7 +193,7 @@ body::before, body::after {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-size: 13px;
-  color: #646973;
+  color: #828791;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -191,6 +239,9 @@ body::before, body::after {
   text-align: center;
   color: #f8f9fa;
   outline: 0;
+  transition: color, -webkit-filter 0.2s ease-in-out;
+  transition: color, filter 0.2s ease-in-out;
+  transition: color, filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
   -moz-appearance: textfield;
   -webkit-touch-callout: none;
 }
@@ -248,6 +299,7 @@ body::before, body::after {
   font-family: "Space Mono", monospace;
   font-size: 20px;
   color: #44464c;
+  transition: all 0.2s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -287,44 +339,59 @@ body::before, body::after {
 }
 
 .mtg-counter .counter#colourless input {
-  color: #CAC2C0;
+  color: #C9C2BF;
 }
 
-.mtg-counter .counter#colourless input:not(.empty) {
-  -webkit-filter: drop-shadow(0 0 12px #CAC2C0);
-          filter: drop-shadow(0 0 12px #CAC2C0);
+.mtg-counter .counter#colourless.active {
+  background-color: #C9C2BF;
+}
+
+.mtg-counter .counter#colourless.active input {
+  color: #221F20;
 }
 
 .mtg-counter .counter#black input {
-  color: black;
+  color: #B3A7C8;
 }
 
-.mtg-counter .counter#black input:not(.empty) {
-  -webkit-filter: drop-shadow(0 0 12px white);
-          filter: drop-shadow(0 0 12px white);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.32);
+.mtg-counter .counter#black.active {
+  background-color: #B3A7C8;
 }
 
-.mtg-counter .counter#black input.empty {
-  opacity: 0.66;
+.mtg-counter .counter#black.active input {
+  color: #1A132A;
 }
 
 .mtg-counter .counter#red input {
-  color: #EEAD94;
+  color: #F5C1AC;
 }
 
-.mtg-counter .counter#red input:not(.empty) {
-  -webkit-filter: drop-shadow(0 0 12px #EEAD94);
-          filter: drop-shadow(0 0 12px #EEAD94);
+.mtg-counter .counter#red.active {
+  background-color: #F5C1AC;
+}
+
+.mtg-counter .counter#red.active input {
+  color: #1C0201;
 }
 
 .mtg-counter .counter#green input {
-  color: #A7D1B1;
+  color: #A6D0B0;
 }
 
-.mtg-counter .counter#green input:not(.empty) {
-  -webkit-filter: drop-shadow(0 0 12px #A7D1B1);
-          filter: drop-shadow(0 0 12px #A7D1B1);
+.mtg-counter .counter#green.active {
+  background-color: #A6D0B0;
+}
+
+.mtg-counter .counter#green.active input {
+  color: #05150B;
+}
+
+.mtg-counter .counter#foundry1.can-golem, .mtg-counter .counter#foundry2.can-golem, .mtg-counter .counter#foundry3.can-golem, .mtg-counter .counter#foundry4.can-golem {
+  background-color: #eeeff0;
+}
+
+.mtg-counter .counter#foundry1.can-golem input, .mtg-counter .counter#foundry2.can-golem input, .mtg-counter .counter#foundry3.can-golem input, .mtg-counter .counter#foundry4.can-golem input {
+  color: #26282e;
 }
 
 .mtg-counter .counter#foundry1 .decrease, .mtg-counter .counter#foundry2 .decrease, .mtg-counter .counter#foundry3 .decrease, .mtg-counter .counter#foundry4 .decrease {
@@ -332,13 +399,13 @@ body::before, body::after {
 }
 
 .mtg-counter .counter#prowess input {
-  color: #EEAD94;
+  color: #1C0201;
   pointer-events: none;
 }
 
 .mtg-counter .counter#prowess input:not(.empty) {
-  -webkit-filter: drop-shadow(0 0 12px #EEAD94);
-          filter: drop-shadow(0 0 12px #EEAD94);
+  -webkit-filter: drop-shadow(0 0 12px #1C0201);
+          filter: drop-shadow(0 0 12px #1C0201);
 }
 
 .mtg-counter #kiln-counts input {

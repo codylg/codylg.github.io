@@ -1,7 +1,7 @@
 extends content
 
 block variables
-  - var classname = "divvy"
+  - var classname = "no-border divvy"
   - var smallpanel = false
 
 block header
@@ -11,8 +11,8 @@ block header
 block description
   p I designed and developed the Divvy web app to simplify splitting expenses between friends — without the need to sign up for a service or set up accounts.
   p Add the expenses for each person and Divvy will calculate the most efficient sequence of repayments.
-  hr.black-line
-  a.button-white(href="https://divvy.lol") Try Divvy
+  hr
+  a.button(href="https://divvy.lol") Try Divvy
     span.rarr
 
 block figure

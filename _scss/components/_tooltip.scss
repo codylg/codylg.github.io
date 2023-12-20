@@ -7,24 +7,18 @@
   display: block;
   width: auto;
   padding: 5px 12px;
-  border-radius: $radius * 2;
-  background-color: $charcoal;
+  border-radius: var(--rad-m);
+  background-color: var(--c);
   opacity: 0;
-  box-shadow: 0 0 20px rgba($black, 0.05);
-  font-family: $font;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2em;
   white-space: nowrap;
-  color: $white;
-  @include prefix(transform, perspective(300px) translateX(-50%) rotateX(-33deg));
+  color: var(--a);
+  @include prefix(transform, translateX(-50%));
   @include transition;
-  transition-property: margin-top, margin-left, opacity, transform;
+  transition-property: margin-top, opacity;
   pointer-events: none;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $black;
-  }
 }
 
 .button,
@@ -40,11 +34,7 @@
 
   &[data-tooltip]::after {
     left: 0;
-    @include prefix(transform, perspective(300px) rotateX(-33deg));
-  }
-
-  &:hover[data-tooltip]::after {
-    @include prefix(transform, perspective(300px));
+    @include prefix(transform, none);
   }
 }
 
@@ -54,6 +44,5 @@
   &:hover::after {
     margin-top: -5px;
     opacity: 1;
-    @include prefix(transform, perspective(300px) translateX(-50%));
   }
 }

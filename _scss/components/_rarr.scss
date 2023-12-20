@@ -1,0 +1,55 @@
+.rarr {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 1px;
+  margin: 4px 0 4px 6px;
+  background-color: var(--c);
+  @include transition;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: -0.5px;
+    display: block;
+    width: 6px;
+    height: 1px;
+    background-color: inherit;
+  }
+
+  &::before {
+    top: -2px;
+    @include prefix(transform, rotate(45deg));
+  }
+
+  &::after {
+    bottom: -2px;
+    @include prefix(transform, rotate(-45deg));
+  }
+
+  &.larr {
+    margin-left: 0;
+    margin-right: 6px;
+
+    &::before,
+    &::after {
+      left: -0.5px;
+      right: auto;
+    }
+
+    &::before {
+      @include prefix(transform, rotate(-45deg));
+    }
+
+    &::after {
+      @include prefix(transform, rotate(45deg));
+    }
+  }
+}
+
+a:hover + .rarr,
+a:hover .rarr {
+  width: 12px;
+  margin-right: -2px;
+}

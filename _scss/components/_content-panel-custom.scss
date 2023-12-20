@@ -1,62 +1,39 @@
 .content-panel {
 
-  &.content-panel-small,
-  &.ios86-panel {
-
-    @media (prefers-color-scheme: dark) {
-      background-color: $charcoal;
-      color: $grey;
-
-      a {
-        border-bottom-color: $grey-dark;
-
-        &:hover {
-          border-bottom-color: $grey;
-        }
-
-        &:focus {
-          background-color: rgba($white, 0.2) !important;
-        }
-      }
-
-      .grey-text {
-        color: $grey-dark;
-      }
-
-      .button,
-      .button-black {
-        background-color: $grey-dark;
-        color: $grey-light;
-
-        &:hover,
-        &:focus {
-          color: $white;
-        }
-
-        &:focus {
-          box-shadow: 0 0 0 4px rgba($white, 0.1);
-        }
-      }
-    }
+  &.no-border {
+    border: 0;
   }
 
   &.divvy-panel {
     background-color: rgb(30, 150, 255);
+    color: rgb(3, 24, 42);
 
     .content-panel-header {
-      background-color: rgb(85, 175, 255);
-      color: rgb(3, 24, 42);
 
-      a {
-        border-bottom-color: rgb(25, 130, 245);
+      @media (min-width: $mobile-media) {
+        background-color: rgb(85, 175, 255);
+      }
+    }
 
-        &:hover {
-          border-bottom-color: rgb(3, 24, 42);
-        }
+    hr {
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%2303182A\"/></svg>");
+    }
+
+    .button {
+      border-color: rgb(3, 24, 42);
+      background-color: rgb(30, 150, 255);
+      color: inherit;
+
+      .rarr {
+        background-color: rgb(3, 24, 42);
       }
 
-      @media (max-width: $mobile-media) {
-        background-color: rgb(30, 150, 255);
+      &::before {
+        background-image: url("data:image/svg+xml;utf8,<svg width=\"2\" height=\"2\" viewBox=\"0 0 2 2\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%2303182A\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\" fill=\"%2303182A\"/></svg>");
+      }
+
+      @media (min-width: $mobile-media) {
+        background-color: rgb(85, 175, 255);
       }
     }
 
@@ -125,22 +102,29 @@
   }
 
   &.rex-panel {
-    background-color: rgb(246, 244, 238);
+    background-color: #F6F4EE;
     background-image: url('/img/rex-blob.webp');
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 84%;
+    color: #372A1E;
 
-    a {
-      border-bottom-color: rgb(178, 162, 150);
-
-      &:hover {
-        border-bottom-color: rgb(85, 70, 57);
-      }
+    hr {
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23372A1E\"/></svg>");
     }
 
-    .grey-dark-text {
-      color: rgb(85, 70, 57);
+    .button {
+      border-color: #372A1E;
+      background-color: #F6F4EE;
+      color: inherit;
+
+      .rarr {
+        background-color: #372A1E;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml;utf8,<svg width=\"2\" height=\"2\" viewBox=\"0 0 2 2\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23372A1E\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\" fill=\"%23372A1E\"/></svg>");
+      }
     }
 
     figure {
@@ -214,37 +198,32 @@
 
   &.component-library-panel {
     background-color: #75836F;
-    background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0,0h1v1H0z\" fill=\"%23626A59\" fill-rule=\"evenodd\"/></svg>");
+    color: #262921;
 
-    h1,
-    p,
-    ul,
-    .button {
-      color: #262921;
-    }
-
-    a {
-      border-bottom-color: #59624B;
-
-      &:hover {
-        border-bottom-color: #3A422E;
-      }
+    hr {
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23262921\"/></svg>");
     }
 
     .button {
-      background-color: #CED7CA;
+      border-color: #262921;
+      background-color: #75836F;
+      color: inherit;
 
-      &:hover {
-        background-color: $white;
+      .rarr {
+        background-color: #262921;
       }
-    }
 
-    .content-panel-header {
-      background-color: rgba(255,255,255,0.04);
+      &::before {
+        background-image: url("data:image/svg+xml;utf8,<svg width=\"2\" height=\"2\" viewBox=\"0 0 2 2\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23262921\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\" fill=\"%23262921\"/></svg>");
+      }
     }
 
     figure {
       position: relative;
+
+      @media (min-width: $small-media) {
+        padding-left: 0;
+      }
 
       @media (max-width: $small-media) {
         background-image: url('/img/component-library-icons.svg');
@@ -281,13 +260,16 @@
       }
 
       @media (max-width: $medium-media) {
-        width: 220px;
+        width: 200px;
+        border-radius: 38px;
       }
 
       @media (max-width: $small-media) {
         position: relative;
         top: 0;
         right: 0;
+        width: 240px;
+        border-radius: 42px;
       }
     }
   }
@@ -298,18 +280,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-
-    a {
-      border-bottom-color: rgb(220, 70, 110);
-
-      &:hover {
-        border-bottom-color: rgb(70, 20, 170);
-      }
-    }
-
-    .grey-dark-text {
-      color: rgb(155, 45, 55);
-    }
+    color: #2F256A;
 
     figure {
 
@@ -328,7 +299,7 @@
         padding: $page-padding ($page-padding / 2);
 
         img {
-          border-radius: $radius;
+          border-radius: var(--rad-s);
         }
 
         img:last-child {
@@ -350,10 +321,12 @@
   }
 
   &.scrunch-panel {
+    background-color: #FFFFFF;
     background-image: url('/img/scrunch-pattern-bg.webp');
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 531px 504px;
+    color: #23211F;
 
     @media (max-width: $mobile-media) {
       background-position: 0 60%;
@@ -375,25 +348,45 @@
         min-height: 50vw;
       }
     }
-
-    @media (prefers-color-scheme: dark) {
-      .grey-dark-text {
-        color: $grey;
-        opacity: 0.7;
-      }
-    }
   }
 
   &.sarif-panel {
-    background-color: $grey-dark;
+    background-color: var(--b);
     background-image: url('/img/sarif-bg.webp');
     background-position: 75% 50%;
     background-size: cover;
+    color: #FAF9F8;
+
+    .tag {
+      text-shadow: none;
+      color: inherit;
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"4\" height=\"4\" viewBox=\"0 0 4 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23FAF9F8\" opacity=\"0.3\"/><rect x=\"2\" y=\"2\" width=\"1\" height=\"1\" fill=\"%23FAF9F8\" opacity=\"0.3\"/></svg>");
+    }
+
+    hr {
+      background-image: url("data:image/svg+xml;utf8,<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23FAF9F8\"/></svg>");
+    }
+
+    .button,
+    [class^="button-"],
+    [class*=" button-"] {
+      border-color: transparent;
+      background-color: #FAF9F8;
+      color: #23211F;
+
+      .rarr {
+        background-color: #23211F;
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml;utf8,<svg width=\"2\" height=\"2\" viewBox=\"0 0 2 2\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"1\" height=\"1\" fill=\"%23FAF9F8\" opacity=\"0.6\"/><rect x=\"1\" y=\"1\" width=\"1\" height=\"1\" fill=\"%23FAF9F8\" opacity=\"0.6\"/></svg>");
+      }
+    }
 
     @media (max-width: $small-media) {
 
       .content-panel-header {
-        background-color: rgba($charcoal, 0.33);
+        background-color: rgba(0, 0, 0, 0.24);
       }
     }
   }
@@ -402,7 +395,7 @@
 .iphone-frame {
   overflow: hidden;
   border: solid 8px rgb(2, 0, 2);
-  border-radius: 32px;
+  border-radius: 40px;
   background-color: rgb(2, 0, 2);
   box-shadow: 0 20px 60px rgba(2, 0, 2, 0.33);
 }

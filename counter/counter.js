@@ -7,6 +7,7 @@ function characterLength(value) {
 // Function to increase a counter by an amount
 function increaseNumber(inputNumber, amount = 1) {
   var inputElement = document.getElementById("number" + inputNumber);
+  var parentCard = inputElement.closest("div");
   var currentValue = parseInt(inputElement.value);
   if (!currentValue) { currentValue = 0; }
   var newValue = currentValue + amount;
@@ -14,27 +15,38 @@ function increaseNumber(inputNumber, amount = 1) {
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
 
-  if (currentValue == (amount * -1)) {
-    inputElement.classList.add("empty");
-  } else {
+  if (newValue > 0) {
     inputElement.classList.remove("empty");
+
+    if (parentCard.classList.contains("mana-count")) {
+      parentCard.classList.add("active");
+    }
+  }
+
+  if (parentCard.classList.contains("golem-foundry") && newValue >= 3) {
+    parentCard.classList.add("can-golem");
   }
 }
 
 // Function to decrease a counter by an amount
 function decreaseNumber(inputNumber, amount = 1) {
   var inputElement = document.getElementById("number" + inputNumber);
+  var parentCard = inputElement.closest("div");
   var currentValue = parseInt(inputElement.value);
   if (!currentValue) { currentValue = 0; }
   var newValue = currentValue - amount;
+  if (newValue < 0) { newValue = 0; }
 
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
 
-  if (currentValue == amount) {
+  if (newValue == 0) {
     inputElement.classList.add("empty");
-  } else {
-    inputElement.classList.remove("empty");
+    parentCard.classList.remove("active");
+  }
+
+  if (parentCard.classList.contains("golem-foundry") && newValue < 3) {
+    parentCard.classList.remove("can-golem");
   }
 }
 
@@ -49,13 +61,22 @@ function resetNumber(inputNumber) {
 // Function to execute when text is typed into the inputs
 function handleInput(event) {
   const inputValue = event.target.value;
+  var parentCard = event.target.closest("div");
   event.target.style.width = characterLength(inputValue);
 
   // Add or remove the empty class if the value is 0 or not
   if (inputValue == "0") {
     event.target.classList.add("empty");
+    parentCard.classList.remove("active");
   } else {
     event.target.classList.remove("empty");
+    parentCard.classList.add("active");
+  }
+
+  if (parentCard.classList.contains("golem-foundry") && inputValue >= 3) {
+    parentCard.classList.add("can-golem");
+  } else {
+    parentCard.classList.remove("can-golem");
   }
 }
 
@@ -82,6 +103,7 @@ function emptyManaPool() {
     manaInput.value = 0;
     manaInput.style.width = "1ch";
     manaInput.classList.add("empty");
+    manaInput.closest("div").classList.remove("active");
   });
 }
 
@@ -109,6 +131,8 @@ function newGame() {
         input.value = 0;
         input.style.width = "1ch";
         input.classList.add("empty");
+        input.closest("div").classList.remove("active");
+        input.closest("div").classList.remove("can-golem");
       }
     });
     swiftspearCounter.value = "+0/+0";

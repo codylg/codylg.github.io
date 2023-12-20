@@ -3,16 +3,12 @@ svg.logo {
   height: 60px;
 
   path.script {
-    stroke: $charcoal;
+    stroke: var(--c);
     stroke-dasharray: 270;
     @include prefix(animation, logo-stroke 2.33s ease-out 1);
     @include prefix(animation-delay, 0.66s);
     @include prefix(animation-fill-mode, backwards);
     @include transition($property: stroke-dashoffset, $duration: 2s, $timing: ease-out);
-
-    @media (prefers-color-scheme: dark) {
-      stroke: $grey;
-    }
   }
 
   &:hover path.script {

@@ -57,7 +57,7 @@
 
       &:not(.transparent, .iphone-frame) {
         border-radius: 2px;
-        background-color: $grey-light;
+        background-color: var(--b);
       }
 
       &.iphone-frame {
@@ -145,13 +145,6 @@
           padding-right: $page-padding / 2;
         }
       }
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-
-    h1, h2, h3, h4, p, ul, ol, td {
-      color: $grey;
     }
   }
 }
