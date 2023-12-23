@@ -252,7 +252,6 @@
       right: 8%;
       width: 252px;
       border-color: #181A15;
-      border-radius: 44px;
       background-color: #181A15;
 
       @media (max-width: $large-media) {
@@ -261,7 +260,6 @@
 
       @media (max-width: $medium-media) {
         width: 200px;
-        border-radius: 38px;
       }
 
       @media (max-width: $small-media) {
@@ -269,7 +267,6 @@
         top: 0;
         right: 0;
         width: 240px;
-        border-radius: 42px;
       }
     }
   }
@@ -395,7 +392,10 @@
 .iphone-frame {
   overflow: hidden;
   border: solid 8px rgb(2, 0, 2);
-  border-radius: 40px;
+  border-top-left-radius: 17% 8.5%;
+  border-top-right-radius: 17% 8.5%;
+  border-bottom-left-radius: 17% 8.5%;
+  border-bottom-right-radius: 17% 8.5%;
   background-color: rgb(2, 0, 2);
   box-shadow: 0 20px 60px rgba(2, 0, 2, 0.33);
 }
