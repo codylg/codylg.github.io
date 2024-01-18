@@ -25,66 +25,66 @@ block content
   div.mtg-counter(ontouchstart="")
     div.counter-group.control-group
       div.card
-        button#new-game(onclick="newGame()") New Game
+        button#new-game(onpointerdown="newGame()") New Game
       div.card
-        button(onclick="emptyManaPool()") Empty Mana Pool
+        button(onpointerdown="emptyManaPool()") Empty Mana Pool
     div.counter-group
       div.counter.card#opponent
         h1 Opponent
         input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
-        button.increase(onclick="increaseNumber(1)") +
-        button.decrease(onclick="decreaseNumber(1)") −
+        button.increase(onpointerdown="increaseNumber(1)") +
+        button.decrease(onpointerdown="decreaseNumber(1)") −
       div.counter.card#player
         h1 Self
         input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
-        button.increase(onclick="increaseNumber(2)") +
-        button.decrease(onclick="decreaseNumber(2)") −
+        button.increase(onpointerdown="increaseNumber(2)") +
+        button.decrease(onpointerdown="decreaseNumber(2)") −
       div.counter.card#storm
         h1 Storm
         input#number11.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(11)") +
-        button.reset(onclick="resetNumber(11)") ↺
+        button.increase(onpointerdown="increaseNumber(11)") +
+        button.reset(onpointerdown="resetNumber(11)") ↺
     div.counter-group#mana-pool
       div.counter.card.mana-count#colourless
         img.mana-symbol(src="/counter/C.png" alt="Colourless mana symbol")
         input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(3)") +
-        button.decrease(onclick="decreaseNumber(3)") −
+        button.increase(onpointerdown="increaseNumber(3)") +
+        button.decrease(onpointerdown="decreaseNumber(3)") −
       div.counter.card.mana-count#black
         img.mana-symbol(src="/counter/B.png" alt="Black mana symbol")
         input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(4)") +
-        button.decrease(onclick="decreaseNumber(4)") −
+        button.increase(onpointerdown="increaseNumber(4)") +
+        button.decrease(onpointerdown="decreaseNumber(4)") −
       div.counter.card.mana-count#red
         img.mana-symbol(src="/counter/R.png" alt="Red mana symbol")
         input#number5.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(5)") +
-        button.decrease(onclick="decreaseNumber(5)") −
+        button.increase(onpointerdown="increaseNumber(5)") +
+        button.decrease(onpointerdown="decreaseNumber(5)") −
       div.counter.card.mana-count#green
         img.mana-symbol(src="/counter/G.png" alt="Green mana symbol")
         input#number6.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(6)") +
-        button.decrease(onclick="decreaseNumber(6)") −
+        button.increase(onpointerdown="increaseNumber(6)") +
+        button.decrease(onpointerdown="decreaseNumber(6)") −
     div.counter-group
       div.counter.card.golem-foundry#foundry1
         h1 Foundry 1
         input#number7.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(7)") +
-        button.decrease(onclick="decreaseNumber(7, 3)") −3
+        button.increase(onpointerdown="increaseNumber(7)") +
+        button.decrease(onpointerdown="decreaseNumber(7, 3)") −3
       div.counter.card.golem-foundry#foundry2
         h1 Foundry 2
         input#number8.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(8)") +
-        button.decrease(onclick="decreaseNumber(8, 3)") −3
+        button.increase(onpointerdown="increaseNumber(8)") +
+        button.decrease(onpointerdown="decreaseNumber(8, 3)") −3
       div.counter.card.golem-foundry#foundry3
         h1 Foundry 3
         input#number9.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(9)") +
-        button.decrease(onclick="decreaseNumber(9, 3)") −3
+        button.increase(onpointerdown="increaseNumber(9)") +
+        button.decrease(onpointerdown="decreaseNumber(9, 3)") −3
       div.counter.card.golem-foundry#foundry4
         h1 Foundry 4
         input#number10.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
-        button.increase(onclick="increaseNumber(10)") +
-        button.decrease(onclick="decreaseNumber(10, 3)") −3
+        button.increase(onpointerdown="increaseNumber(10)") +
+        button.decrease(onpointerdown="decreaseNumber(10, 3)") −3
 
   script(type="text/javascript", src="/counter/counter.js")

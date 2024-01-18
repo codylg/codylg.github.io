@@ -25,23 +25,23 @@ block content
   div.mtg-counter(ontouchstart="")
     div.counter-group.control-group
       div.card
-        button#new-game(onclick="newGame()") New Game
+        button#new-game(onpointerdown="newGame()") New Game
     div.counter-group
       div.counter.card#opponent
         h1 Opponent
         input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
-        button.increase(onclick="increaseNumber(1)") +
-        button.decrease(onclick="decreaseNumber(1)") −
+        button.increase(onpointerdown="increaseNumber(1)") +
+        button.decrease(onpointerdown="decreaseNumber(1)") −
       div.counter.card#player
         h1 Self
         input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
-        button.increase(onclick="increaseNumber(2)") +
-        button.decrease(onclick="decreaseNumber(2)") −
+        button.increase(onpointerdown="increaseNumber(2)") +
+        button.decrease(onpointerdown="decreaseNumber(2)") −
       div.counter.card#prowess
         h1 Prowess
         input#prowess-counter.empty(type="number", value="0", readonly)
-        button.increase(onclick="increaseProwess()") +
-        button.reset(onclick="resetProwess()") ↺
+        button.increase(onpointerdown="increaseProwess()") +
+        button.reset(onpointerdown="resetProwess()") ↺
     div.counter-group#kiln-counts
       div.counter.card
         h1 Swiftspear

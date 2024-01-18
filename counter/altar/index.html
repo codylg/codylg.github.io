@@ -26,78 +26,78 @@
     <div ontouchstart="" class="mtg-counter">
       <div class="counter-group control-group">
         <div class="card">
-          <button id="new-game" onclick="newGame()">New Game</button>
+          <button id="new-game" onpointerdown="newGame()">New Game</button>
         </div>
         <div class="card">
-          <button onclick="emptyManaPool()">Empty Mana Pool</button>
+          <button onpointerdown="emptyManaPool()">Empty Mana Pool</button>
         </div>
       </div>
       <div class="counter-group">
         <div id="opponent" class="counter card">
           <h1>Opponent</h1>
           <input id="number1" type="number" inputmode="numeric" value="20" placeholder="🧙" class="life">
-          <button onclick="increaseNumber(1)" class="increase">+</button>
-          <button onclick="decreaseNumber(1)" class="decrease">−</button>
+          <button onpointerdown="increaseNumber(1)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(1)" class="decrease">−</button>
         </div>
         <div id="player" class="counter card">
           <h1>Self</h1>
           <input id="number2" type="number" inputmode="numeric" value="20" placeholder="🧙" class="life">
-          <button onclick="increaseNumber(2)" class="increase">+</button>
-          <button onclick="decreaseNumber(2)" class="decrease">−</button>
+          <button onpointerdown="increaseNumber(2)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(2)" class="decrease">−</button>
         </div>
         <div id="storm" class="counter card">
           <h1>Storm</h1>
           <input id="number11" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(11)" class="increase">+</button>
-          <button onclick="resetNumber(11)" class="reset">↺</button>
+          <button onpointerdown="increaseNumber(11)" class="increase">+</button>
+          <button onpointerdown="resetNumber(11)" class="reset">↺</button>
         </div>
       </div>
       <div id="mana-pool" class="counter-group">
         <div id="colourless" class="counter card mana-count"><img src="/counter/C.png" alt="Colourless mana symbol" class="mana-symbol">
           <input id="number3" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(3)" class="increase">+</button>
-          <button onclick="decreaseNumber(3)" class="decrease">−</button>
+          <button onpointerdown="increaseNumber(3)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(3)" class="decrease">−</button>
         </div>
         <div id="black" class="counter card mana-count"><img src="/counter/B.png" alt="Black mana symbol" class="mana-symbol">
           <input id="number4" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(4)" class="increase">+</button>
-          <button onclick="decreaseNumber(4)" class="decrease">−</button>
+          <button onpointerdown="increaseNumber(4)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(4)" class="decrease">−</button>
         </div>
         <div id="red" class="counter card mana-count"><img src="/counter/R.png" alt="Red mana symbol" class="mana-symbol">
           <input id="number5" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(5)" class="increase">+</button>
-          <button onclick="decreaseNumber(5)" class="decrease">−</button>
+          <button onpointerdown="increaseNumber(5)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(5)" class="decrease">−</button>
         </div>
         <div id="green" class="counter card mana-count"><img src="/counter/G.png" alt="Green mana symbol" class="mana-symbol">
           <input id="number6" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(6)" class="increase">+</button>
-          <button onclick="decreaseNumber(6)" class="decrease">−</button>
+          <button onpointerdown="increaseNumber(6)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(6)" class="decrease">−</button>
         </div>
       </div>
       <div class="counter-group">
         <div id="foundry1" class="counter card golem-foundry">
           <h1>Foundry 1</h1>
           <input id="number7" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(7)" class="increase">+</button>
-          <button onclick="decreaseNumber(7, 3)" class="decrease">−3</button>
+          <button onpointerdown="increaseNumber(7)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(7, 3)" class="decrease">−3</button>
         </div>
         <div id="foundry2" class="counter card golem-foundry">
           <h1>Foundry 2</h1>
           <input id="number8" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(8)" class="increase">+</button>
-          <button onclick="decreaseNumber(8, 3)" class="decrease">−3</button>
+          <button onpointerdown="increaseNumber(8)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(8, 3)" class="decrease">−3</button>
         </div>
         <div id="foundry3" class="counter card golem-foundry">
           <h1>Foundry 3</h1>
           <input id="number9" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(9)" class="increase">+</button>
-          <button onclick="decreaseNumber(9, 3)" class="decrease">−3</button>
+          <button onpointerdown="increaseNumber(9)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(9, 3)" class="decrease">−3</button>
         </div>
         <div id="foundry4" class="counter card golem-foundry">
           <h1>Foundry 4</h1>
           <input id="number10" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
-          <button onclick="increaseNumber(10)" class="increase">+</button>
-          <button onclick="decreaseNumber(10, 3)" class="decrease">−3</button>
+          <button onpointerdown="increaseNumber(10)" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(10, 3)" class="decrease">−3</button>
         </div>
       </div>
     </div>
