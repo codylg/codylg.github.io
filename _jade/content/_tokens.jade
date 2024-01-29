@@ -1,0 +1,24 @@
+extends content
+
+block variables
+  - var classname = "tokens"
+  - var smallpanel = false
+
+block header
+  h1
+    a(id="#{classname}", href="https://misotokens.etsy.com") Miso Tokens
+
+block description
+  p My store where I design, illustrate, and print custom token cards for Magic: The Gathering.
+  hr
+  a.button(href="https://misotokens.etsy.com") Buy on Etsy
+    span.rarr
+
+block figure
+  figure
+    div
+      img(src="/img/token-treasure.webp" alt="A card feature a goblin holding a treasure")
+    div
+      img(src="/img/token-blood.webp" alt="A card featuring a goblin holding a vial of blood")
+    div
+      img(src="/img/token-golem.webp" alt="A card featuring three goblins stacked on top of each other")

@@ -271,6 +271,43 @@
     }
   }
 
+  &.tokens-panel {
+    min-height: 0;
+
+    figure {
+      position: relative;
+      perspective: 800px;
+      display: flex;
+
+      div {
+
+        img {
+          filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
+
+          @media (prefers-color-scheme: dark) {
+            filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
+          }
+        }
+
+
+        &:nth-child(1) {
+          z-index: 3;
+          transform: rotateY(-6deg) rotateZ(-4deg) translateX(12%) translateY(-4%);
+        }
+
+        &:nth-child(2) {
+          z-index: 2;
+          transform: rotateY(-8deg) rotateZ(-0deg);
+        }
+
+        &:nth-child(3) {
+          z-index: 1;
+          transform: rotateY(-10deg) rotateZ(4deg) translateX(-12%) translateY(4%);
+        }
+      }
+    }
+  }
+
   &.attract-panel {
     background-color: rgb(255, 102, 111);
     background-image: url('/img/attract-pattern.webp');
