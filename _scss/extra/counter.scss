@@ -27,8 +27,8 @@ body {
 }
 
 .mtg-counter {
-  width: calc(100vw - 8px);
-  height: calc(100vh - 8px);
+  width: calc(100dvw - 8px);
+  height: calc(100dvh - 8px);
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -40,8 +40,8 @@ body {
   touch-action: manipulation;
 
   @media (max-height: 400px) {
-    width: calc(100vw - 4px);
-    height: calc(100vh - 4px);
+    width: calc(100dvw - 4px);
+    height: calc(100dvh - 4px);
     padding-top: calc(env(safe-area-inset-top) - 4px);
     padding-right: calc(env(safe-area-inset-right) - 4px);
     padding-bottom: calc(env(safe-area-inset-bottom) - 4px);
