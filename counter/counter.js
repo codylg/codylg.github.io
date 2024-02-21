@@ -6,8 +6,8 @@ function characterLength(value) {
 
 let holdTimer;
 
-// Function to be executed when button is held for a set timeout
-function onButtonHold(inputElement, parentCard) {
+// Function to be executed when an increase button is held for a set time
+function onIncreaseButtonHold(inputElement, parentCard) {
   clearTimeout(holdTimer);
   inputElement.value = 999;
   inputElement.style.width = characterLength(999);
@@ -15,6 +15,17 @@ function onButtonHold(inputElement, parentCard) {
   if (parentCard.classList.contains("golem-foundry")) {
     parentCard.classList.add("can-golem");
   }
+}
+
+// Function to be executed when a decrease button is held for a set time
+function onDecreaseButtonHold(inputElement, parentCard) {
+  clearTimeout(holdTimer);
+  inputElement.value = 0;
+  inputElement.style.width = characterLength(0);
+
+  inputElement.classList.add("empty");
+  parentCard.classList.remove("active");
+  parentCard.classList.remove("can-golem");
 }
 
 // Function to be clear the hold timer when a button is released
@@ -33,8 +44,8 @@ function increaseNumber(inputNumber, amount = 1) {
   // Restart the hold timer
   clearTimeout(holdTimer);
   holdTimer = setTimeout(function() {
-    onButtonHold(inputElement, parentCard);
-  }, 2400);
+    onIncreaseButtonHold(inputElement, parentCard);
+  }, 2000);
 
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
@@ -60,6 +71,12 @@ function decreaseNumber(inputNumber, amount = 1) {
   if (!currentValue) { currentValue = 0; }
   var newValue = currentValue - amount;
   if (newValue < 0) { newValue = 0; }
+
+  // Restart the hold timer
+  clearTimeout(holdTimer);
+  holdTimer = setTimeout(function() {
+    onDecreaseButtonHold(inputElement, parentCard);
+  }, 2000);
 
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
