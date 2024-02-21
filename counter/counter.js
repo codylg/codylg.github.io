@@ -4,6 +4,24 @@ function characterLength(value) {
   return characterCount + "ch";
 }
 
+let holdTimer;
+
+// Function to be executed when button is held for a set timeout
+function onButtonHold(inputElement, parentCard) {
+  clearTimeout(holdTimer);
+  inputElement.value = 999;
+  inputElement.style.width = characterLength(999);
+
+  if (parentCard.classList.contains("golem-foundry")) {
+    parentCard.classList.add("can-golem");
+  }
+}
+
+// Function to be clear the hold timer when a button is released
+function buttonRelease() {
+  clearTimeout(holdTimer);
+}
+
 // Function to increase a counter by an amount
 function increaseNumber(inputNumber, amount = 1) {
   var inputElement = document.getElementById("number" + inputNumber);
@@ -11,6 +29,12 @@ function increaseNumber(inputNumber, amount = 1) {
   var currentValue = parseInt(inputElement.value);
   if (!currentValue) { currentValue = 0; }
   var newValue = currentValue + amount;
+
+  // Restart the hold timer
+  clearTimeout(holdTimer);
+  holdTimer = setTimeout(function() {
+    onButtonHold(inputElement, parentCard);
+  }, 2400);
 
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
