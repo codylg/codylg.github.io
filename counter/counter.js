@@ -45,7 +45,7 @@ function increaseNumber(inputNumber, amount = 1) {
   clearTimeout(holdTimer);
   holdTimer = setTimeout(function() {
     onIncreaseButtonHold(inputElement, parentCard);
-  }, 2000);
+  }, 1500);
 
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
@@ -76,7 +76,7 @@ function decreaseNumber(inputNumber, amount = 1) {
   clearTimeout(holdTimer);
   holdTimer = setTimeout(function() {
     onDecreaseButtonHold(inputElement, parentCard);
-  }, 2000);
+  }, 1500);
 
   inputElement.value = newValue;
   inputElement.style.width = characterLength(newValue);
