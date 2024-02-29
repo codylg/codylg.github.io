@@ -227,6 +227,8 @@ body::before, body::after {
   z-index: 10;
   width: 1ch;
   min-width: 1ch;
+  max-width: calc(100% - 76px);
+  height: 60px;
   padding: 0;
   margin: 0;
   border: 0;
@@ -248,6 +250,18 @@ body::before, body::after {
   .mtg-counter .counter input {
     font-size: 36px;
   }
+}
+
+.mtg-counter .counter input[style*="3ch"] {
+  font-size: 32px;
+}
+
+.mtg-counter .counter input[style*="4ch"] {
+  font-size: 28px;
+}
+
+.mtg-counter .counter input[style*="5ch"], .mtg-counter .counter input[style*="6ch"], .mtg-counter .counter input[style*="7ch"], .mtg-counter .counter input[style*="8ch"] {
+  font-size: 24px;
 }
 
 .mtg-counter .counter input.life {

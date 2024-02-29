@@ -171,6 +171,8 @@ body {
       z-index: 10;
       width: 1ch;
       min-width: 1ch;
+      max-width: calc(100% - 76px);
+      height: 60px;
       padding: 0;
       margin: 0;
       border: 0;
@@ -187,6 +189,18 @@ body {
 
       @media (max-height: 380px) {
         font-size: 36px;
+      }
+
+      &[style*="3ch"] {
+        font-size: 32px;
+      }
+
+      &[style*="4ch"] {
+        font-size: 28px;
+      }
+
+      &[style*="5ch"], &[style*="6ch"], &[style*="7ch"], &[style*="8ch"] {
+        font-size: 24px;
       }
 
       &.life {
