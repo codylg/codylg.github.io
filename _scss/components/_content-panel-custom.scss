@@ -274,6 +274,18 @@
   &.tokens-panel {
     min-height: 0;
 
+    h1 {
+      font-size: 0;
+
+      svg {
+        max-width: 164px;
+
+        path {
+          fill: var(--c);
+        }
+      }
+    }
+
     figure {
       position: relative;
       perspective: 800px;
