@@ -1,0 +1,22 @@
+extends content
+
+block variables
+  - var classname = "miso-tracker"
+  - var smallpanel = false
+
+block header
+  h1
+    a(id="#{classname}", href="https://misotracker.com") Miso Tracker
+
+block description
+  p A collection of custom trackers for Magic: The Gathering. Specifically for playing Pauper decks and keeping track of life totals, storm counts, floating mana etc.
+  hr
+  a.button(href="https://misotracker.com") Try Miso Tracker
+    span.rarr
+
+block figure
+  figure
+    div
+      img(src="/img/tracker-altar-tron.webp" alt="An interface featuring several counters for keeping track of life totals, mana counts, storm, etc")
+    div
+      img(src="/img/tracker-poison-storm.webp" alt="An interface featuring several counters for keeping track of life totals, mana counts, poison etc")
