@@ -997,11 +997,17 @@ img {
 }
 
 .content-panel.cloudflare-panel {
-  border: 4px solid #F6821F;
-  border-radius: 8px;
+  border-top: 4px solid #F6821F;
   background-color: #ffe0d6;
   background-image: linear-gradient(123deg, #fcede8, #ffe0d6);
   color: #4b2921;
+}
+
+@media (min-width: 600px) {
+  .content-panel.cloudflare-panel {
+    border: 4px solid #F6821F;
+    border-radius: 8px;
+  }
 }
 
 .content-panel.cloudflare-panel h1 {
@@ -1030,6 +1036,20 @@ img {
 
 .content-panel.cloudflare-panel .button::before {
   background-image: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23372A1E"/><rect x="1" y="1" width="1" height="1" fill="%234b2921"/></svg>');
+}
+
+@media (max-width: 1024px) {
+  .content-panel.cloudflare-panel figure {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-panel.cloudflare-panel figure {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
 }
 
 .content-panel.cloudflare-panel figure img {
