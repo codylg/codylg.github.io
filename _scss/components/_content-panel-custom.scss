@@ -142,7 +142,7 @@
 
     figure {
 
-      @media (max-width: $medium-media) {
+      @media (max-width: $small-media) {
         padding-top: 0;
       }
 
@@ -153,8 +153,13 @@
       }
 
       img {
+        border: 3px solid #f0b887;
         border-radius: 6px !important;
         box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
+
+        @media (max-width: $mobile-media) {
+          border-color: #f59d53;
+        }
       }
     }
   }

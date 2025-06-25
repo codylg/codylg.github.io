@@ -1038,7 +1038,7 @@ img {
   background-image: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23372A1E"/><rect x="1" y="1" width="1" height="1" fill="%234b2921"/></svg>');
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .content-panel.cloudflare-panel figure {
     padding-top: 0;
   }
@@ -1053,8 +1053,15 @@ img {
 }
 
 .content-panel.cloudflare-panel figure img {
+  border: 3px solid #f0b887;
   border-radius: 6px !important;
   box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
+}
+
+@media (max-width: 600px) {
+  .content-panel.cloudflare-panel figure img {
+    border-color: #f59d53;
+  }
 }
 
 .content-panel.rex-panel {
