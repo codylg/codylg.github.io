@@ -1528,25 +1528,27 @@ header.page-header .no-underline {
   }
 }
 
-.acknowledgement-of-country a {
+.acknowledgement-of-country a:not(.flag) {
+  margin-right: 8px;
+}
+
+.acknowledgement-of-country a.flag {
   position: relative;
   top: 0;
   display: inline-block;
   width: 18px;
   height: 12px;
-  margin-left: 8px;
   border-radius: 1px;
   background-color: #000000;
-  font-size: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  .acknowledgement-of-country a {
+  .acknowledgement-of-country a.flag {
     outline: 1px solid var(--b);
   }
 }
 
-.acknowledgement-of-country a::before {
+.acknowledgement-of-country a.flag::before {
   content: '';
   position: absolute;
   z-index: 1;
@@ -1558,7 +1560,7 @@ header.page-header .no-underline {
   background-color: #FFFF00;
 }
 
-.acknowledgement-of-country a::after {
+.acknowledgement-of-country a.flag::after {
   content: '';
   position: absolute;
   top: 50%;
