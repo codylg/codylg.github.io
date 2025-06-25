@@ -996,6 +996,47 @@ img {
   }
 }
 
+.content-panel.cloudflare-panel {
+  border: 4px solid #F6821F;
+  border-radius: 8px;
+  background-color: #ffe0d6;
+  background-image: linear-gradient(123deg, #fcede8, #ffe0d6);
+  color: #4b2921;
+}
+
+.content-panel.cloudflare-panel h1 {
+  font-size: 0;
+}
+
+.content-panel.cloudflare-panel hr {
+  background-image: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%234b2921"/></svg>');
+}
+
+.content-panel.cloudflare-panel .tag {
+  color: #4b2921;
+  text-shadow: 1px 1px 0 #fcede8, -1px 1px 0 #fcede8, 1px -1px 0 #fcede8, -1px -1px 0 #fcede8;
+  background-image: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23e9a28b"/><rect x="2" y="2" width="1" height="1" fill="%23e9a28b"/></svg>');
+}
+
+.content-panel.cloudflare-panel .button {
+  border-color: #4b2921;
+  background-color: #fff9f7;
+  color: inherit;
+}
+
+.content-panel.cloudflare-panel .button .rarr {
+  background-color: #4b2921;
+}
+
+.content-panel.cloudflare-panel .button::before {
+  background-image: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23372A1E"/><rect x="1" y="1" width="1" height="1" fill="%234b2921"/></svg>');
+}
+
+.content-panel.cloudflare-panel figure img {
+  border-radius: 6px !important;
+  box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
+}
+
 .content-panel.rex-panel {
   background-color: #F6F4EE;
   background-image: url("/img/rex-blob.webp");
