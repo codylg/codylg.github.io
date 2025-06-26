@@ -141,6 +141,7 @@
     }
 
     figure {
+      position: relative;
 
       @media (max-width: $small-media) {
         padding-top: 0;
@@ -152,13 +153,32 @@
         padding-left: $page-padding / 2;
       }
 
-      img {
-        border: 3px solid #f0b887;
-        border-radius: 6px !important;
+      .demo {
+        border: 3px solid #f5b074;
+        border-radius: 6px;
         box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
 
         @media (max-width: $mobile-media) {
           border-color: #f59d53;
+        }
+      }
+
+      .lamp {
+        position: absolute;
+        right: 45px;
+        bottom: $page-padding;
+        width: 66%;
+        border-radius: 0;
+        background-color: transparent;
+
+        @media (max-width: $small-media) {
+          bottom: -8px;
+          width: 50%;
+        }
+
+        @media (max-width: $mobile-media) {
+          bottom: -6px;
+          width: 40%;
         }
       }
     }
