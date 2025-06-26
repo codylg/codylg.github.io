@@ -1071,7 +1071,7 @@ img {
 .content-panel.cloudflare-panel figure .cf-lamp {
   position: absolute;
   right: 45px;
-  bottom: 40px;
+  top: 30%;
   width: 66%;
   border-radius: 0;
   background-color: transparent;
@@ -1079,6 +1079,7 @@ img {
 
 @media (max-width: 800px) {
   .content-panel.cloudflare-panel figure .cf-lamp {
+    top: auto;
     bottom: -8px;
     width: 50%;
   }

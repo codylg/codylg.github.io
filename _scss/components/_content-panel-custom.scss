@@ -166,12 +166,13 @@
       .cf-lamp {
         position: absolute;
         right: 45px;
-        bottom: $page-padding;
+        top: 30%;
         width: 66%;
         border-radius: 0;
         background-color: transparent;
 
         @media (max-width: $small-media) {
+          top: auto;
           bottom: -8px;
           width: 50%;
         }
