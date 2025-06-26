@@ -1056,19 +1056,19 @@ img {
   }
 }
 
-.content-panel.cloudflare-panel figure .demo {
+.content-panel.cloudflare-panel figure .cf-demo {
   border: 3px solid #f5b074;
   border-radius: 6px;
   box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
 }
 
 @media (max-width: 600px) {
-  .content-panel.cloudflare-panel figure .demo {
+  .content-panel.cloudflare-panel figure .cf-demo {
     border-color: #f59d53;
   }
 }
 
-.content-panel.cloudflare-panel figure .lamp {
+.content-panel.cloudflare-panel figure .cf-lamp {
   position: absolute;
   right: 45px;
   bottom: 40px;
@@ -1078,14 +1078,14 @@ img {
 }
 
 @media (max-width: 800px) {
-  .content-panel.cloudflare-panel figure .lamp {
+  .content-panel.cloudflare-panel figure .cf-lamp {
     bottom: -8px;
     width: 50%;
   }
 }
 
 @media (max-width: 600px) {
-  .content-panel.cloudflare-panel figure .lamp {
+  .content-panel.cloudflare-panel figure .cf-lamp {
     bottom: -6px;
     width: 40%;
   }

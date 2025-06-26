@@ -37,5 +37,6 @@ block description
 
 block figure
   figure.image-gallery
-    img.demo(src="/img/cloudflare.gif" alt="A screen recording from Cloudflare showing a redirect rule being configured")
-    img.lamp(src="/img/lamp.webp" alt="An orange lava lamp")
+    video(autoplay, loop, muted, playsinline).cf-demo
+      source(src="/img/cf-rules-demo.mp4", type="video/mp4")
+    img.cf-lamp(src="/img/lamp.webp" alt="An orange lava lamp")
