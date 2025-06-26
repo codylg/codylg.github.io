@@ -1077,6 +1077,12 @@ img {
   background-image: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23372A1E"/></svg>');
 }
 
+.content-panel.rex-panel .tag {
+  color: #372A1E;
+  text-shadow: 1px 1px 0 #F6F4EE, -1px 1px 0 #F6F4EE, 1px -1px 0 #F6F4EE, -1px -1px 0 #F6F4EE;
+  background-image: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23c4b8ab"/><rect x="2" y="2" width="1" height="1" fill="%23c4b8ab"/></svg>');
+}
+
 .content-panel.rex-panel .button {
   border-color: #372A1E;
   background-color: #F6F4EE;
@@ -1297,6 +1303,12 @@ img {
   color: #2F256A;
 }
 
+.content-panel.attract-panel .tag {
+  color: #2F256A;
+  text-shadow: 1px 1px 0 #ff666f, -1px 1px 0 #ff666f, 1px -1px 0 #ff666f, -1px -1px 0 #ff666f;
+  background-image: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23923db0"/><rect x="2" y="2" width="1" height="1" fill="%23923db0"/></svg>');
+}
+
 .content-panel.attract-panel figure img {
   box-shadow: 0 10px 33px #dc466e;
 }
@@ -1337,6 +1349,12 @@ img {
   background-position: 0 100%;
   background-size: 531px 504px;
   color: #23211F;
+}
+
+.content-panel.scrunch-panel .tag {
+  color: #23211F;
+  text-shadow: 1px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF;
+  background-image: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23c4bcb5"/><rect x="2" y="2" width="1" height="1" fill="%23c4bcb5"/></svg>');
 }
 
 @media (max-width: 600px) {
