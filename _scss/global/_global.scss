@@ -24,7 +24,7 @@ body {
   @include font-antialias;
   -webkit-tap-highlight-color: transparent;
 
-  @media (min-width: $mobile-media) {
+  @media (min-width: $small-media) {
     background-attachment: fixed;
   }
 
@@ -37,7 +37,7 @@ body {
     left: 0;
     border-bottom-right-radius: 100%;
 
-    @media (max-width: $mobile-media) {
+    @media (max-width: $small-media) {
       position: absolute;
     }
   }

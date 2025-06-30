@@ -61,7 +61,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   body {
     background-attachment: fixed;
   }
@@ -76,7 +76,7 @@ body::before, body::after {
   border-bottom-right-radius: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   body::before, body::after {
     position: absolute;
   }
