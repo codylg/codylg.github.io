@@ -1511,7 +1511,7 @@ img {
 .content-panel.miso-tracker-panel figure .miso-tracker-demo-img video,
 .content-panel.miso-tracker-panel figure .miso-tracker-demo-img img {
   border-radius: 10px;
-  border: 3px solid rgba(255, 245, 240, 0.64);
+  border: 3px solid rgba(255, 255, 255, 0.8);
   -webkit-filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
           filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
 }
@@ -1523,6 +1523,7 @@ img {
   .content-panel.miso-tracker-panel figure .miso-tracker-demo-img img {
     -webkit-filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
             filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
+    border-color: rgba(255, 245, 240, 0.64);
   }
 }
 

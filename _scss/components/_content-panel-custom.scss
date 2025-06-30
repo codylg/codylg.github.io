@@ -449,11 +449,12 @@
         video,
         img {
           border-radius: 10px;
-          border: 3px solid rgba(255, 245, 240, 0.64);
+          border: 3px solid rgba(255, 255, 255, 0.8);
           filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
 
           @media (prefers-color-scheme: dark) {
             filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
+            border-color: rgba(255, 245, 240, 0.64);
           }
         }
       }
