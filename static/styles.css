@@ -1632,6 +1632,10 @@ img {
   background-image: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23c4bcb5"/><rect x="2" y="2" width="1" height="1" fill="%23c4bcb5"/></svg>');
 }
 
+.content-panel.scrunch-panel video {
+  background-color: transparent;
+}
+
 @media (max-width: 600px) {
   .content-panel.scrunch-panel {
     background-position: 0 60%;
