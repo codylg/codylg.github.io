@@ -1177,7 +1177,7 @@ img {
 
 @media (max-width: 600px) {
   .content-panel.cloudflare-panel figure .cf-lamp {
-    bottom: -12px;
+    bottom: -8px;
   }
 }
 
