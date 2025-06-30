@@ -1412,28 +1412,72 @@ img {
   display: flex;
 }
 
-.content-panel.miso-tracker-panel figure div img {
+@media (max-width: 800px) {
+  .content-panel.miso-tracker-panel figure {
+    padding-top: 0;
+  }
+}
+
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-vid video,
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-vid img,
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-img video,
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-img img {
+  border-radius: 10px;
+  border: 3px solid rgba(255, 245, 240, 0.64);
   -webkit-filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
           filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
 }
 
 @media (prefers-color-scheme: dark) {
-  .content-panel.miso-tracker-panel figure div img {
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-vid video,
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-vid img,
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-img video,
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-img img {
     -webkit-filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
             filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
   }
 }
 
-.content-panel.miso-tracker-panel figure div:nth-child(1) {
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-vid {
   z-index: 3;
-  -webkit-transform: rotateY(-8deg);
-          transform: rotateY(-8deg);
+  -webkit-transform: rotateY(-8deg) translateX(-6%) translateY(-6%);
+          transform: rotateY(-8deg) translateX(-6%) translateY(-6%);
 }
 
-.content-panel.miso-tracker-panel figure div:nth-child(2) {
+@media (max-width: 800px) {
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-vid {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
+
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-vid video {
+  width: 62%;
+}
+
+@media (max-width: 800px) {
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-vid video {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-img {
+  position: absolute;
   z-index: 2;
-  -webkit-transform: rotateY(-10deg) rotateZ(4deg) translateX(-5%) translateY(10%);
-          transform: rotateY(-10deg) rotateZ(4deg) translateX(-5%) translateY(10%);
+  -webkit-transform: rotateY(-10deg) rotateZ(4deg) translateX(30%) translateY(12%);
+          transform: rotateY(-10deg) rotateZ(4deg) translateX(30%) translateY(12%);
+}
+
+@media (max-width: 800px) {
+  .content-panel.miso-tracker-panel figure .miso-tracker-demo-img {
+    display: none;
+  }
+}
+
+.content-panel.miso-tracker-panel figure .miso-tracker-demo-img img {
+  width: 56%;
 }
 
 .content-panel.attract-panel {

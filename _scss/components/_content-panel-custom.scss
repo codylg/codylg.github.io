@@ -439,24 +439,54 @@
       perspective: 800px;
       display: flex;
 
-      div {
+      @media (max-width: $small-media) {
+        padding-top: 0;
+      }
 
+      .miso-tracker-demo-vid,
+      .miso-tracker-demo-img {
+
+        video,
         img {
+          border-radius: 10px;
+          border: 3px solid rgba(255, 245, 240, 0.64);
           filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
 
           @media (prefers-color-scheme: dark) {
             filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
           }
         }
+      }
 
-        &:nth-child(1) {
-          z-index: 3;
-          transform: rotateY(-8deg);
+      .miso-tracker-demo-vid {
+        z-index: 3;
+        transform: rotateY(-8deg) translateX(-6%) translateY(-6%);
+
+        @media (max-width: $small-media) {
+          transform: none;
         }
 
-        &:nth-child(2) {
-          z-index: 2;
-          transform: rotateY(-10deg) rotateZ(4deg) translateX(-5%) translateY(10%);
+        video {
+          width: 62%;
+
+          @media (max-width: $small-media) {
+            box-sizing: border-box;
+            width: 100%;
+          }
+        }
+      }
+
+      .miso-tracker-demo-img {
+        position: absolute;
+        z-index: 2;
+        transform: rotateY(-10deg) rotateZ(4deg) translateX(30%) translateY(12%);
+
+        @media (max-width: $small-media) {
+          display: none;
+        }
+
+        img {
+          width: 56%;
         }
       }
     }
