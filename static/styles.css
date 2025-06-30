@@ -1145,15 +1145,9 @@ img {
 }
 
 .content-panel.cloudflare-panel figure .cf-demo {
-  border: 3px solid #f5b074;
+  border: 3px solid #f59d53;
   border-radius: 6px;
   box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
-}
-
-@media (max-width: 600px) {
-  .content-panel.cloudflare-panel figure .cf-demo {
-    border-color: #f59d53;
-  }
 }
 
 .content-panel.cloudflare-panel figure .cf-lamp {
