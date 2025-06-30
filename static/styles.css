@@ -1199,23 +1199,23 @@ img {
 
 @-webkit-keyframes lava-wobble {
   from {
-    -webkit-transform: translateX(0) translateY(1.5%) scaleX(1.1) scaleY(1);
-            transform: translateX(0) translateY(1.5%) scaleX(1.1) scaleY(1);
+    -webkit-transform: translateX(0) translateY(1.52%) scaleX(1.16) scaleY(1);
+            transform: translateX(0) translateY(1.52%) scaleX(1.16) scaleY(1);
   }
   to {
-    -webkit-transform: translateX(-1%) translateY(0) scaleX(1) scaleY(1.1);
-            transform: translateX(-1%) translateY(0) scaleX(1) scaleY(1.1);
+    -webkit-transform: translateX(-1.12%) translateY(0) scaleX(1) scaleY(1.16);
+            transform: translateX(-1.12%) translateY(0) scaleX(1) scaleY(1.16);
   }
 }
 
 @keyframes lava-wobble {
   from {
-    -webkit-transform: translateX(0) translateY(1.5%) scaleX(1.1) scaleY(1);
-            transform: translateX(0) translateY(1.5%) scaleX(1.1) scaleY(1);
+    -webkit-transform: translateX(0) translateY(1.52%) scaleX(1.16) scaleY(1);
+            transform: translateX(0) translateY(1.52%) scaleX(1.16) scaleY(1);
   }
   to {
-    -webkit-transform: translateX(-1%) translateY(0) scaleX(1) scaleY(1.1);
-            transform: translateX(-1%) translateY(0) scaleX(1) scaleY(1.1);
+    -webkit-transform: translateX(-1.12%) translateY(0) scaleX(1) scaleY(1.16);
+            transform: translateX(-1.12%) translateY(0) scaleX(1) scaleY(1.16);
   }
 }
 
