@@ -46,10 +46,33 @@ body {
     width: 440px;
     height: 440px;
     background-image: var(--grid-8);
+    animation: 6s ease-in-out infinite alternate background-wobble-1;
+
+    @keyframes background-wobble-1 {
+      from {
+        width: 440px;
+        height: 440px;
+      }
+      to {
+        width: 600px;
+        height: 600px;
+      }
+    }
 
     @media (max-width: $mobile-media) {
       width: 320px;
       height: 320px;
+
+      @keyframes background-wobble-1 {
+        from {
+          width: 320px;
+          height: 320px;
+        }
+        to {
+          width: 440px;
+          height: 440px;
+        }
+      }
     }
   }
 
@@ -57,10 +80,33 @@ body {
     width: 170px;
     height: 170px;
     background-image: var(--grid-4);
+    animation: 6s ease-in-out infinite alternate background-wobble-2;
+
+    @keyframes background-wobble-2 {
+      from {
+        width: 170px;
+        height: 170px;
+      }
+      to {
+        width: 220px;
+        height: 220px;
+      }
+    }
 
     @media (max-width: $mobile-media) {
       width: 150px;
       height: 150px;
+
+      @keyframes background-wobble-2 {
+        from {
+          width: 150px;
+          height: 150px;
+        }
+        to {
+          width: 200px;
+          height: 200px;
+        }
+      }
     }
   }
 }

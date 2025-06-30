@@ -86,6 +86,30 @@ body::before {
   width: 440px;
   height: 440px;
   background-image: var(--grid-8);
+  -webkit-animation: 6s ease-in-out infinite alternate background-wobble-1;
+          animation: 6s ease-in-out infinite alternate background-wobble-1;
+}
+
+@-webkit-keyframes background-wobble-1 {
+  from {
+    width: 440px;
+    height: 440px;
+  }
+  to {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@keyframes background-wobble-1 {
+  from {
+    width: 440px;
+    height: 440px;
+  }
+  to {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -93,18 +117,82 @@ body::before {
     width: 320px;
     height: 320px;
   }
+  @-webkit-keyframes background-wobble-1 {
+    from {
+      width: 320px;
+      height: 320px;
+    }
+    to {
+      width: 440px;
+      height: 440px;
+    }
+  }
+  @keyframes background-wobble-1 {
+    from {
+      width: 320px;
+      height: 320px;
+    }
+    to {
+      width: 440px;
+      height: 440px;
+    }
+  }
 }
 
 body::after {
   width: 170px;
   height: 170px;
   background-image: var(--grid-4);
+  -webkit-animation: 6s ease-in-out infinite alternate background-wobble-2;
+          animation: 6s ease-in-out infinite alternate background-wobble-2;
+}
+
+@-webkit-keyframes background-wobble-2 {
+  from {
+    width: 170px;
+    height: 170px;
+  }
+  to {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@keyframes background-wobble-2 {
+  from {
+    width: 170px;
+    height: 170px;
+  }
+  to {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 @media (max-width: 600px) {
   body::after {
     width: 150px;
     height: 150px;
+  }
+  @-webkit-keyframes background-wobble-2 {
+    from {
+      width: 150px;
+      height: 150px;
+    }
+    to {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  @keyframes background-wobble-2 {
+    from {
+      width: 150px;
+      height: 150px;
+    }
+    to {
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
