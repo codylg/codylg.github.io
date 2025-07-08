@@ -119,22 +119,22 @@ body::before {
   }
   @-webkit-keyframes background-wobble-1 {
     from {
-      width: 320px;
-      height: 320px;
+      width: 95vw;
+      height: 95vw;
     }
     to {
-      width: 440px;
-      height: 440px;
+      width: 100vw;
+      height: 150vw;
     }
   }
   @keyframes background-wobble-1 {
     from {
-      width: 320px;
-      height: 320px;
+      width: 95vw;
+      height: 95vw;
     }
     to {
-      width: 440px;
-      height: 440px;
+      width: 100vw;
+      height: 150vw;
     }
   }
 }
@@ -176,22 +176,22 @@ body::after {
   }
   @-webkit-keyframes background-wobble-2 {
     from {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
     }
     to {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
     }
   }
   @keyframes background-wobble-2 {
     from {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
     }
     to {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
     }
   }
 }
