@@ -434,6 +434,7 @@
       position: relative;
       perspective: 800px;
       display: flex;
+      overflow-x: hidden;
 
       @media (max-width: $small-media) {
         padding-top: 0;
