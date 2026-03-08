@@ -428,63 +428,102 @@
   }
 
   &.miso-tracker-panel {
-    min-height: 0;
+    background: radial-gradient(80% 45% at 50% 100%, rgb(145, 75, 35), rgb(90, 35, 12) 50%, #000 100%);
+    border: 0;
 
-    figure {
-      position: relative;
-      perspective: 800px;
+    .content-panel-header {
       display: flex;
-      overflow-x: hidden;
+      flex-direction: column;
+      align-items: center;
 
       @media (max-width: $small-media) {
-        padding-top: 0;
+        padding-bottom: 0;
       }
 
-      .miso-tracker-demo-vid,
-      .miso-tracker-demo-img {
+      img {
+        width: 64px;
+        height: 64px;
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
 
-        video,
-        img {
-          border-radius: 10px;
-          border: 3px solid rgba(255, 255, 255, 0.8);
-          filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.24));
+      h1 {
+        margin-bottom: 0;
+      }
 
-          @media (prefers-color-scheme: dark) {
-            filter: drop-shadow(0 8px 16px rgba(37, 25, 20, 0.64));
-            border-color: rgba(255, 245, 240, 0.64);
-          }
+      p {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+    }
+
+    figure {
+
+      .miso-tracker-demo-vids {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 40px;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+
+        @media (max-width: $medium-media) {
+          padding-top: 20px;
         }
-      }
-
-      .miso-tracker-demo-vid {
-        z-index: 3;
-        transform: rotateY(-8deg) translateX(-6%) translateY(-6%);
 
         @media (max-width: $small-media) {
-          transform: none;
+          padding: 0 80px;
         }
 
-        video {
-          width: 62%;
+        @media (max-width: $mobile-media) {
+          padding: 0 12px;
+        }
+
+        .phone {
+          position: relative;
+          box-sizing: border-box;
+          width: 40%;
+          transform-style: preserve-3d;
+
+          @media (max-width: $medium-media) {
+            width: 45%;
+          }
+
+          .phone-frame {
+            padding: 4px;
+            background: #000;
+            border-radius: 16.5% / 7.6%;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            box-shadow: 0 0 0 2px #333, 0 0 0 4px #111, 0 40px 80px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.5);
+          }
+
+          video {
+            display: block;
+            width: 100%;
+            border-radius: 15.42% / 7.09%;
+          }
+        }
+
+        .shared-demo {
+          z-index: 2;
+          transform: rotateZ(-4deg) rotateY(10deg) rotateX(-2deg);
+
+          @media (max-width: $medium-media) {
+            margin-left: -5%;
+          }
 
           @media (max-width: $small-media) {
-            box-sizing: border-box;
-            width: 100%;
+            margin-left: 0;
           }
         }
-      }
 
-      .miso-tracker-demo-img {
-        position: absolute;
-        z-index: 2;
-        transform: rotateY(-10deg) rotateZ(4deg) translateX(30%) translateY(12%);
-
-        @media (max-width: $small-media) {
-          display: none;
-        }
-
-        img {
-          width: 56%;
+        .custom-demo {
+          z-index: 1;
+          margin-top: 60px;
+          margin-left: 10%;
+          transform: rotateZ(4deg) rotateY(-10deg) rotateX(-2deg);
         }
       }
     }
