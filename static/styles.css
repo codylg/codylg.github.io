@@ -1748,6 +1748,10 @@ header.page-header .no-underline {
   }
 }
 
+.acknowledgement-of-country {
+  letter-spacing: -0.4%;
+}
+
 @media (min-width: 600px) {
   .acknowledgement-of-country {
     margin-bottom: 0;
