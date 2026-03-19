@@ -81,6 +81,12 @@ body #bg-canvas {
   image-rendering: crisp-edges;
 }
 
+@media (max-width: 600px) {
+  body #bg-canvas {
+    position: absolute;
+  }
+}
+
 h1,
 h2,
 h3,
