@@ -1284,6 +1284,11 @@ img {
   color: #262921;
 }
 
+.content-panel.component-library-panel span {
+  color: #262921;
+  text-shadow: 1px 1px 0 #75836F, -1px 1px 0 #75836F, 1px -1px 0 #75836F, -1px -1px 0 #75836F;
+}
+
 .content-panel.component-library-panel hr {
   background-image: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23262921"/></svg>');
 }
