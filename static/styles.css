@@ -1036,9 +1036,11 @@ img {
 }
 
 .content-panel.cloudflare-panel figure .cf-demo {
-  border: 3px solid #f59d53;
+  border: 2px solid #f59d53;
   border-radius: 6px;
+  box-sizing: border-box;
   box-shadow: 0 24px 40px rgba(209, 83, 51, 0.24);
+  background-color: #fff;
 }
 
 .content-panel.cloudflare-panel figure .cf-lamp {
