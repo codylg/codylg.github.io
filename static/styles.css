@@ -975,6 +975,242 @@ img {
   }
 }
 
+.content-panel.atlassian-panel {
+  background-color: #fefefe;
+  color: #292A2E;
+}
+
+.content-panel.atlassian-panel::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #fefefe;
+  background-image: linear-gradient(to right, #e7f1ff 1px, transparent 1px), linear-gradient(to bottom, #e7f1ff 1px, transparent 1px);
+  background-size: 16px 16px;
+  mask-image: radial-gradient(ellipse at center, transparent 40%, #000 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 40%, #000 100%);
+}
+
+.content-panel.atlassian-panel h1 {
+  font-size: 0;
+}
+
+.content-panel.atlassian-panel hr {
+  background-image: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%231868DB"/></svg>');
+}
+
+.content-panel.atlassian-panel .tag {
+  color: #032e6b;
+  text-shadow: 1px 1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, -1px -1px 0 #fefefe;
+  background-image: url('data:image/svg+xml;utf8,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%2370a5ef"/><rect x="2" y="2" width="1" height="1" fill="%2370a5ef"/></svg>');
+}
+
+.content-panel.atlassian-panel .button {
+  border-color: #1868DB;
+  background-color: #fefefe;
+  color: #032e6b;
+}
+
+.content-panel.atlassian-panel .button .rarr {
+  background-color: #032e6b;
+}
+
+.content-panel.atlassian-panel .button::before {
+  background-image: url('data:image/svg+xml;utf8,<svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%2370a5ef"/><rect x="1" y="1" width="1" height="1" fill="%2370a5ef"/></svg>');
+}
+
+.content-panel.atlassian-panel figure {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .content-panel.atlassian-panel figure {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-panel.atlassian-panel figure {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+}
+
+.content-panel.atlassian-panel figure .atl-demo {
+  border: 1px solid #a7c2e8;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0 24px 40px rgba(24, 104, 219, 0.12);
+  background-color: #fff;
+}
+
+.content-panel.atlassian-panel figure .atl-graph {
+  margin-top: -18%;
+  margin-bottom: -10%;
+}
+
+@media (min-width: 1024px) {
+  .content-panel.atlassian-panel figure .atl-graph {
+    margin-left: 10%;
+  }
+}
+
+.content-panel.atlassian-panel figure .atl-graph img {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .graph-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 10;
+  overflow: visible;
+  container-type: inline-size;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .graph-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .graph-svg .line-base {
+  stroke: rgba(10, 10, 12, 0.4);
+  stroke-width: clamp(0.7px, 0.17cqw, 1.1px);
+  stroke-dasharray: 0.1 6;
+  stroke-linecap: round;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .graph-svg .line-pulse {
+  stroke-width: clamp(1.3px, 0.31cqw, 2px);
+  stroke-dasharray: 0.1 6;
+  stroke-linecap: round;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node {
+  position: absolute;
+  will-change: transform;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon {
+  width: clamp(24px, 6.9cqw, 44px);
+  height: clamp(24px, 6.9cqw, 44px);
+  border-radius: clamp(6px, 1.9cqw, 12px);
+  background: #1c1c1e;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon svg {
+  width: clamp(13px, 3.4cqw, 22px);
+  height: clamp(13px, 3.4cqw, 22px);
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon svg.filled,
+.content-panel.atlassian-panel figure .atl-graph .hex-icon-wrap svg.filled {
+  fill: #ffffff;
+  stroke: none;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon.brand {
+  background: #ffffff;
+  border: 1px solid #e0e0e3;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon.brand img {
+  width: clamp(16px, 4.31cqw, 27px);
+  height: clamp(16px, 4.31cqw, 27px);
+  object-fit: contain;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon.brand svg {
+  width: clamp(15px, 3.91cqw, 25px);
+  height: clamp(15px, 3.91cqw, 25px);
+  stroke: none;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-avatar {
+  width: clamp(24px, 7.2cqw, 46px);
+  height: clamp(24px, 7.2cqw, 46px);
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-hex {
+  width: clamp(24px, 7.2cqw, 46px);
+  height: clamp(24px, 7.2cqw, 46px);
+  position: relative;
+  -webkit-filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.14));
+          filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.14));
+}
+
+.content-panel.atlassian-panel figure .atl-graph .hex-shape-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .hex-fill {
+  fill: #1c1c1e;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .hex-icon-wrap {
+  position: absolute;
+  inset: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(-1%) translateY(-2%);
+      -ms-transform: translateX(-1%) translateY(-2%);
+          transform: translateX(-1%) translateY(-2%);
+}
+
+.content-panel.atlassian-panel figure .atl-graph .hex-icon-wrap svg {
+  width: clamp(11px, 2.79cqw, 18px);
+  height: clamp(11px, 2.79cqw, 18px);
+}
+
 .content-panel.cloudflare-panel {
   border-top: 4px solid #F6821F;
   background-color: #ffe0d6;
@@ -1382,6 +1618,7 @@ img {
 .content-panel.miso-tracker-panel {
   background: radial-gradient(80% 45% at 50% 100%, #914b23, #5a230c 50%, #000 100%);
   border: 0;
+  color: #f9f6f2;
 }
 
 .content-panel.miso-tracker-panel .content-panel-header {
