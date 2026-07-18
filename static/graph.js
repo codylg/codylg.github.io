@@ -39,8 +39,8 @@
 
     // Travel duration stays fast (matches the original feel); the idle gap
     // between pulses is what makes them fire less often.
-    const travelDur = 1 + Math.random() * 0.24;
-    const idleDur = 6 + Math.random() * 6;
+    const travelDur = 0.5 + Math.random() * 0.24;
+    const idleDur = 5 + Math.random() * 5;
     const period = travelDur + idleDur;
 
     return {

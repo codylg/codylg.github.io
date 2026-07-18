@@ -199,19 +199,19 @@
           height: 100%;
           pointer-events: none;
           overflow: visible;
-        }
 
-        .graph-svg .line-base {
-          stroke: rgba(10, 10, 12, 0.4);
-          stroke-width: clamp(0.7px, 0.17cqw, 1.1px);
-          stroke-dasharray: 0.1 6;
-          stroke-linecap: round;
-        }
+          .line-base {
+            stroke: rgba(10, 10, 12, 0.32);
+            stroke-width: clamp(0.8px, 0.18cqw, 1.1px);
+            stroke-dasharray: 0.2 4;
+            stroke-linecap: round;
+          }
 
-        .graph-svg .line-pulse {
-          stroke-width: clamp(1.3px, 0.31cqw, 2px);
-          stroke-dasharray: 0.1 6;
-          stroke-linecap: round;
+          .line-pulse {
+            stroke-width: clamp(1.4px, 0.32cqw, 2px);
+            stroke-dasharray: 0.2 4;
+            stroke-linecap: round;
+          }
         }
 
         .node {
@@ -228,39 +228,39 @@
           align-items: center;
           justify-content: center;
           box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-        }
 
-        .node-icon svg {
-          width: clamp(13px, 3.4cqw, 22px);
-          height: clamp(13px, 3.4cqw, 22px);
-          stroke: #ffffff;
-          fill: none;
-          stroke-width: 1.8;
-          stroke-linecap: round;
-          stroke-linejoin: round;
+          svg {
+            width: clamp(13px, 3.4cqw, 22px);
+            height: clamp(13px, 3.4cqw, 22px);
+            stroke: #ffffff;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+
+          &.brand {
+            background: #ffffff;
+            border: 1px solid #e0e0e3;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+
+            img {
+              width: clamp(16px, 4.31cqw, 27px);
+              height: clamp(16px, 4.31cqw, 27px);
+              object-fit: contain;
+            }
+
+            svg {
+              width: clamp(15px, 3.91cqw, 25px);
+              height: clamp(15px, 3.91cqw, 25px);
+              stroke: none;
+            }
+          }
         }
 
         .node-icon svg.filled,
         .hex-icon-wrap svg.filled {
           fill: #ffffff;
-          stroke: none;
-        }
-
-        .node-icon.brand {
-          background: #ffffff;
-          border: 1px solid #e0e0e3;
-          box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-        }
-
-        .node-icon.brand img {
-          width: clamp(16px, 4.31cqw, 27px);
-          height: clamp(16px, 4.31cqw, 27px);
-          object-fit: contain;
-        }
-
-        .node-icon.brand svg {
-          width: clamp(15px, 3.91cqw, 25px);
-          height: clamp(15px, 3.91cqw, 25px);
           stroke: none;
         }
 
@@ -289,7 +289,9 @@
           height: 100%;
         }
 
-        .hex-fill { fill: #1c1c1e; }
+        .hex-fill {
+          fill: #1c1c1e;
+        }
 
         .hex-icon-wrap {
           position: absolute;
@@ -298,11 +300,11 @@
           align-items: center;
           justify-content: center;
           transform: translateX(-1%) translateY(-2%);
-        }
 
-        .hex-icon-wrap svg {
-          width: clamp(11px, 2.79cqw, 18px);
-          height: clamp(11px, 2.79cqw, 18px);
+          svg {
+            width: clamp(11px, 2.79cqw, 18px);
+            height: clamp(11px, 2.79cqw, 18px);
+          }
         }
       }
     }

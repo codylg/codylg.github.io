@@ -1085,15 +1085,15 @@ img {
 }
 
 .content-panel.atlassian-panel figure .atl-graph .graph-svg .line-base {
-  stroke: rgba(10, 10, 12, 0.4);
-  stroke-width: clamp(0.7px, 0.17cqw, 1.1px);
-  stroke-dasharray: 0.1 6;
+  stroke: rgba(10, 10, 12, 0.32);
+  stroke-width: clamp(0.8px, 0.18cqw, 1.1px);
+  stroke-dasharray: 0.2 4;
   stroke-linecap: round;
 }
 
 .content-panel.atlassian-panel figure .atl-graph .graph-svg .line-pulse {
-  stroke-width: clamp(1.3px, 0.31cqw, 2px);
-  stroke-dasharray: 0.1 6;
+  stroke-width: clamp(1.4px, 0.32cqw, 2px);
+  stroke-dasharray: 0.2 4;
   stroke-linecap: round;
 }
 
@@ -1129,12 +1129,6 @@ img {
   stroke-linejoin: round;
 }
 
-.content-panel.atlassian-panel figure .atl-graph .node-icon svg.filled,
-.content-panel.atlassian-panel figure .atl-graph .hex-icon-wrap svg.filled {
-  fill: #ffffff;
-  stroke: none;
-}
-
 .content-panel.atlassian-panel figure .atl-graph .node-icon.brand {
   background: #ffffff;
   border: 1px solid #e0e0e3;
@@ -1150,6 +1144,12 @@ img {
 .content-panel.atlassian-panel figure .atl-graph .node-icon.brand svg {
   width: clamp(15px, 3.91cqw, 25px);
   height: clamp(15px, 3.91cqw, 25px);
+  stroke: none;
+}
+
+.content-panel.atlassian-panel figure .atl-graph .node-icon svg.filled,
+.content-panel.atlassian-panel figure .atl-graph .hex-icon-wrap svg.filled {
+  fill: #ffffff;
   stroke: none;
 }
 
