@@ -21,6 +21,7 @@
         if (b >= LEVEL_MINS[j]) lvl = j;
         else break;
       }
+      if (lvl > 7) lvl = 7; // cap dithering density at 50% (checkerboard)
       LEVEL_LUT[i] = lvl;
     }
   })();
