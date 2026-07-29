@@ -1808,6 +1808,7 @@ img {
 
 .content-panel.miso-roller-panel {
   background: #000;
+  background: radial-gradient(100% 120% at 100% 0%, rgba(40, 35, 50, 0) 40%, rgba(255, 185, 235, 0.5), rgba(40, 35, 50, 0) 80%), radial-gradient(100% 120% at 115% 70%, rgba(40, 35, 50, 0.9) 40%, rgba(230, 200, 255, 0.8), rgba(40, 35, 50, 0.9)), url(/img/noise.svg);
   border: 0;
   color: #f9f6f2;
 }
@@ -1909,8 +1910,8 @@ img {
   .content-panel.miso-roller-panel figure .miso-roller-demo-vid .phone {
     width: 100%;
     margin-left: 0;
-    -webkit-transform: rotateZ(90deg) rotateY(-24deg) rotateX(0deg);
-            transform: rotateZ(90deg) rotateY(-24deg) rotateX(0deg);
+    -webkit-transform: rotateZ(90deg) rotateY(-16deg) rotateX(0deg);
+            transform: rotateZ(90deg) rotateY(-16deg) rotateX(0deg);
   }
 }
 
