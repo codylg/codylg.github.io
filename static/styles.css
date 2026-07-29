@@ -1806,6 +1806,131 @@ img {
           transform: rotateZ(4deg) rotateY(-10deg) rotateX(-2deg);
 }
 
+.content-panel.miso-roller-panel {
+  background: #000;
+  border: 0;
+  color: #f9f6f2;
+}
+
+.content-panel.miso-roller-panel .content-panel-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 800px) {
+  .content-panel.miso-roller-panel .content-panel-header {
+    width: 250px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .content-panel.miso-roller-panel .content-panel-header {
+    padding-bottom: 0;
+  }
+}
+
+.content-panel.miso-roller-panel .content-panel-header img {
+  width: 64px;
+  height: 64px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.content-panel.miso-roller-panel .content-panel-header h1 {
+  margin-bottom: 0;
+}
+
+.content-panel.miso-roller-panel .content-panel-header p {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.content-panel.miso-roller-panel figure {
+  padding: 0;
+}
+
+.content-panel.miso-roller-panel figure .miso-roller-demo-vid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@media (max-width: 800px) {
+  .content-panel.miso-roller-panel figure .miso-roller-demo-vid {
+    margin-top: -5%;
+    margin-bottom: -5%;
+  }
+}
+
+.content-panel.miso-roller-panel figure .miso-roller-demo-vid .phone {
+  position: relative;
+  box-sizing: border-box;
+  width: 69%;
+  max-width: 180px;
+  margin-top: -8%;
+  margin-left: -7%;
+  -webkit-transform: rotateZ(9deg) rotateY(-12deg) rotateX(14deg);
+          transform: rotateZ(9deg) rotateY(-12deg) rotateX(14deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@media (max-width: 1260px) {
+  .content-panel.miso-roller-panel figure .miso-roller-demo-vid .phone {
+    width: 80%;
+    margin-left: -16%;
+  }
+}
+
+@media (max-width: 800px) {
+  .content-panel.miso-roller-panel figure .miso-roller-demo-vid .phone {
+    width: 100%;
+    margin-left: 0;
+    -webkit-transform: rotateZ(90deg) rotateY(-24deg) rotateX(0deg);
+            transform: rotateZ(90deg) rotateY(-24deg) rotateX(0deg);
+  }
+}
+
+.content-panel.miso-roller-panel figure .miso-roller-demo-vid .phone .phone-frame {
+  padding: 4px;
+  background: #000;
+  border-radius: 16.5% / 7.6%;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 0 0 0 2px #333, 0 0 0 5px #111;
+}
+
+.content-panel.miso-roller-panel figure .miso-roller-demo-vid .phone video {
+  display: block;
+  width: 100%;
+  border-radius: 15.42% / 7.09%;
+}
+
 .content-panel.attract-panel {
   background-color: #ff666f;
   background-image: url("/img/attract-pattern.webp");

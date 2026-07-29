@@ -797,6 +797,100 @@
     }
   }
 
+  &.miso-roller-panel {
+    background: #000;
+    border: 0;
+    color: #f9f6f2;
+
+    .content-panel-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (min-width: $small-media) {
+        width: 250px;
+        padding-right: 0;
+      }
+
+      @media (max-width: $small-media) {
+        padding-bottom: 0;
+      }
+
+      img {
+        width: 64px;
+        height: 64px;
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+    }
+
+    figure {
+      padding: 0;
+
+      .miso-roller-demo-vid {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+
+        @media (max-width: $small-media) {
+          margin-top: -5%;
+          margin-bottom: -5%;
+        }
+
+        .phone {
+          position: relative;
+          box-sizing: border-box;
+          width: 69%;
+          max-width: 180px;
+          margin-top: -8%;
+          margin-left: -7%;
+          transform: rotateZ(9deg) rotateY(-12deg) rotateX(14deg);
+          transform-style: preserve-3d;
+
+          @media (max-width: $large-media) {
+            width: 80%;
+            margin-left: -16%;
+          }
+
+          @media (max-width: $small-media) {
+            width: 100%;
+            margin-left: 0;
+            transform: rotateZ(90deg) rotateY(-24deg) rotateX(0deg);
+          }
+
+          .phone-frame {
+            padding: 4px;
+            background: #000;
+            border-radius: 16.5% / 7.6%;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            box-shadow: 0 0 0 2px #333, 0 0 0 5px #111;
+          }
+
+          video {
+            display: block;
+            width: 100%;
+            border-radius: 15.42% / 7.09%;
+          }
+        }
+      }
+    }
+  }
+
   &.attract-panel {
     background-color: rgb(255, 102, 111);
     background-image: url('/img/attract-pattern.webp');
