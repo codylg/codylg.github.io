@@ -10,6 +10,11 @@
 
     .content-panel-header {
 
+      @media (max-width: $small-media) {
+        border-top-left-radius: var(--rad-l);
+        border-top-right-radius: var(--rad-l);
+      }
+
       @media (min-width: $mobile-media) {
         background-color: rgb(85, 175, 255);
       }
@@ -318,7 +323,7 @@
 
     @media (min-width: $mobile-media) {
       border: 4px solid #F6821F;
-      border-radius: 8px;
+      border-radius: var(--rad-l);
     }
 
     h1 {
@@ -459,6 +464,33 @@
           opacity: 1;
         }
       }
+    }
+  }
+
+  &.skrivbord-panel {
+    background: radial-gradient(80% 80% at 50% 30%, rgba(234, 183, 167, 0.8), rgba(204, 110, 106, 0.9), rgba(20, 7, 7, 0.9)), url(/img/noise.svg);
+    border: 0;
+    color: rgb(30, 17, 17);
+    text-align: center;
+
+    .content-panel-header {
+      background: radial-gradient(80% 100% at 85% 60%, rgba(20, 7, 7, 0.1) 40%, rgba(255, 183, 187, 0.3), rgba(20, 7, 7, 0) 95%);
+    }
+
+    img.app-icon {
+        width: 100px;
+        margin: 24px auto;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 8px auto 32px;
+      max-width: 340px;
     }
   }
 
@@ -644,7 +676,7 @@
   }
 
   &.miso-tracker-panel {
-    background: radial-gradient(80% 45% at 50% 100%, rgb(145, 75, 35), rgb(90, 35, 12) 50%, #000 100%);
+    background: #000;
     border: 0;
     color: #f9f6f2;
 
@@ -672,6 +704,25 @@
         margin-top: 8px;
         margin-bottom: 32px;
         text-align: center;
+      }
+
+      .grainy-noise {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(100% 70% at 100% 100%, rgba(230, 165, 118, 0.75), rgba(204, 121, 110, 0.55) 50%, rgba(30, 17, 17, 0.9) 100%), url(/img/noise.svg);
+        filter: contrast(180%) brightness(800%);
+
+        @media (max-width: $small-media) {
+          background: radial-gradient(100% 50% at 50% 100%, rgba(230, 165, 118, 0.75), rgba(204, 121, 110, 0.55) 50%, rgba(30, 17, 17, 0.9) 100%), url(/img/noise.svg);
+        }
+
+        @media (min-width: $mobile-media) {
+          border-radius: calc(var(--rad-l) - 1px);
+        }
       }
     }
 
@@ -713,7 +764,7 @@
             border-radius: 16.5% / 7.6%;
             transform: translateZ(0);
             backface-visibility: hidden;
-            box-shadow: 0 0 0 2px #333, 0 0 0 4px #111, 0 40px 80px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 2px #333, 0 0 0 5px #111, 0 40px 80px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.5);
           }
 
           video {

@@ -1,17 +1,16 @@
 extends content
 
 block variables
-  - var classname = "miso-tracker"
-  - var smallpanel = false
+  - var classname = "skrivbord"
+  - var smallpanel = true
 
 block header
-  img(src="/img/miso-tracker-icon.webp" alt="An app icon featuring an orange D20")
-  h1
-    a(id="#{classname}", href="https://misotracker.com") Miso Tracker
+  img.app-icon(src="/img/skrivbord.webp" alt="An app icon with a smiling face, except the eyes are up and down arrows")
+  h1 Skrivbord
 
 block description
-  p A thoughtfully designed, fully customisable tracker for Magic:&nbsp;The&nbsp;Gathering. Designed for iPhone and iPad.
-  a(href="https://apps.apple.com/au/app/mtg-life-counter-miso-tracker/id6759641556")
+  p A macOS menu bar app to control the IKEA Idåsen standing desk and other Linak-protocol desks.
+  a(href="https://github.com/codylg/skrivbord")
     svg(xmlns="http://www.w3.org/2000/svg" width="119.66407" height="40" viewBox="0 0 119.66407 40")
       g
         g
@@ -47,16 +46,3 @@ block description
             path(d="M93.51516,9.07373v1.1416h.97559v.74854h-.97559V13.2793c0,.47168.19434.67822.63672.67822a2.96657,2.96657,0,0,0,.33887-.02051v.74023a2.9155,2.9155,0,0,1-.4834.04541c-.98828,0-1.38184-.34766-1.38184-1.21582v-2.543h-.71484v-.74854h.71484V9.07373Z" style="fill: #fff")
             path(d="M95.70461,8.437h.88086v2.48145h.07031a1.3856,1.3856,0,0,1,1.373-.80664,1.48339,1.48339,0,0,1,1.55078,1.67871v2.90723H98.69v-2.688c0-.71924-.335-1.0835-.96289-1.0835a1.05194,1.05194,0,0,0-1.13379,1.1416v2.62988h-.88867Z" style="fill: #fff")
             path(d="M104.76125,13.48193a1.828,1.828,0,0,1-1.95117,1.30273A2.04531,2.04531,0,0,1,100.73,12.46045a2.07685,2.07685,0,0,1,2.07617-2.35254c1.25293,0,2.00879.856,2.00879,2.27V12.688h-3.17969v.0498a1.1902,1.1902,0,0,0,1.19922,1.29,1.07934,1.07934,0,0,0,1.07129-.5459Zm-3.126-1.45117h2.27441a1.08647,1.08647,0,0,0-1.1084-1.1665A1.15162,1.15162,0,0,0,101.63527,12.03076Z" style="fill: #fff")
-  .grainy-noise
-
-block figure
-  figure
-    div.miso-tracker-demo-vids
-      .phone.shared-demo
-        .phone-frame
-          video(autoplay, loop, muted, playsinline)
-            source(src="/img/miso-tracker-shared-demo.mp4", type="video/mp4")
-      .phone.custom-demo
-        .phone-frame
-          video(autoplay, loop, muted, playsinline)
-            source(src="/img/miso-tracker-custom-demo.mp4", type="video/mp4")
